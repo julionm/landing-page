@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", serif;
+}
+
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+.montserrat-thin {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
+}
+.montserrat-bold {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
