@@ -1,0 +1,25 @@
+.experiences-container {
+    background-color: #222; 
+    color: white;
+    font-size: 1.125rem;
+
+    min-height: 100vh;
+    width: 100%;
+    /* clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%); */
+    padding: 1rem;
+
+    box-sizing: border-box;
+}
+
+.section-title {
+    margin-block: 5rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.work-list {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
