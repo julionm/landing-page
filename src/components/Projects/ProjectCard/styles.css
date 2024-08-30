@@ -1,0 +1,6 @@
+.card-container {
+    width: 400px;
+    height: 300px;
+    border-radius: 2rem;
+    border: 1px solid #888888;    
+}
