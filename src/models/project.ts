@@ -2,8 +2,8 @@ import { TechStack } from "./workInfo";
 
 export type Project = {
     id: number,
-    title: String,
-    link: String,
+    title: string,
+    link: string,
     techStack: TechStack[],
-    description: String
+    description: string
 };

@@ -8,7 +8,7 @@ export default defineConfig({
     alias: {
       assets: "/src/assets",
       components: "/src/components",
-      models: "/src/models"
+      models: "/src/models",
     }
   }
 })

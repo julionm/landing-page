@@ -1,6 +1,6 @@
 import profilePhoto from 'assets/profile-image.jpeg';
-import './styles.css';
 import { BrazilFlagIcon } from 'assets/icons/BrazilFlag';
+import './styles.css';
 
 export function HomePage () {
     return (

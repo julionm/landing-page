@@ -1,5 +1,6 @@
-import { useCallback, useMemo } from "react";
-import { WorkDetails, techStackToIcon } from "../../../models/workInfo"
+import { useMemo } from "react";
+import { WorkDetails } from "models/workInfo"
+import { TechStackList } from "components/common/TechStackList";
 import './styles.css';
 
 type WorkInfoProps = {
@@ -12,24 +13,6 @@ const dateFormatOptions: Intl.DateTimeFormatOptions = {
 };
 
 export function WorkInfo({ workDetails }: WorkInfoProps) {
-    
-    const TechStack = useCallback(() => {
-        return (
-            <div className="tech-stack-container">
-                {
-                    workDetails.techStack.map(tech => {
-                        const IconComponent = techStackToIcon[tech];
-            
-                        return (
-                            <div key={tech} className="icon-container">
-                                <IconComponent />
-                            </div>
-                        );
-                    })
-                }
-            </div>
-        );
-    }, [workDetails]);
 
     const workDuration = useMemo(() => {
         const datesFormatted = new Intl.DateTimeFormat(navigator.language, dateFormatOptions);
@@ -40,7 +23,10 @@ export function WorkInfo({ workDetails }: WorkInfoProps) {
         <div className="work-details-container">
             <p className="work-details-title">{workDetails.position} @ {workDetails.companyName}</p>
             <div className="work-context">
-                <TechStack />
+                <div className="tech-stack-container">
+                    <TechStackList items={workDetails.techStack} />
+                </div>
+
                 <p>{workDuration}</p>
             </div>
             <p className="work-details-description">

@@ -1,7 +1,7 @@
 import { Project } from 'models/project';
-import './styles.css';
 import { TechStack } from 'models/workInfo';
 import { ProjectCard } from './ProjectCard';
+import './styles.css';
 
 const PROJECTS: Project[] = [
     {
