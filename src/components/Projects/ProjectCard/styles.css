@@ -4,16 +4,22 @@
     border-radius: 1.75rem;
     border: 2px solid #888888;    
 
-    display: flex;
-    flex-direction: column;
-
     overflow: hidden;
+
+    z-index: 1;
+
+    position: relative;
 }
 
 .card-container footer {
+    position: absolute;
+    bottom: 0;
+    inset-inline: 0;
+
     padding: 1rem;
     border-top: 2px solid #888;
     color: white;
+    background-color: #000;
     text-decoration: none;
     font-weight: lighter;
 
@@ -28,9 +34,9 @@
 }
 
 .card-container .project-image {
-    flex: 1 1 0;
-    /* border-top-left-radius: 1.75rem;
-    border-top-right-radius: 1.75rem; */
-    background-color: white;
+    position: absolute;
+    inset: 0;
+    height: 250px;
     object-fit: cover;
+    object-position: top;
 }
