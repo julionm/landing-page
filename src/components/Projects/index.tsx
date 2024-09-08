@@ -2,6 +2,8 @@ import { Project } from 'models/project';
 import { TechStack } from 'models/workInfo';
 import { ProjectCard } from './ProjectCard';
 import './styles.css';
+import { ProjectDetailedCard } from './ProjectDetailedCard';
+import { PointerEventHandler, useRef, useState } from 'react';
 
 const PROJECTS: Project[] = [
     {
@@ -34,18 +36,57 @@ const PROJECTS: Project[] = [
     }
 ];
 
-export function ProjectsPage () {
-    return (
-        <section className="projects-page">
-            <h2 className='title'>Projects</h2>
+type ProjectDetailsProps = {
+    cardRect?: DOMRect,
+    project?: Project
+}
 
-            <div className='project-list'>
-                {
-                    PROJECTS.map((project: Project) => (
-                        <ProjectCard key={project.id} project={project} />
-                    ))
-                }
-            </div>
-        </section>
+export function ProjectsPage () {
+
+    const [showDetailed, setShowDetailed] = useState(false);
+    const [projectDetailsProps, setProjectDetailsProps] = useState<ProjectDetailsProps>({});
+
+    const cardRefList = useRef<Record<number, HTMLDivElement>>({});
+
+    const handleDetailedCard = (project: Project) => {
+        const newProjectDetailsProps: ProjectDetailsProps = {
+            project,
+            cardRect: cardRefList.current[project.id].getBoundingClientRect()
+        }
+
+        setTimeout(() => {
+            setProjectDetailsProps(newProjectDetailsProps);
+            setShowDetailed(true);
+        }, 450)
+    }
+
+    const hideDetailsModal = () => {
+        setShowDetailed(false);
+    };
+
+    return (
+        <>
+            <section className="projects-page">
+                <h2 className='title'>Projects</h2>
+
+                <div className='project-list'>
+                    {
+                        PROJECTS.map((project: Project) => (
+                            <div key={project.id} onPointerEnter={() => handleDetailedCard(project)}>
+                                <ProjectCard
+                                    ref={(el: HTMLDivElement) => cardRefList.current[project.id] = el}
+                                    project={project} />
+                            </div>
+                        ))
+                    }
+                </div>
+            </section>
+
+            <ProjectDetailedCard
+                    visible={showDetailed}
+                    cardRect={projectDetailsProps.cardRect}
+                    project={projectDetailsProps.project}
+                    callback={hideDetailsModal} />
+        </>
     )
 }
