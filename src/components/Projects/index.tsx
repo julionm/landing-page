@@ -1,9 +1,10 @@
+import { useRef, useState } from 'react';
 import { Project } from 'models/project';
 import { TechStack } from 'models/workInfo';
 import { ProjectCard } from './ProjectCard';
+import { ProjectDialog } from './ProjectDialog';
+
 import './styles.css';
-import { ProjectDetailedCard } from './ProjectDetailedCard';
-import { PointerEventHandler, useRef, useState } from 'react';
 
 const PROJECTS: Project[] = [
     {
@@ -57,7 +58,7 @@ export function ProjectsPage () {
         setTimeout(() => {
             setProjectDetailsProps(newProjectDetailsProps);
             setShowDetailed(true);
-        }, 450)
+        }, 500)
     }
 
     const hideDetailsModal = () => {
@@ -82,11 +83,11 @@ export function ProjectsPage () {
                 </div>
             </section>
 
-            <ProjectDetailedCard
-                    visible={showDetailed}
-                    cardRect={projectDetailsProps.cardRect}
-                    project={projectDetailsProps.project}
-                    callback={hideDetailsModal} />
+            <ProjectDialog
+                visible={showDetailed}
+                cardRect={projectDetailsProps.cardRect}
+                project={projectDetailsProps.project}
+                callback={hideDetailsModal} />
         </>
     )
 }

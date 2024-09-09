@@ -6,7 +6,8 @@ export enum TimingProgress {
 export function animate (
     draw: (progress: number) => void,
     duration: number,
-    timingProgress: TimingProgress = TimingProgress.Linear
+    timingProgress: TimingProgress = TimingProgress.Linear,
+    reverse?: boolean
 ) {
     const zero = getZeroTime();
     const timingFn = getTimingFunction[timingProgress];
@@ -15,7 +16,11 @@ export function animate (
         const delta = Math.min((timestamp - zero) / duration, 1);
         const progress = timingFn(delta);
 
-        draw(progress);
+        if (reverse) {
+            draw(1 - progress);
+        } else {
+            draw(progress);
+        }
 
         if (progress < 1) {
             requestAnimationFrame(executeAnimation);
