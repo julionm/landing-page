@@ -7,7 +7,8 @@ export function animate (
     draw: (progress: number) => void,
     duration: number,
     timingProgress: TimingProgress = TimingProgress.Linear,
-    reverse?: boolean
+    callback: () => void,
+    reverse: boolean = false
 ) {
     const zero = getZeroTime();
     const timingFn = getTimingFunction[timingProgress];
@@ -24,6 +25,8 @@ export function animate (
 
         if (progress < 1) {
             requestAnimationFrame(executeAnimation);
+        } else {
+            callback();
         }
     };
 

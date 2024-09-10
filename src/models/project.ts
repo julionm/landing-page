@@ -7,3 +7,7 @@ export type Project = {
     techStack: TechStack[],
     description: string
 };
+
+export type ProjectDialogRef = {
+    showDialog: (cardRect: DOMRect, project: Project) => void
+}

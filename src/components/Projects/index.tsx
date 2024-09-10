@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react';
-import { Project } from 'models/project';
+import { useRef } from 'react';
+import { Project, ProjectDialogRef } from 'models/project';
 import { TechStack } from 'models/workInfo';
 import { ProjectCard } from './ProjectCard';
 import { ProjectDialog } from './ProjectDialog';
@@ -37,33 +37,21 @@ const PROJECTS: Project[] = [
     }
 ];
 
-type ProjectDetailsProps = {
-    cardRect?: DOMRect,
-    project?: Project
-}
-
 export function ProjectsPage () {
 
-    const [showDetailed, setShowDetailed] = useState(false);
-    const [projectDetailsProps, setProjectDetailsProps] = useState<ProjectDetailsProps>({});
-
     const cardRefList = useRef<Record<number, HTMLDivElement>>({});
+    const dialogRef = useRef<ProjectDialogRef>(null);
 
     const handleDetailedCard = (project: Project) => {
-        const newProjectDetailsProps: ProjectDetailsProps = {
-            project,
-            cardRect: cardRefList.current[project.id].getBoundingClientRect()
-        }
+
+        const cardRect = cardRefList.current[project.id].getBoundingClientRect();
 
         setTimeout(() => {
-            setProjectDetailsProps(newProjectDetailsProps);
-            setShowDetailed(true);
-        }, 500)
+            if (dialogRef.current) {
+                dialogRef.current.showDialog(cardRect, project);
+            }
+        }, 750)
     }
-
-    const hideDetailsModal = () => {
-        setShowDetailed(false);
-    };
 
     return (
         <>
@@ -83,11 +71,7 @@ export function ProjectsPage () {
                 </div>
             </section>
 
-            <ProjectDialog
-                visible={showDetailed}
-                cardRect={projectDetailsProps.cardRect}
-                project={projectDetailsProps.project}
-                callback={hideDetailsModal} />
+            <ProjectDialog ref={dialogRef} />
         </>
     )
 }

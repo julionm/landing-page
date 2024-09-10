@@ -1,5 +1,5 @@
-import { Project } from "models/project";
-import { useEffect, useRef } from "react";
+import { Project, ProjectDialogRef } from "models/project";
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { TimingProgress, animate } from "utils/animation";
 import { CardThumb } from "../CardThumb";
@@ -10,13 +10,6 @@ import './styles.css';
 
 const DURATION = 275;
 
-type ProjectDialogProps = {
-    project?: Project,
-    callback: () => void,
-    cardRect?: DOMRect,
-    visible: boolean
-}
-
 type DialogPosition = { top: number, left: number };
 
 type DialogTransformDescriptor = {
@@ -25,19 +18,33 @@ type DialogTransformDescriptor = {
     finalTranslateY: number
 }
 
-export function ProjectDialog ({ project, callback, cardRect, visible }: ProjectDialogProps) {
+// * refact the callback style
+
+export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
+
+    const [visible, setVisible] = useState<boolean>(false);
+    const [cardRect, setCardRect] = useState<DOMRect>();
+    const [project, setProject] = useState<Project>();
 
     const dialogRef = useRef<HTMLDivElement>(null);
     const overlayRef = useRef<HTMLDivElement>(null);
     const footerRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        if (visible) {
-            runAnimation();
+    useImperativeHandle(ref, () => {
+        return {
+            showDialog: (cardRect: DOMRect, project: Project) => {
+                setCardRect(cardRect);
+                setProject(project);
+                setVisible(true);
+            }
         }
-    }, [visible]);
+    });
 
-    function runAnimation (reverse: boolean = false) {
+    useEffect(() => {
+        runAnimation(() => {});
+    }, [project]);
+
+    function runAnimation (callback: () => void, reverse: boolean = false) {
         if (!(dialogRef.current && cardRect && overlayRef.current && footerRef.current)) return;
 
         const dialog = dialogRef.current;
@@ -55,7 +62,13 @@ export function ProjectDialog ({ project, callback, cardRect, visible }: Project
 
         const updateDialog = createOpenDialogFunction(dialog, footer, transformDescriptor);
     
-        animate(updateDialog, DURATION, TimingProgress.Linear, reverse);
+        animate(
+            updateDialog,
+            DURATION,
+            TimingProgress.Linear,
+            callback,
+            reverse
+        );
     }
 
     const createOpenDialogFunction = (
@@ -109,10 +122,7 @@ export function ProjectDialog ({ project, callback, cardRect, visible }: Project
     }
 
     const handlePointerLeave = () => {
-        runAnimation(true);
-        
-        // ! I NEED TO REMOVE THIS
-        setTimeout(callback, DURATION);
+        runAnimation(() => setVisible(false), true);
     }
 
     return (
@@ -144,4 +154,4 @@ export function ProjectDialog ({ project, callback, cardRect, visible }: Project
             }
         </>
     );
-}
+});
