@@ -8,7 +8,7 @@ import { TechStackList } from "components/common/TechStackList";
 
 import './styles.css';
 
-const DURATION = 275;
+const DURATION = 325;
 
 type DialogPosition = { top: number, left: number };
 
@@ -29,6 +29,7 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
     const dialogRef = useRef<HTMLDivElement>(null);
     const overlayRef = useRef<HTMLDivElement>(null);
     const footerRef = useRef<HTMLDivElement>(null);
+    const cardThumbRef = useRef<HTMLDivElement>(null);
 
     useImperativeHandle(ref, () => {
         return {
@@ -45,20 +46,21 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
     }, [project]);
 
     function runAnimation (callback: () => void, reverse: boolean = false) {
-        if (!(dialogRef.current && cardRect && overlayRef.current && footerRef.current)) return;
+        if (!(dialogRef.current && cardRect && overlayRef.current && footerRef.current && cardThumbRef.current)) return;
 
         const dialog = dialogRef.current;
         const footer = footerRef.current;
 
         const dialogRect = dialog.getBoundingClientRect();
         const overlayRect = overlayRef.current.getBoundingClientRect();
+        const cardThumbRect = cardThumbRef.current.getBoundingClientRect();
 
         const dialogPosition = getDialogInitialPosition(overlayRect, cardRect, dialogRect);
 
         dialog.style.setProperty('top', `${dialogPosition.top}px`);
         dialog.style.setProperty('left', `${dialogPosition.left}px`);
 
-        const transformDescriptor = getDialogTransformDescriptor(cardRect, dialogRect);
+        const transformDescriptor = getDialogTransformDescriptor(cardRect, dialogRect, cardThumbRect);
 
         const updateDialog = createOpenDialogFunction(dialog, footer, transformDescriptor);
     
@@ -96,10 +98,11 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
 
     function getDialogTransformDescriptor(
         cardRect: DOMRect,
-        dialogRect: DOMRect): DialogTransformDescriptor {
+        dialogRect: DOMRect,
+        cardThumbRect: DOMRect): DialogTransformDescriptor {
             // * modal initial size to match the card's
             const initialScaleX = Math.round((cardRect.width / dialogRect.width) * 1000) / 1000;
-            const initialScaleY = Math.round((cardRect.height / dialogRect.height) * 1000) / 1000;
+            const initialScaleY = Math.round((cardRect.height / cardThumbRect.height) * 1000) / 1000;
             
             // * final dialog position on Y axis
             const finalTranslateY = (dialogRect.height - cardRect.height) / 2;
@@ -131,7 +134,9 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
                 visible && createPortal(
                     <div ref={overlayRef} className="overlay" role="dialog" onPointerLeave={handlePointerLeave}>
                         <div ref={dialogRef} className="detailed-card">
-                            {project && <CardThumb project={project} />}
+                            <div ref={cardThumbRef} className="card-thumb-container">
+                                {project && <CardThumb project={project} />}
+                            </div>
 
                             <footer ref={footerRef}>
                                 <div className="project-summary">

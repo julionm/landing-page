@@ -8,8 +8,8 @@
 
 .detailed-card {
     width: 300px;
-    border-radius: 1rem;
-    border: 2px solid #888888; 
+    border-radius: 0.75rem;
+    border: 1px solid #888888; 
 
     transform-origin: 50% 0;
 
@@ -24,7 +24,7 @@
     opacity: 0;
 
     padding: 1rem;
-    border-top: 2px solid #888;
+    border-top: 1px solid #888;
     color: white;
     background-color: #000;
     text-decoration: none;
