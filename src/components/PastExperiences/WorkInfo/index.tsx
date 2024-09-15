@@ -12,6 +12,8 @@ const dateFormatOptions: Intl.DateTimeFormatOptions = {
     year: 'numeric'
 };
 
+// TODO: show a text range value
+
 export function WorkInfo({ workDetails }: WorkInfoProps) {
 
     const workDuration = useMemo(() => {
@@ -20,18 +22,16 @@ export function WorkInfo({ workDetails }: WorkInfoProps) {
     }, [workDetails]);
 
     return (
-        <div className="work-details-container">
-            <p className="work-details-title">{workDetails.position} @ {workDetails.companyName}</p>
-            <div className="work-context">
-                <div className="tech-stack-container">
-                    <TechStackList items={workDetails.techStack} />
-                </div>
-
-                <p>{workDuration}</p>
-            </div>
-            <p className="work-details-description">
+        <div className="work-details">
+            <p className="work__title">{workDetails.companyName}</p>
+            <p className="work__position">{workDetails.position}</p>
+            <p className="work__duration">{workDuration}</p>
+            <p className="work__description">
                 {workDetails.description}
             </p>
+            <div className="work__tech">
+                <TechStackList items={workDetails.techStack} />
+            </div>
         </div>
     );
 }

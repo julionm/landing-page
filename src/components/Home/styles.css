@@ -1,11 +1,11 @@
 .home-container {
     background-color: #111; 
     color: white;
-    font-size: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.5;
 
     width: 100%;
     padding-block: 12rem;
-    /* clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%); */
 
     display: grid;
     place-items: center;
@@ -34,16 +34,10 @@
     }
 }
 
-.profile-description {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
 .name {
     font-size: clamp(2rem, 8vw, 5rem);
     font-weight: bold;
-    color: #FF5500;
+    color: var(--primary);
 }
 
 .name .highlight-letter {
@@ -60,12 +54,68 @@
 
     object-fit: cover;
 
-    border-radius: 4rem;
+    border-radius: 50%;
     aspect-ratio: 1;
 }
 
 @media (min-width: 1056px) {
     .profile-photo {
         width: 20rem;
+    }
+}
+
+.actions {
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.button {
+    appearance: none;
+    outline: none;
+    border: none;
+
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+
+    transition: all .3s ease-out;
+
+    cursor: pointer;
+}
+
+.button--primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.button--primary:hover {
+    transform: scale(1.1);
+}
+
+.button--outlined {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.button--outlined:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.home__about {
+    animation: 1s ease-out showUp;
+}
+
+@keyframes showUp {
+    from {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

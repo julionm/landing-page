@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Project, ProjectDialogRef } from 'models/project';
 import { TechStack } from 'models/workInfo';
 import { ProjectCard } from './ProjectCard';
-import { ProjectDialog } from './ProjectDialog';
+import { ProjectDialog } from './ProjectDetailedCard';
 
 import './styles.css';
 

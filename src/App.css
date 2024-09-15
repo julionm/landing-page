@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     font-family: "Montserrat", serif;
+    --primary: #FF5500;
+    --text: #C6C6C6;
 }
 
 .montserrat-regular {

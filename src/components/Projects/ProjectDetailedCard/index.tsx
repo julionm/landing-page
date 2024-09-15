@@ -18,7 +18,7 @@ type DialogTransformDescriptor = {
     finalTranslateY: number
 }
 
-// * refact the callback style
+// TODO: refact the callback style
 
 export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
 
@@ -140,13 +140,13 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
 
                             <footer ref={footerRef}>
                                 <div className="project-summary">
-                                    <p>{project?.title}</p>
+                                    <p className="project__title">{project?.title}</p>
                                     <a href={project?.link} target='_blank'>
                                         <CodeIcon height='1.5rem' width='1.5rem' />
                                     </a>
                                 </div>
 
-                                <p>{project?.description}</p>
+                                <p className="project__description">{project?.description}</p>
 
                                 <div className="tech-stack-list">
                                     <TechStackList items={project?.techStack || []} />

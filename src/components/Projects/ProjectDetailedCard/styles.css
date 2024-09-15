@@ -8,7 +8,6 @@
 
 .detailed-card {
     width: 300px;
-    border-radius: 0.75rem;
     border: 1px solid #888888; 
 
     transform-origin: 50% 0;
@@ -55,4 +54,14 @@
     flex-direction: row;
 
     gap: .5rem;
+}
+
+.project__description {
+    color: var(--text);
+}
+
+.project__title {
+    color: #FFF;
+    font-size: 1.125rem;
+    font-weight: 500;
 }

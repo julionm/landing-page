@@ -7,7 +7,7 @@ export function HomePage () {
         <section className="home-container">
             <div className='container'>
                 <div className='presentation'>
-                    <div className='profile-description'>
+                    <div className='home__about'>
                         <p>Hi! I'm</p>
                         <p className="name">
                             <span className='highlight-letter'>J</span>ulio <span className="highlight-letter">N</span>egri
@@ -15,7 +15,11 @@ export function HomePage () {
                         <p>I'm a <span className='position-highlight'>Software Developer</span>.</p>
                         <p>I'm 23 years old and I live in Brazil <BrazilFlagIcon />.</p>
                         <p>I've built this to showcase my habilities and experiences.</p>
-                        <p>Hope you like it!</p>
+
+                        <div className='actions'>
+                            <button className='button button--primary'>Contact Me!</button>
+                            <button className='button button--outlined'>Download Resume</button>
+                        </div>
                     </div>
                     <img
                         src={profilePhoto}

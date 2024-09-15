@@ -1,6 +1,6 @@
 import { TechStack } from "models/workInfo";
-import { techStackToIcon } from "models/workInfo";
 import { memo } from "react";
+import { TechStackTag } from "../TechStackTag";
 
 type TechStackListProps = {
     items: TechStack[]
@@ -11,15 +11,7 @@ export const TechStackList = memo(
         return (
             <>
                 {
-                    items.map(tech => {
-                        const IconComponent = techStackToIcon[tech];
-            
-                        return (
-                            <div key={tech} className="icon-container">
-                                <IconComponent />
-                            </div>
-                        );
-                    })
+                    items.map(tech => <TechStackTag key={tech} techStack={tech} />)
                 }
             </>
         );

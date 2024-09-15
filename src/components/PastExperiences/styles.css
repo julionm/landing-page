@@ -1,5 +1,5 @@
 .experiences-container {
-    background-color: #222; 
+    background-color: #111; 
     color: white;
     font-size: 1.125rem;
 
@@ -17,7 +17,17 @@
 
 .work-list {
     margin-top: 4rem;
+    
     display: flex;
-    flex-direction: column;
     gap: 5rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.work-list:nth-child(odd) {
+    align-self: flex-end;
+}
+
+.work-list:nth-child(even) {
+    align-self: flex-start;
 }
