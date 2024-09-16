@@ -8,7 +8,7 @@ import { TechStackList } from "components/common/TechStackList";
 
 import './styles.css';
 
-const DURATION = 325;
+const DURATION = 250;
 
 type DialogPosition = { top: number, left: number };
 
@@ -28,7 +28,6 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
 
     const dialogRef = useRef<HTMLDivElement>(null);
     const overlayRef = useRef<HTMLDivElement>(null);
-    const footerRef = useRef<HTMLDivElement>(null);
     const cardThumbRef = useRef<HTMLDivElement>(null);
 
     useImperativeHandle(ref, () => {
@@ -46,10 +45,9 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
     }, [project]);
 
     function runAnimation (callback: () => void, reverse: boolean = false) {
-        if (!(dialogRef.current && cardRect && overlayRef.current && footerRef.current && cardThumbRef.current)) return;
+        if (!(dialogRef.current && cardRect && overlayRef.current && cardThumbRef.current)) return;
 
         const dialog = dialogRef.current;
-        const footer = footerRef.current;
 
         const dialogRect = dialog.getBoundingClientRect();
         const overlayRect = overlayRef.current.getBoundingClientRect();
@@ -62,7 +60,7 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
 
         const transformDescriptor = getDialogTransformDescriptor(cardRect, dialogRect, cardThumbRect);
 
-        const updateDialog = createOpenDialogFunction(dialog, footer, transformDescriptor);
+        const updateDialog = createOpenDialogFunction(dialog, transformDescriptor);
     
         animate(
             updateDialog,
@@ -75,7 +73,6 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
 
     const createOpenDialogFunction = (
         dialog: HTMLDivElement,
-        footer: HTMLDivElement,
         transformDescriptor: DialogTransformDescriptor
     ): (progress: number) => void => {
 
@@ -90,7 +87,6 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
             const transformStr = `scaleX(${initialScaleX + scaleX}) scaleY(${initialScaleY + scaleY}) translateY(-${translateY}px)`;
                 
             dialog.style.setProperty('transform', transformStr);
-            footer.style.setProperty('opacity', String(progress));
         }
 
         return updateDialog;
@@ -138,7 +134,7 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
                                 {project && <CardThumb project={project} />}
                             </div>
 
-                            <footer ref={footerRef}>
+                            <footer>
                                 <div className="project-summary">
                                     <p className="project__title">{project?.title}</p>
                                     <a href={project?.link} target='_blank'>

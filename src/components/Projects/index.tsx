@@ -50,7 +50,7 @@ export function ProjectsPage () {
             if (dialogRef.current) {
                 dialogRef.current.showDialog(cardRect, project);
             }
-        }, 750)
+        }, 500)
     }
 
     return (
