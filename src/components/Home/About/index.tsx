@@ -4,6 +4,11 @@ import { LinkedInIcon } from 'assets/icons/contact/LinkedInIcon';
 import { Button, ButtonType } from 'components/common/Button';
 import './styles.css';
 
+/**
+ * add some icon to each paragraph... I believe it'd be better to treat them as bullet points
+ * not as paragraphs
+ */
+
 export function About() {
     return (
         <div className='about'>
@@ -11,8 +16,11 @@ export function About() {
             <p className="about__name">
                 <span className='highlight-text'>J</span>ulio <span className="highlight-text">N</span>egri
             </p>
-            <p>I'm a Full Stack Developer.</p>
-            <p>I'm 23 years old and I live in Brazil <BrazilFlagIcon />.</p>
+            <div className='about__intro'>
+                <p>I'm a Full Stack Developer.</p>
+                <p>I'm 23 years old and I live in Brazil <BrazilFlagIcon />.</p>
+                <p>Working with software since 2018.</p>
+            </div>
 
             <div className='about__actions'>
                 <Button type={ButtonType.PRIMARY}>

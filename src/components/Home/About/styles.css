@@ -1,12 +1,22 @@
 /*
 * General Styling
 */
+
+.about p {
+    margin-inline: 0px;
+    margin-block: 0px;
+    line-height: 1;
+}
+
 .about .highlight-text {
     font-size: clamp(3rem, 10vw, 5rem);
 }
 
 .about {
     animation: 1s ease-out showUp;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
 .about p:not(.about__name) {
@@ -24,6 +34,17 @@
     font-size: clamp(2rem, 8vw, 5rem);
     font-weight: bold;
     color: var(--primary);
+}
+
+.about__intro {
+    line-height: 1.6;
+}
+
+.about__email {
+}
+
+.about__email:hover {
+    border: 1px solid var(--primary);
 }
 
 .linkedin-button {

@@ -5,10 +5,16 @@
     line-height: 1.5;
 
     width: 100%;
-    padding-block: 12rem;
+    padding-block: 8rem;
 
     display: grid;
     place-items: center;
+}
+
+@media (max-width: 564px) {
+    .home {
+        padding-block: 4rem;
+    }
 }
 
 .home__container {
