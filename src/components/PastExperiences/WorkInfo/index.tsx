@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { WorkDetails } from "models/workInfo"
-import { TechStackList } from "components/common/TechStackList";
+import { TagList } from "components/common/TagList";
 import './styles.css';
 
 type WorkInfoProps = {
@@ -30,7 +30,7 @@ export function WorkInfo({ workDetails }: WorkInfoProps) {
                 {workDetails.description}
             </p>
             <div className="work__tech">
-                <TechStackList items={workDetails.techStack} />
+                <TagList items={workDetails.techStack} />
             </div>
         </div>
     );

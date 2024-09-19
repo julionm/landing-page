@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import { TimingProgress, animate } from "utils/animation";
 import { CardThumb } from "../CardThumb";
 import { CodeIcon } from "assets/icons/CodeIcon";
-import { TechStackList } from "components/common/TechStackList";
+import { TagList } from "components/common/TagList";
 
 import './styles.css';
 
@@ -145,7 +145,7 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
                                 <p className="project__description">{project?.description}</p>
 
                                 <div className="tech-stack-list">
-                                    <TechStackList items={project?.techStack || []} />
+                                    <TagList items={project?.techStack || []} />
                                 </div>
                             </footer>    
                         </div>
