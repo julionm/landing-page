@@ -1,4 +1,4 @@
-.home-container {
+.home {
     background-color: #111; 
     color: white;
     font-size: 1rem;
@@ -11,11 +11,11 @@
     place-items: center;
 }
 
-.container {
+.home__container {
     width: min(100%, 1280px);
 }
 
-.presentation {
+.home__presentation {
     width: 100%;
 
     padding-inline: 1rem;
@@ -28,25 +28,10 @@
 }
 
 @media (min-width: 1056px) {
-    .presentation {
+    .home__presentation {
         gap: 1rem;
         flex-direction: row;
     }
-}
-
-.name {
-    font-size: clamp(2rem, 8vw, 5rem);
-    font-weight: bold;
-    color: var(--primary);
-}
-
-.name .highlight-letter {
-    font-size: clamp(3rem, 10vw, 5rem);
-}
-
-.position-highlight {
-    background-color: white;
-    color: black;
 }
 
 .profile-photo {
@@ -61,61 +46,5 @@
 @media (min-width: 1056px) {
     .profile-photo {
         width: 20rem;
-    }
-}
-
-.actions {
-    margin-top: 2rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.button {
-    appearance: none;
-    outline: none;
-    border: none;
-
-    padding: 0.75rem 1.25rem;
-    border-radius: 0.5rem;
-    box-sizing: border-box;
-
-    transition: all .3s ease-out;
-
-    cursor: pointer;
-}
-
-.button--primary {
-    background-color: var(--primary);
-    color: white;
-}
-
-.button--primary:hover {
-    transform: scale(1.1);
-}
-
-.button--outlined {
-    background-color: transparent;
-    border: 1px solid var(--primary);
-    color: var(--primary);
-}
-
-.button--outlined:hover {
-    background-color: var(--primary);
-    color: white;
-}
-
-.home__about {
-    animation: 1s ease-out showUp;
-}
-
-@keyframes showUp {
-    from {
-        transform: translateY(20%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
     }
 }

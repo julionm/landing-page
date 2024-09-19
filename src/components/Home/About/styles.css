@@ -1,0 +1,63 @@
+/*
+* General Styling
+*/
+.about .highlight-text {
+    font-size: clamp(3rem, 10vw, 5rem);
+}
+
+.about {
+    animation: 1s ease-out showUp;
+}
+
+.about p:not(.about__name) {
+    line-height: 1.6;
+}
+
+.about__actions {
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.about__name {
+    font-size: clamp(2rem, 8vw, 5rem);
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.linkedin-button {
+    opacity: 0;
+    animation: .5s ease-out slideRight;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.github-button {
+    opacity: 0;
+    animation: .5s ease-out slideRight;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes showUp {
+    from {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -8,7 +8,7 @@ import { TechStackList } from "components/common/TechStackList";
 
 import './styles.css';
 
-const DURATION = 250;
+const DURATION = 100;
 
 type DialogPosition = { top: number, left: number };
 

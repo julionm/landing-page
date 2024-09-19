@@ -1,0 +1,45 @@
+
+.button {
+    appearance: none;
+    outline: none;
+    
+    padding-inline: 0.75rem;
+    padding-block: 0.75rem;
+    
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+
+    transition: all .3s ease-out;
+
+    cursor: pointer;
+
+    font-size: 0.8rem;
+
+    display: flex;
+    align-items: center;
+    line-height: 1;
+
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+.button:active {
+    transform: scale(0.9);
+    background-color: #C44405;
+}
+
+.button--primary {
+    --bg: var(--primary);
+    --fg: white;
+}
+
+.button--outlined {
+    --bg: transparent;
+    --fg: var(--primary);
+}
+
+.button--outlined:hover {
+    --bg: var(--primary);
+    --fg: white;
+}

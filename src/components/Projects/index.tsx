@@ -42,15 +42,23 @@ export function ProjectsPage () {
     const cardRefList = useRef<Record<number, HTMLDivElement>>({});
     const dialogRef = useRef<ProjectDialogRef>(null);
 
+    const timeoutRef = useRef<number>();
+
     const handleDetailedCard = (project: Project) => {
 
         const cardRect = cardRefList.current[project.id].getBoundingClientRect();
 
-        setTimeout(() => {
+        timeoutRef.current = setTimeout(() => {
             if (dialogRef.current) {
                 dialogRef.current.showDialog(cardRect, project);
             }
-        }, 500)
+        }, 600)
+    }
+
+    const handlePointerLeave = () => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
     }
 
     return (
@@ -61,7 +69,10 @@ export function ProjectsPage () {
                 <div className='project-list'>
                     {
                         PROJECTS.map((project: Project) => (
-                            <div key={project.id} onPointerEnter={() => handleDetailedCard(project)}>
+                            <div
+                                key={project.id}
+                                onPointerEnter={() => handleDetailedCard(project)}
+                                onPointerLeave={handlePointerLeave}>
                                 <ProjectCard
                                     ref={(el: HTMLDivElement) => cardRefList.current[project.id] = el}
                                     project={project} />

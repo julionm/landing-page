@@ -7,7 +7,7 @@
 }
 
 .detailed-card {
-    width: 300px;
+    width: 250px;
     border: 1px solid #888888; 
 
     transform-origin: 50% 0;
@@ -56,6 +56,8 @@
 
 .project__description {
     color: var(--text);
+    font-size: 0.875rem;
+    line-height: 1.5;
 }
 
 .project__title {

@@ -1,7 +1,7 @@
 .projects-page {
     display: flex;
     flex-direction: column;
-    background-color: #000;
+    background-color: #111;
     padding: 5rem;
     width: 100%;
     box-sizing: border-box;
