@@ -12,10 +12,12 @@ import './styles.css';
 export function About() {
     return (
         <div className='about'>
-            <p>Hi! I'm</p>
-            <p className="about__name">
-                <span className='highlight-text'>J</span>ulio <span className="highlight-text">N</span>egri
-            </p>
+            <div className=''>
+                <p className="about__name">
+                    <span className='highlight-text'>J</span>ulio <span className="highlight-text">N</span>egri
+                </p>
+                <p className='position'>Full Stack Developer</p>
+            </div>
             <div className='about__intro'>
                 <p>I'm a Full Stack Developer.</p>
                 <p>I'm 23 years old and I live in Brazil <BrazilFlagIcon />.</p>

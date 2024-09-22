@@ -8,9 +8,9 @@
     line-height: 1;
 }
 
-.about .highlight-text {
-    font-size: clamp(3rem, 10vw, 5rem);
-}
+/* .about .highlight-text {
+    font-size: 2.5rem;
+} */
 
 .about {
     animation: 1s ease-out showUp;
@@ -23,24 +23,26 @@
     line-height: 1.6;
 }
 
+.about .position {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
 .about__actions {
-    margin-top: 2rem;
     display: flex;
     align-items: flex-start;
     gap: 1rem;
 }
 
 .about__name {
-    font-size: clamp(2rem, 8vw, 5rem);
+    font-size: 2.5rem;
     font-weight: bold;
     color: var(--primary);
+    text-transform: uppercase;
 }
 
 .about__intro {
     line-height: 1.6;
-}
-
-.about__email {
 }
 
 .about__email:hover {

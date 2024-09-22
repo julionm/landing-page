@@ -18,7 +18,7 @@
     position: relative;
 
     padding: 2.5rem 4rem;
-    border-left: 1px solid var(--primary);
+    border-left: 1px solid var(--primary-dark);
 
     box-sizing: border-box;
 }
@@ -29,7 +29,7 @@
     left: -0.6125em;
     top: 3.25em;
 
-    background-color: var(--primary);
+    background-color: var(--primary-dark);
 
     height: 1.25em;
     aspect-ratio: 1;
@@ -37,18 +37,21 @@
 }
 
 .work__title {
-    font-size: 2.5em;
+    font-size: 2em;
     color: var(--primary);
     font-weight: 600;
 }
 
 .work__position {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
 }
 
+.work__duration {
+    margin-block: .25em;
+}
+
 .work__description {
-    margin-top: 1em;
     font-size: 1em;
     line-height: 1.5;
     color: #C6C6C6;
@@ -68,7 +71,6 @@
 @media(max-width: 564px) {
     .work-details {
        padding: 2rem 2rem;
-       font-size: 0.875rem;
     }
 
     .work__description {

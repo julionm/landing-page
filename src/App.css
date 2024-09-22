@@ -3,7 +3,13 @@
     margin: 0;
     font-family: "Montserrat", serif;
     --primary: #FF5500;
+    --primary-dark: #C44405;
     --text: #C6C6C6;
+    --bg: #111;
+}
+
+body {
+    background: var(--bg);
 }
 
 .montserrat-regular {

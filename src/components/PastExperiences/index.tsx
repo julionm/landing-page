@@ -1,4 +1,4 @@
-import { TechStack, WorkDetails } from '../../models/workInfo';
+import { TechStack, WorkDetails } from 'models/workInfo';
 import { WorkInfo } from './WorkInfo';
 import './styles.css';
 
@@ -24,9 +24,14 @@ const workExperiences: WorkDetails[] = [
 export function PastExperiencesPage () {
 
     return (
-        <section className='experiences-container'>
+        <section className='experiences'>
 
-            <h1 className='section-title'>Past Experiences</h1>
+            <div className='header'>
+                <h1 className='title'>Past Experiences</h1>
+                <p className=''>
+                    I've had the opportunity to meet great coworkers along my experiences and to work on a variety of different projects.
+                </p>
+            </div>
 
             <div className='work-list'>
                 {

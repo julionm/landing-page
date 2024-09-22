@@ -17,6 +17,12 @@
     }
 }
 
+@media (max-width: 1056px) {
+    .home {
+        padding-block: 6rem;
+    }
+}
+
 .home__container {
     width: min(100%, 1280px);
 }
@@ -24,20 +30,11 @@
 .home__presentation {
     width: 100%;
 
-    padding-inline: 1rem;
-
     display: flex;
+    gap: 3rem;
     flex-direction: column-reverse;
-    gap: 2rem;
     align-items: center;
-    justify-content: space-evenly;
-}
-
-@media (min-width: 1056px) {
-    .home__presentation {
-        gap: 1rem;
-        flex-direction: row;
-    }
+    justify-content: center;
 }
 
 .profile-photo {
@@ -52,5 +49,12 @@
 @media (min-width: 1056px) {
     .profile-photo {
         width: 20rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .home__presentation {
+        flex-direction: row;
+        gap: 6rem;
     }
 }

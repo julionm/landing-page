@@ -12,19 +12,32 @@ const dateFormatOptions: Intl.DateTimeFormatOptions = {
     year: 'numeric'
 };
 
-// TODO: show a text range value
-
 export function WorkInfo({ workDetails }: WorkInfoProps) {
 
     const workDuration = useMemo(() => {
-        const datesFormatted = new Intl.DateTimeFormat(navigator.language, dateFormatOptions);
-        return datesFormatted.formatRange(workDetails.start, workDetails.end);
+        const dateTimeFormatter = new Intl.DateTimeFormat(navigator.language, dateFormatOptions);
+
+        const formattedRange: string = dateTimeFormatter.formatRange(workDetails.start, workDetails.end)
+    
+        const dates = formattedRange.split(' – ');
+        const capitalizedRange = `${capitalize(dates[0].trim())} - ${capitalize(dates[1].trim())}`;
+
+        return capitalizedRange;
     }, [workDetails]);
+
+    function capitalize (text: string): string {
+        const firstLetter = text.charAt(0).toUpperCase();
+        const rest = text.slice(1);
+
+        return firstLetter + rest;
+    }
 
     return (
         <div className="work-details">
-            <p className="work__title">{workDetails.companyName}</p>
-            <p className="work__position">{workDetails.position}</p>
+            <div>
+                <p className="work__title">{workDetails.companyName}</p>
+                <p className="work__position">{workDetails.position}</p>
+            </div>
             <p className="work__duration">{workDuration}</p>
             <p className="work__description">
                 {workDetails.description}
