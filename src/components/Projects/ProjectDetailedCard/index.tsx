@@ -7,6 +7,7 @@ import { CodeIcon } from "assets/icons/CodeIcon";
 import { TagList } from "components/common/TagList";
 
 import './styles.css';
+import { Button, ButtonType } from "components/common/Button";
 
 const DURATION = 100;
 
@@ -24,7 +25,7 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
 
     const [visible, setVisible] = useState<boolean>(false);
     const [cardRect, setCardRect] = useState<DOMRect>();
-    const [project, setProject] = useState<Project>();
+    const [project, setProject] = useState<Project | null>();
 
     const dialogRef = useRef<HTMLDivElement>(null);
     const overlayRef = useRef<HTMLDivElement>(null);
@@ -33,6 +34,10 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
     useImperativeHandle(ref, () => {
         return {
             showDialog: (cardRect: DOMRect, project: Project) => {
+                if (!cardRect) {
+                    console.log('No cardRect: ', cardRect);
+                    return;
+                }
                 setCardRect(cardRect);
                 setProject(project);
                 setVisible(true);
@@ -121,7 +126,10 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
     }
 
     const handlePointerLeave = () => {
-        runAnimation(() => setVisible(false), true);
+        runAnimation(() => {
+            setVisible(false)
+            setProject(null);
+        }, true);
     }
 
     return (
@@ -137,9 +145,10 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
                             <footer>
                                 <div className="project-summary">
                                     <p className="project__title">{project?.title}</p>
-                                    <a href={project?.link} target='_blank'>
-                                        <CodeIcon height='1.5rem' width='1.5rem' />
-                                    </a>
+
+                                    <Button type={ButtonType.PRIMARY} customClass="get-code">
+                                        <CodeIcon height='1rem' width='1rem' />
+                                    </Button>
                                 </div>
 
                                 <p className="project__description">{project?.description}</p>

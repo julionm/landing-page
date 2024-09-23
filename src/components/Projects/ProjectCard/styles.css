@@ -1,9 +1,9 @@
 .card-container {
     width: 200px;
-    height: 200px;
-    border: 1px solid #888888;
 
     z-index: 1;
 
     overflow: hidden;
+
+    border-radius: 0.25em;
 }

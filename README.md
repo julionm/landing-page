@@ -4,7 +4,9 @@ My landing page with some basic information: past experiences, interests, past p
 
 ## ToDo
 
-- [ ] choose a new font for titles and call to action buttons
-- [ ] choose the primary color for the website and use it
-- [ ] add a Contact Me button in header (this should lead to a contact form or make one show up on a dialog)
-- [ ] animate the header
+- [ ] redo the projects part 
+- [ ] design new sections
+- [ ] find a way to show my email
+- [ ] discover a way to make the site stand out more, today it looks really similar to everything else
+  - I had an idea for this but it'll only work after 90% of the site is finished
+- [ ] 
