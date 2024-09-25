@@ -9,6 +9,9 @@ import './styles.css';
  * not as paragraphs
  */
 
+const LINKEDIN = 'https://www.linkedin.com/in/julio-mirandola/';
+const GITHUB = 'https://github.com/julionm';
+
 export function About() {
     return (
         <div className='about'>
@@ -28,10 +31,18 @@ export function About() {
                 <Button type={ButtonType.PRIMARY}>
                     <span>Download Resume</span>
                 </Button>
-                <Button customClass='linkedin-button'>
+                <Button
+                    customClass='linkedin-button'
+                    href={LINKEDIN}
+                    target='_blank'
+                    isLink>
                     <LinkedInIcon />
                 </Button>
-                <Button customClass='github-button'>
+                <Button
+                    customClass='github-button'
+                    href={GITHUB}
+                    target='_blank'
+                    isLink>
                     <GithubIcon />
                 </Button>
             </div>
