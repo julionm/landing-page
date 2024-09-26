@@ -52,7 +52,7 @@ export function ProjectsPage () {
             if (dialogRef.current) {
                 dialogRef.current.showDialog(cardRect, project);
             }
-        }, 600)
+        }, 400)
     }
 
     const handlePointerLeave = () => {
