@@ -3,7 +3,7 @@ import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "re
 import { createPortal } from "react-dom";
 import { TimingProgress, animate } from "utils/animation";
 import { CardThumb } from "../CardThumb";
-import { CodeIcon } from "assets/icons/CodeIcon";
+import { CodeIcon } from "assets/icons/Code";
 import { TagList } from "components/common/TagList";
 
 import './styles.css';

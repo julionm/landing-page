@@ -1,6 +1,6 @@
 import { BrazilFlagIcon } from 'assets/icons/BrazilFlag';
-import { GithubIcon } from 'assets/icons/contact/GithubIcon';
-import { LinkedInIcon } from 'assets/icons/contact/LinkedInIcon';
+import { GithubIcon } from 'assets/icons/contact/Github';
+import { LinkedInIcon } from 'assets/icons/contact/LinkedIn';
 import { Button, ButtonType } from 'components/common/Button';
 import './styles.css';
 

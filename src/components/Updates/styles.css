@@ -1,0 +1,11 @@
+.updates {
+    width: min(960px, 100%);
+    padding-inline: 1em;
+    box-sizing: border-box;
+    margin-inline: auto;
+}
+
+.updates .title {
+    color: var(--primary);
+    font-size: 2.5em;
+}

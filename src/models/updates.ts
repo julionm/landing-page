@@ -1,7 +1,7 @@
 export type Update = {
     id: number,
     title: string,
-    time: string, // timestamp
+    time: Date, // timestamp
     description: string,
     shortDescription: string,
     type: UpdateType

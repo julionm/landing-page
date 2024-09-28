@@ -43,3 +43,10 @@
     --bg: var(--primary);
     --fg: white;
 }
+
+.button--text {
+    --bg: transparent;
+    --fg: transparent;
+    border-color: transparent;
+    padding: 0;
+}

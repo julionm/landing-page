@@ -4,6 +4,7 @@ import './styles.css';
 export enum ButtonType {
     PRIMARY = 'primary',
     OUTLINED = 'outlined',
+    TEXT = 'text'
 };
 
 type ButtonProps = {
