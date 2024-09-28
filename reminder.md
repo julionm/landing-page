@@ -7,3 +7,7 @@ I'll let these things here so I remember how I've done so far.
   - Sort of done, I'm not adding a form but I'll give all information needed to someone reach me easily
 - [x] animate the header
   - Kind of removed it... so there's no more header to animate
+- [x] redo the projects part 
+  - I did change things there, but it's okay now
+- [x] design new sections
+  - designed the latest Last Updates section
