@@ -2,14 +2,17 @@
 
 My landing page with some basic information: past experiences, interests, past projects, etc.
 
+## Notes
+
+- Buttons and Links don't fit in a single component (they could in a different project)
 
 ## ToDo
 
+- [ ] make projects part the most correct as possible (add more projects)
 - [-] make buttons work (both links and normal buttons)
 - [ ] make projects work for mobile 
 - [ ] find a way to show my email
 - [ ] normalize a single class for titles
-- [ ] make projects part the most correct as possible (add more projects)
 - [ ] make last updates work
   - [ ] make it work for mobile devices
   - [ ] make it actually work, create a new page to show the content, or maybe just use it as short update messages
