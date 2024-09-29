@@ -54,7 +54,7 @@
 .work__description {
     font-size: 1em;
     line-height: 1.75;
-    color: #C6C6C6;
+    color: var(--text);
 }
 
 .work__tech {

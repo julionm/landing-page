@@ -16,5 +16,8 @@ export enum TechStack {
     MySQL = 'mysql',
     PostgreSQL = 'postgres',
     Spring = 'spring',
-    Angular = 'angular'
+    Angular = 'angular',
+    CSS = 'css',
+    HTML = 'html',
+    JavaScript = 'javascript'
 }

@@ -17,9 +17,11 @@
 
 .project-list {
     margin-top: 5rem;
+    
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-inline: auto;
     justify-content: center;
+    gap: 1rem;
+
+    margin-inline: auto;
 }

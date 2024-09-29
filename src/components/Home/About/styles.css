@@ -23,8 +23,9 @@
     font-size: 1.125rem;
 }
 
-.about__intro {
-    line-height: 1.6;
+.about__intro p {
+    line-height: 1.75;
+    color: var(--text);
 }
 
 .about__actions {

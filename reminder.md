@@ -12,3 +12,4 @@ I'll let these things here so I remember how I've done so far.
 - [x] design new sections
   - designed the latest Last Updates section
 - [x] rewrite introduction text on header
+- [x] make projects part the most correct as possible (add more projects)

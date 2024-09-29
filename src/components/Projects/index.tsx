@@ -34,6 +34,20 @@ const PROJECTS: Project[] = [
         description: "Simple reusable tooltip component.",
         link: "https://github.com/julionm/tulitip",
         techStack: [TechStack.React]
+    },
+    {
+        id: 5,
+        title: "Simple Dashboard",
+        description: "Using a dribbble layout as a base I made this simple dashboard using Glassmorphism technique. I really liked the result.",
+        link: "https://codepen.io/julionm/pen/GRMbmdg",
+        techStack: [TechStack.CSS, TechStack.HTML]
+    },
+    {
+        id: 6,
+        title: "Flipping Cards",
+        description: "I saw a flipping card like this on a website and I decided to implement it myself. It was pretty fun to toy with the perspective CSS property.",
+        link: "https://codepen.io/julionm/pen/jORpYbO",
+        techStack: [TechStack.CSS, TechStack.HTML, TechStack.JavaScript]
     }
 ];
 

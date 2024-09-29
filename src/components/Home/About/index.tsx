@@ -31,13 +31,9 @@ export function About() {
             </div>
             <div className='about__intro'>
                 <p>
-                    I'm 23 years old and I'm based in Brazil <BrazilFlagIcon />.
-                </p>
-                <p>
-                    I've been working as a Full Stack Developer since 2018.
-                </p>
-                <p>
-                    Download my resume or check my accounts to learn more about me. 
+                    I'm 23 years old and I'm based in Brazil <BrazilFlagIcon />.<br />
+                    I've been working as a Full Stack Developer since 2018.<br />
+                    Download my resume or check my accounts! 
                 </p>
             </div>
 

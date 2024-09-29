@@ -8,9 +8,9 @@ My landing page with some basic information: past experiences, interests, past p
 
 ## ToDo
 
-- [ ] make projects part the most correct as possible (add more projects)
-- [-] make buttons work (both links and normal buttons)
 - [ ] make projects work for mobile 
+  - I'll fix the size for desktop too
+- [-] make buttons work (both links and normal buttons)
 - [ ] find a way to show my email
 - [ ] normalize a single class for titles
 - [ ] make last updates work
@@ -22,3 +22,4 @@ My landing page with some basic information: past experiences, interests, past p
   - this may be solved by adding a context that'll say if the user is scrolling (this could be used for some animations or other interactions too)
 - [ ] check if a section Interests makes any sense
 - [ ] add a specific Update for LeetCodes I finish
+- [ ] DEAL WITH IMAGES FOR PROJECTS AND OTHER STUFF
