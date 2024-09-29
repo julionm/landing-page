@@ -11,3 +11,4 @@ I'll let these things here so I remember how I've done so far.
   - I did change things there, but it's okay now
 - [x] design new sections
   - designed the latest Last Updates section
+- [x] rewrite introduction text on header

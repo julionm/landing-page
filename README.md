@@ -5,8 +5,7 @@ My landing page with some basic information: past experiences, interests, past p
 
 ## ToDo
 
-- [ ] make buttons work (both links and normal buttons)
-- [ ] rewrite introduction text on header
+- [-] make buttons work (both links and normal buttons)
 - [ ] make projects work for mobile 
 - [ ] find a way to show my email
 - [ ] normalize a single class for titles

@@ -1,12 +1,20 @@
-import { BrazilFlagIcon } from 'assets/icons/BrazilFlag';
-import { GithubIcon } from 'assets/icons/contact/Github';
-import { LinkedInIcon } from 'assets/icons/contact/LinkedIn';
 import { Button, ButtonType } from 'components/common/Button';
+import { LeetCodeIcon, LinkedInIcon, GithubIcon, BrazilFlagIcon } from 'assets/icons';
 import './styles.css';
 
 /**
- * add some icon to each paragraph... I believe it'd be better to treat them as bullet points
- * not as paragraphs
+ * bullet points for my introduction:
+ * - where I'm based
+ * - years of experience
+ * - languages I speak
+ * - I sometimes upload things on codepen
+ * - I sometimes do some leetcode to always stay sharp
+ * 
+ * actions on home page
+ * - download resume
+ * - linkedin
+ * - github
+ * - 
  */
 
 const LINKEDIN = 'https://www.linkedin.com/in/julio-mirandola/';
@@ -16,35 +24,48 @@ export function About() {
     return (
         <div className='about'>
             <div className=''>
-                <p className="about__name">
-                    <span className='highlight-text'>J</span>ulio <span className="highlight-text">N</span>egri
+                <p className="name">
+                    Julio Negri
                 </p>
                 <p className='position'>Full Stack Developer</p>
             </div>
             <div className='about__intro'>
-                <p>I'm a Full Stack Developer.</p>
-                <p>I'm 23 years old and I live in Brazil <BrazilFlagIcon />.</p>
-                <p>Working with software since 2018.</p>
+                <p>
+                    I'm 23 years old and I'm based in Brazil <BrazilFlagIcon />.
+                </p>
+                <p>
+                    I've been working as a Full Stack Developer since 2018.
+                </p>
+                <p>
+                    Download my resume or check my accounts to learn more about me. 
+                </p>
             </div>
 
             <div className='about__actions'>
                 <Button type={ButtonType.PRIMARY}>
                     <span>Download Resume</span>
                 </Button>
-                <Button
-                    customClass='linkedin-button'
-                    href={LINKEDIN}
-                    target='_blank'
-                    isLink>
-                    <LinkedInIcon />
-                </Button>
-                <Button
-                    customClass='github-button'
-                    href={GITHUB}
-                    target='_blank'
-                    isLink>
-                    <GithubIcon />
-                </Button>
+
+                <div className='my-links'>
+                    <a
+                        href={LINKEDIN}
+                        className='linkedin-button'
+                        target='_blank'>
+                        <LinkedInIcon />
+                    </a>
+                    <a
+                        href={GITHUB}
+                        className='github-button'
+                        target='_blank'>
+                        <GithubIcon />
+                    </a>
+                    <a
+                        href={GITHUB}
+                        className='leetcode-button'
+                        target='_blank'>
+                        <LeetCodeIcon />
+                    </a>
+                </div>
             </div>
         </div>
     )

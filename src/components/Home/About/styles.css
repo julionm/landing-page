@@ -1,26 +1,21 @@
-/*
-* General Styling
-*/
-
 .about p {
     margin-inline: 0px;
     margin-block: 0px;
-    line-height: 1;
 }
-
-/* .about .highlight-text {
-    font-size: 2.5rem;
-} */
 
 .about {
     animation: 1s ease-out showUp;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
-.about p:not(.about__name) {
-    line-height: 1.6;
+.about .name {
+    line-height: 1.25;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-transform: uppercase;
 }
 
 .about .position {
@@ -28,39 +23,44 @@
     font-size: 1.125rem;
 }
 
-.about__actions {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.about__name {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--primary);
-    text-transform: uppercase;
-}
-
 .about__intro {
     line-height: 1.6;
 }
 
-.about__email:hover {
-    border: 1px solid var(--primary);
+.about__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
 }
 
-.linkedin-button {
+.about__actions .my-links {
+    display: flex;
+    gap: 1em;
+    align-items: center;    
+}
+
+.about__actions .my-links a {
+    color: var(--primary);
+    font-size: 1.25em;
+
+    display: flex;
+
     opacity: 0;
     animation: .5s ease-out slideRight;
     animation-fill-mode: forwards;
+}
+
+
+.about__actions .my-links .linkedin-button {
     animation-delay: 1s;
 }
 
-.github-button {
-    opacity: 0;
-    animation: .5s ease-out slideRight;
-    animation-fill-mode: forwards;
+.about__actions .my-links .github-button {
     animation-delay: 1.5s;
+}
+
+.about__actions .my-links .leetcode-button {
+    animation-delay: 2s;
 }
 
 @keyframes slideRight {

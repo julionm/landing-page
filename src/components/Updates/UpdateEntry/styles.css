@@ -4,7 +4,7 @@
     box-sizing: border-box;
 
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
     align-items: center;
 
     color: var(--text);
@@ -28,7 +28,7 @@
 }
 
 .update__content .title {
-    font-size: 1.5em;
+    font-size: 1.375em; /* 0.125 + 1.25 */
     color: white;
 }
 

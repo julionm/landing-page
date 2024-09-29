@@ -10,18 +10,12 @@ export enum ButtonType {
 type ButtonProps = {
     type?: ButtonType,
     customClass?: string,
-    isLink?: boolean,
     children: ReactNode
 };
-
-/**
- * TODO: check with Morais if there's any way to do it better 
- */
 
 export function Button ({
     type = ButtonType.OUTLINED,
     customClass,
-    isLink = false,
     children,
     ...rest
 }: ButtonProps) {
@@ -31,23 +25,11 @@ export function Button ({
     }, [type]);
 
     return (
-        <>
-            {
-                isLink ? (
-                    <a
-                        className={`button ${className} ${customClass}`}
-                        {...rest}>
-                        {children}
-                    </a>            
-                ) : (
-                    <button
-                        className={`button ${className} ${customClass}`}
-                        {...rest}>
-                        {children}
-                    </button>
-                )
-            }
-        </>
-    )
+        <button
+            className={`button ${className} ${customClass}`}
+            {...rest}>
+            {children}
+        </button>
+    );
 
 }
