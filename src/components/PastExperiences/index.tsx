@@ -28,7 +28,7 @@ export function PastExperiencesPage () {
 
             <div className='header'>
                 <h1 className='title'>Past Experiences</h1>
-                <p className=''>
+                <p className='text'>
                     I've had the opportunity to meet great coworkers along my experiences and to work on a variety of different projects.
                 </p>
             </div>

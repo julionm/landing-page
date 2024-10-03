@@ -5,7 +5,18 @@
     --primary: #FF5500;
     --primary-dark: #C44405;
     --text: #EEE;
-    --bg: #111;
+    --bg: #011D2A;
+}
+
+.light-theme {
+    --primary: #FF7300;
+    --primary-dark: #FF5500;
+    --text: #FFFFEE;
+    --bg: #3EC2FF;
+}
+
+p::selection {
+    background-color: var(--primary);
 }
 
 body {

@@ -1,5 +1,5 @@
 .home {
-    background-color: #111; 
+    background-color: var(--bg); 
     color: white;
     font-size: 1rem;
     line-height: 1.5;
@@ -37,13 +37,19 @@
 
     border-radius: 50%;
     aspect-ratio: 1;
+
+    animation: 1s glow forwards;
+    animation-delay: 1s;
 }
 
-/* @media (min-width: 1056px) {
-    .profile-photo {
-        width: 20rem;
+@keyframes glow {
+    from {
+        box-shadow: 0px 0px 0px var(--primary);
     }
-} */
+    to {
+        box-shadow: 0px 0px 150px var(--primary);
+    }
+}
 
 @media (min-width: 640px) {
     .home__presentation {

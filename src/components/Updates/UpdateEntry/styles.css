@@ -11,18 +11,6 @@
     border-bottom: 1px solid var(--text);
 }
 
-.update__favorite .icon {
-    height: 1.5em;
-    width: 1.5em;
-    color: var(--text);
-    cursor: pointer;
-}
-
-.update__favorite .icon[data-favorite] {
-    color: var(--primary);
-    fill: var(--primary);
-}
-
 .update__content {
     flex: 1;
 }

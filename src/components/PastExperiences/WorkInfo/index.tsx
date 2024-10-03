@@ -2,13 +2,14 @@ import { useMemo } from "react";
 import { WorkDetails } from "models/workInfo"
 import { TagList } from "components/common/TagList";
 import './styles.css';
+import { ClockIcon } from "assets/icons";
 
 type WorkInfoProps = {
     workDetails: WorkDetails
 }
 
 const dateFormatOptions: Intl.DateTimeFormatOptions = {
-    month: 'long',
+    month: 'numeric',
     year: 'numeric'
 };
 
@@ -34,11 +35,13 @@ export function WorkInfo({ workDetails }: WorkInfoProps) {
 
     return (
         <div className="work-details">
-            <div>
-                <p className="work__title">{workDetails.companyName}</p>
-                <p className="work__position">{workDetails.position}</p>
+            <div className="header">
+                <div>
+                    <p className="work__title">{workDetails.companyName}</p>
+                    <p className="work__position">{workDetails.position}</p>
+                </div>
+                <p className="work__duration"><ClockIcon className="clock" /> {workDuration}</p>
             </div>
-            <p className="work__duration">{workDuration}</p>
             <p className="work__description">
                 {workDetails.description}
             </p>

@@ -36,6 +36,14 @@
     border-radius: 100%;
 }
 
+.work-details .header {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .work__title {
     font-size: 2em;
     color: var(--primary);
@@ -49,6 +57,16 @@
 
 .work__duration {
     margin-block: .25em;
+
+    display: flex;
+    gap: .5em;
+    align-items: center;
+}
+
+.work__duration .clock {
+    height: 1em;
+    width: 1em;
+    line-height: 1;
 }
 
 .work__description {
