@@ -35,7 +35,7 @@
     align-items: flex-start;
 }
 
-.detailed-card .project-summary {
+.detailed-card .memory-summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,13 +56,13 @@
     gap: .5rem;
 }
 
-.project__description {
+.memory__description {
     color: var(--text);
     font-size: 0.875rem;
     line-height: 1.5;
 }
 
-.project__title {
+.memory__title {
     color: #FFF;
     font-size: 1.125rem;
     font-weight: 500;

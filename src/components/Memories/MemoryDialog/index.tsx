@@ -1,13 +1,10 @@
-import { Project, ProjectDialogRef } from "models/project";
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { TimingProgress, animate } from "utils/animation";
 import { CardThumb } from "../CardThumb";
-import { CodeIcon } from "assets/icons/Code";
-import { TagList } from "components/common/TagList";
+import { Memory, MemoryDialogRef } from "models/memory";
 
 import './styles.css';
-import { Button, ButtonType } from "components/common/Button";
 
 const DURATION = 100;
 
@@ -21,11 +18,11 @@ type DialogTransformDescriptor = {
 
 // TODO: refact the callback style
 
-export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
+export const MemoryDialog = forwardRef<MemoryDialogRef, any>((_, ref) => {
 
     const [visible, setVisible] = useState<boolean>(false);
     const [cardRect, setCardRect] = useState<DOMRect>();
-    const [project, setProject] = useState<Project | null>();
+    const [memory, setMemory] = useState<Memory | null>();
 
     const dialogRef = useRef<HTMLDivElement>(null);
     const overlayRef = useRef<HTMLDivElement>(null);
@@ -33,13 +30,13 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
 
     useImperativeHandle(ref, () => {
         return {
-            showDialog: (cardRect: DOMRect, project: Project) => {
+            showDialog: (cardRect: DOMRect, memory: Memory) => {
                 if (!cardRect) {
                     console.log('No cardRect: ', cardRect);
                     return;
                 }
                 setCardRect(cardRect);
-                setProject(project);
+                setMemory(memory);
                 setVisible(true);
             }
         }
@@ -47,7 +44,7 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
 
     useEffect(() => {
         runAnimation(() => {});
-    }, [project]);
+    }, [memory]);
 
     function runAnimation (callback: () => void, reverse: boolean = false) {
         if (!(dialogRef.current && cardRect && overlayRef.current && cardThumbRef.current)) return;
@@ -128,7 +125,7 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
     const handlePointerLeave = () => {
         runAnimation(() => {
             setVisible(false)
-            setProject(null);
+            setMemory(null);
         }, true);
     }
 
@@ -139,23 +136,17 @@ export const ProjectDialog = forwardRef<ProjectDialogRef, any>((_, ref) => {
                     <div ref={overlayRef} className="overlay" role="dialog" onPointerLeave={handlePointerLeave}>
                         <div ref={dialogRef} className="detailed-card">
                             <div ref={cardThumbRef} className="card-thumb-container">
-                                {project && <CardThumb project={project} />}
+                                {memory && <CardThumb imageUrl={memory.imageUrl} />}
                             </div>
 
                             <footer>
-                                <div className="project-summary">
-                                    <p className="project__title">{project?.title}</p>
+                                <div className="memory-summary">
+                                    <p className="memory__title">{memory?.title}</p>
 
-                                    <Button type={ButtonType.PRIMARY} customClass="get-code">
-                                        <CodeIcon height='1rem' width='1rem' />
-                                    </Button>
+                                    <p>{memory?.date?.toString()}</p>
                                 </div>
 
-                                <p className="project__description">{project?.description}</p>
-
-                                <div className="tech-stack-list">
-                                    <TagList items={project?.techStack || []} />
-                                </div>
+                                { memory?.description && <p className="memory__description">{memory.description}</p> }
                             </footer>    
                         </div>
                     </div>,

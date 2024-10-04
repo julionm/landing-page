@@ -1,17 +1,17 @@
 import { HomePage } from "components/Home"
-import { PastExperiencesPage } from "components/PastExperiences";
-import { ProjectsPage } from "components/Projects";
-import './App.css';
+import { ExperiencesPage } from "components/Experiences";
+import { MemoriesPage } from "components/Memories";
 import { Updates } from "components/Updates";
+import './App.css';
 
 function App() {
 
   return (
     <main className="">
       <HomePage />
-      <PastExperiencesPage />
-      <ProjectsPage />
+      <ExperiencesPage />
       <Updates />
+      <MemoriesPage />
     </main>
   )
 }

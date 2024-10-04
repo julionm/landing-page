@@ -1,6 +1,6 @@
 # Landing Page
 
-My landing page with some basic information: past experiences, interests, past projects, etc.
+My landing page with some basic information: experiences, interests, projects, etc.
 
 ## Notes
 

@@ -1,10 +1,5 @@
-import { useRef } from 'react';
-import { Project, ProjectDialogRef } from 'models/project';
-import { TechStack } from 'models/workInfo';
-import { ProjectCard } from './ProjectCard';
-import { ProjectDialog } from './ProjectDetailedCard';
-
-import './styles.css';
+import { Project } from "models/project";
+import { TechStack } from "models/workInfo";
 
 const PROJECTS: Project[] = [
     {
@@ -51,52 +46,8 @@ const PROJECTS: Project[] = [
     }
 ];
 
-export function ProjectsPage () {
-
-    const cardRefList = useRef<Record<number, HTMLDivElement>>({});
-    const dialogRef = useRef<ProjectDialogRef>(null);
-
-    const timeoutRef = useRef<number>();
-
-    const handleDetailedCard = (project: Project) => {
-
-        const cardRect = cardRefList.current[project.id].getBoundingClientRect();
-
-        timeoutRef.current = setTimeout(() => {
-            if (dialogRef.current) {
-                dialogRef.current.showDialog(cardRect, project);
-            }
-        }, 400)
-    }
-
-    const handlePointerLeave = () => {
-        if (timeoutRef.current) {
-            clearTimeout(timeoutRef.current);
-        }
-    }
-
+export function PropertiesPage () {
     return (
-        <>
-            <section className="projects-page">
-                <h2 className='title'>Personal Projects</h2>
-
-                <div className='project-list'>
-                    {
-                        PROJECTS.map((project: Project) => (
-                            <div
-                                key={project.id}
-                                onPointerEnter={() => handleDetailedCard(project)}
-                                onPointerLeave={handlePointerLeave}>
-                                <ProjectCard
-                                    ref={(el: HTMLDivElement) => cardRefList.current[project.id] = el}
-                                    project={project} />
-                            </div>
-                        ))
-                    }
-                </div>
-            </section>
-
-            <ProjectDialog ref={dialogRef} />
-        </>
+        <section></section>
     )
 }

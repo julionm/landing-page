@@ -1,4 +1,4 @@
-.projects-page {
+.memories {
     display: flex;
     flex-direction: column;
     background-color: var(--bg);
@@ -9,14 +9,14 @@
     box-sizing: border-box;
 }
 
-.projects-page .title {
+.memories .title {
     font-size: 2.5em;
     width: fit-content;
     color: var(--primary);
     align-self: center;
 }
 
-.project-list {
+.memories__list {
     margin-top: 1.75rem;
     
     display: flex;
