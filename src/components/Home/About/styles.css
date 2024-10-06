@@ -34,6 +34,12 @@
     gap: 1.75rem;
 }
 
+.about__actions .icon {
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
+}
+
 .about__actions .my-links {
     display: flex;
     gap: 1em;

@@ -1,6 +1,7 @@
 import { Button, ButtonType } from 'components/common/Button';
 import { LeetCodeIcon, LinkedInIcon, GithubIcon, BrazilFlagIcon } from 'assets/icons';
 import './styles.css';
+import { DownloadIcon } from 'assets/icons/Download';
 
 /**
  * bullet points for my introduction:
@@ -24,9 +25,7 @@ export function About() {
     return (
         <div className='about'>
             <div className=''>
-                <p className="name">
-                    Julio Negri
-                </p>
+                <h1 className="name">Julio Negri</h1>
                 <p className='position'>Full Stack Developer</p>
             </div>
             <div className='about__intro'>
@@ -39,7 +38,7 @@ export function About() {
 
             <div className='about__actions'>
                 <Button type={ButtonType.PRIMARY}>
-                    <span>Download Resume</span>
+                    <span>Download Resume</span><DownloadIcon className='icon' />
                 </Button>
 
                 <div className='my-links'>
