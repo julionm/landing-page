@@ -1,22 +1,7 @@
 import { Button, ButtonType } from 'components/common/Button';
 import { LeetCodeIcon, LinkedInIcon, GithubIcon, BrazilFlagIcon } from 'assets/icons';
-import './styles.css';
 import { DownloadIcon } from 'assets/icons/Download';
-
-/**
- * bullet points for my introduction:
- * - where I'm based
- * - years of experience
- * - languages I speak
- * - I sometimes upload things on codepen
- * - I sometimes do some leetcode to always stay sharp
- * 
- * actions on home page
- * - download resume
- * - linkedin
- * - github
- * - 
- */
+import './styles.css';
 
 const LINKEDIN = 'https://www.linkedin.com/in/julio-mirandola/';
 const GITHUB = 'https://github.com/julionm';

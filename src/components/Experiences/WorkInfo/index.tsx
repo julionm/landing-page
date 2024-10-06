@@ -31,7 +31,7 @@ export function WorkInfo({ workDetails }: WorkInfoProps) {
         <div className="work-details">
             <div className="header">
                 <div>
-                    <p className="work__title">{workDetails.companyName}</p>
+                    <h3 className="work__title">{workDetails.companyName}</h3>
                     <p className="work__position">{workDetails.position}</p>
                 </div>
                 <p className="work__duration"><ClockIcon className="clock" /> {workDuration}</p>

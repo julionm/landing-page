@@ -19,7 +19,7 @@ export function UpdateEntry ({ update }: UpdateEntryProps) {
     return (
         <div className="update">
             <div className="update__content">
-                <p className="title">{update.title}</p>
+                <h3 className="title">{update.title}</h3>
                 <div className="sub-title">
                     <p className="time">
                         <ClockIcon className="icon" />

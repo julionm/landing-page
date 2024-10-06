@@ -48,7 +48,7 @@ const UPDATES: Update[] = [
 export function Updates () {
     return (
         <div className='updates'>
-            <h1 className='title'>Last Updates</h1>
+            <h2 className='title'>Last Updates</h2>
             {
                 UPDATES.map(update => (
                     <UpdateEntry key={update.id} update={update} />

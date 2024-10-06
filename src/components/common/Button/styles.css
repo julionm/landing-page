@@ -24,14 +24,19 @@
 }
 
 .button:active {
-    transform: scale(0.9);
+    transform: scale(0.95);
     background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
 }
 
 .button--primary {
     --bg: var(--primary);
     --fg: white;
     box-shadow: 0px 0px 10px var(--primary);
+}
+
+.button--primary:hover {
+   box-shadow: 0px 0px 20px var(--primary); 
 }
 
 .button--outlined {
