@@ -8,7 +8,7 @@ type CardThumbProps = {
 export function CardThumb({ imageUrl }: CardThumbProps) {
     return (
         <div className="thumbnail">
-            <img src={imageUrl ?? profilePhoto} alt="" className='project-image'/>
+            <img src={imageUrl || profilePhoto} alt="" className='project-image'/>
         </div>
     )
 }

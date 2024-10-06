@@ -8,21 +8,21 @@ import './styles.css';
 const MEMORIES: Memory[] = [
     {
         id: 1,
-        imageUrl: undefined,
+        imageUrl: '',
         title: 'Up Anniversary',
         description: "There's no easy way to describe how amazing the party was... You had to be there!",
         date: new Date()
     },
     {
         id: 2,
-        imageUrl: undefined,
+        imageUrl: '',
         title: 'Up Anniversary',
         description: "There's no easy way to describe how amazing the party was... You had to be there!",
         date: new Date()
     },
     {
         id: 3,
-        imageUrl: undefined,
+        imageUrl: '',
         title: 'Up Anniversary',
         description: "There's no easy way to describe how amazing the party was... You had to be there!",
         date: new Date()

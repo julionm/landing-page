@@ -1,6 +1,6 @@
 export type Memory = {
     id: number,
-    imageUrl?: string,
+    imageUrl: string,
     title: string,
     description?: string,
     date?: Date

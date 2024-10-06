@@ -1,10 +1,11 @@
-import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
+import { forwardRef, memo, useEffect, useImperativeHandle, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { TimingProgress, animate } from "utils/animation";
 import { CardThumb } from "../CardThumb";
 import { Memory, MemoryDialogRef } from "models/memory";
 
 import './styles.css';
+import { formatNumericDate } from "utils/date-formatter";
 
 const DURATION = 100;
 
@@ -27,6 +28,14 @@ export const MemoryDialog = forwardRef<MemoryDialogRef, any>((_, ref) => {
     const dialogRef = useRef<HTMLDivElement>(null);
     const overlayRef = useRef<HTMLDivElement>(null);
     const cardThumbRef = useRef<HTMLDivElement>(null);
+
+    const formattedDate = useMemo(() => {
+        if (memory?.date) {
+            return formatNumericDate(memory?.date);
+        }
+
+        return '';
+    }, [memory]);
 
     useImperativeHandle(ref, () => {
         return {
@@ -143,7 +152,7 @@ export const MemoryDialog = forwardRef<MemoryDialogRef, any>((_, ref) => {
                                 <div className="memory-summary">
                                     <p className="memory__title">{memory?.title}</p>
 
-                                    <p>{memory?.date?.toString()}</p>
+                                    <p>{formattedDate}</p>
                                 </div>
 
                                 { memory?.description && <p className="memory__description">{memory.description}</p> }

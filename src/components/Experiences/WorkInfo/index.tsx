@@ -3,22 +3,16 @@ import { WorkDetails } from "models/workInfo"
 import { TagList } from "components/common/TagList";
 import './styles.css';
 import { ClockIcon } from "assets/icons";
+import { formatNumericDateRange } from "utils/date-formatter";
 
 type WorkInfoProps = {
     workDetails: WorkDetails
 }
 
-const dateFormatOptions: Intl.DateTimeFormatOptions = {
-    month: 'numeric',
-    year: 'numeric'
-};
-
 export function WorkInfo({ workDetails }: WorkInfoProps) {
 
     const workDuration = useMemo(() => {
-        const dateTimeFormatter = new Intl.DateTimeFormat(navigator.language, dateFormatOptions);
-
-        const formattedRange: string = dateTimeFormatter.formatRange(workDetails.start, workDetails.end)
+        const formattedRange: string = formatNumericDateRange(workDetails.start, workDetails.end);
     
         const dates = formattedRange.split(' – ');
         const capitalizedRange = `${capitalize(dates[0].trim())} - ${capitalize(dates[1].trim())}`;

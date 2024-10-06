@@ -2,10 +2,12 @@
     padding: 0;
     margin: 0;
     font-family: "Montserrat", serif;
+
+    --primary-light: #FF8C00;
     --primary: #FF5500;
     --primary-dark: #C44405;
     --text: #EEE;
-    --bg: #011D2A;
+    --bg: #010C2A;
 }
 
 .light-theme {

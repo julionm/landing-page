@@ -8,8 +8,8 @@ My landing page with some basic information: experiences, interests, projects, e
 
 ## ToDo
 
-- [ ] make projects work for mobile 
-  - I'll fix the size for desktop too
+- [ ] create a shared class for all titles so it'll be easier to change on the rundown
+- [ ] create new project section
 - [ ] add action to the project cards
 - [x] make buttons work (both links and normal buttons)
 - [ ] find a way to show my email
