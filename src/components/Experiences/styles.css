@@ -16,10 +16,8 @@
 }
 
 .experiences .header .title {
-    font-size: 2.5em;
     width: fit-content;
     text-align: left;
-    color: var(--primary);
 }
 
 .experiences .header .text {

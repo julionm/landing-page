@@ -5,3 +5,6 @@ export { ClockIcon } from "./Clock";
 export { GithubIcon } from "./contact/Github";
 export { LinkedInIcon } from "./contact/LinkedIn";
 export { LeetCodeIcon } from "./contact/LeetCodeIcon"
+export { CloseIcon } from "./Close";
+export { DownloadIcon } from "./Download";
+export { ArrowExternalIcon } from "./ArrowExternal";

@@ -1,0 +1,14 @@
+.projects {
+    width: min(800px, 100%);
+    margin-inline: auto;
+    margin-top: 6em;
+}
+
+.projects .list {
+    margin-top: 2em;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: .75em;
+    row-gap: 1.625em;
+}

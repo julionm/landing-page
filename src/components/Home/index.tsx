@@ -4,7 +4,7 @@ import './styles.css';
 
 export function HomePage() {
     return (
-        <section className="home">
+        <section className="home" role='banner'>
             <div className='home__container'>
                 <div className='home__presentation'>
                     <About />

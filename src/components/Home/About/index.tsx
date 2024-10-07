@@ -1,6 +1,5 @@
 import { Button, ButtonType } from 'components/common/Button';
-import { LeetCodeIcon, LinkedInIcon, GithubIcon, BrazilFlagIcon } from 'assets/icons';
-import { DownloadIcon } from 'assets/icons/Download';
+import { LeetCodeIcon, LinkedInIcon, GithubIcon, BrazilFlagIcon, DownloadIcon } from 'assets/icons';
 import './styles.css';
 
 const LINKEDIN = 'https://www.linkedin.com/in/julio-mirandola/';
@@ -8,7 +7,7 @@ const GITHUB = 'https://github.com/julionm';
 
 export function About() {
     return (
-        <div className='about'>
+        <section className='about'>
             <div className=''>
                 <h1 className="name">Julio Negri</h1>
                 <p className='position'>Full Stack Developer</p>
@@ -47,6 +46,6 @@ export function About() {
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

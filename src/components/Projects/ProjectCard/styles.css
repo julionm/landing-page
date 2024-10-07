@@ -1,0 +1,39 @@
+.project {
+    transition: transform .3s ease-out;
+    cursor: pointer;
+}
+
+.project:hover {
+    transform: scale(1.025);
+}
+
+.project:active {
+    transform: scale(0.975);
+}
+
+.project img {
+    width: 100%;
+    border-radius: .4vw;
+    aspect-ratio: 1;    
+    object-fit: cover;
+    object-position: center;
+}
+
+.project figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: .75em;
+
+    margin-top: .5em;
+}
+
+.project figcaption h4 {
+    color: var(--text);
+    font-size: 1.125em;
+    font-weight: 500;
+}
+
+.project .tech-list {
+    display: flex;
+    gap: .5em;
+}

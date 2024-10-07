@@ -18,17 +18,21 @@
 }
 
 p::selection {
-    background-color: var(--primary);
+    background-color: var(--primary-light);
 }
 
 h1 {
+    line-height: 1.25;
     font-size: 3em;
     font-weight: bold;
+    color: var(--primary-light);
 }
 
 h2 {
+    line-height: 1.25;
     font-size: 2.5em;
     font-weight: bold;
+    color: var(--primary-light);
 }
 
 body {

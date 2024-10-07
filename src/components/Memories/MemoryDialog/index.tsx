@@ -1,11 +1,11 @@
-import { forwardRef, memo, useEffect, useImperativeHandle, useMemo, useRef, useState } from "react";
+import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { TimingProgress, animate } from "utils/animation";
 import { CardThumb } from "../CardThumb";
 import { Memory, MemoryDialogRef } from "models/memory";
+import { formatNumericDate } from "utils/date-formatter";
 
 import './styles.css';
-import { formatNumericDate } from "utils/date-formatter";
 
 const DURATION = 100;
 

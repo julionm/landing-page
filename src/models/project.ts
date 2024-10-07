@@ -3,7 +3,17 @@ import { TechStack } from "./workInfo";
 export type Project = {
     id: number,
     title: string,
-    link: string,
+    sourceCodeUrl: string,
     techStack: TechStack[],
-    description: string
+    description: string,
+    imageUrl: string,
+    startDate?: Date,
+    endDate?: Date,
+    metrics?: ProjectMetric[]
 };
+
+export type ProjectMetric = {
+    name: string,
+    value: number,
+    units: string    
+}

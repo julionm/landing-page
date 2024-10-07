@@ -19,5 +19,6 @@ export enum TechStack {
     Angular = 'angular',
     CSS = 'css',
     HTML = 'html',
-    JavaScript = 'javascript'
+    JavaScript = 'javascript',
+    Rust = 'rust'
 }
