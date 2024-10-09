@@ -1,7 +1,6 @@
 .memories {
     display: flex;
     flex-direction: column;
-    background-color: var(--bg);
     padding: 0 5rem 5rem;
     margin-top: 6rem;
     margin-inline: auto;
@@ -10,9 +9,7 @@
 }
 
 .memories .title {
-    font-size: 2.5em;
     width: fit-content;
-    color: var(--primary);
     align-self: center;
 }
 

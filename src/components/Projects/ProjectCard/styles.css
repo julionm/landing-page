@@ -36,4 +36,11 @@
 .project .tech-list {
     display: flex;
     gap: .5em;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+    .project:hover {
+        transform: scale(1);
+    }
 }

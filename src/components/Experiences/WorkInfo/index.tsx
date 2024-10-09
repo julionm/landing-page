@@ -28,20 +28,23 @@ export function WorkInfo({ workDetails }: WorkInfoProps) {
     }
 
     return (
-        <div className="work-details">
+        <article className="work-details">
             <div className="header">
-                <div>
+                <div className="top">
                     <h3 className="work__title">{workDetails.companyName}</h3>
-                    <p className="work__position">{workDetails.position}</p>
+                    <p className="work__duration"><ClockIcon className="clock" /> {workDuration}</p>
                 </div>
-                <p className="work__duration"><ClockIcon className="clock" /> {workDuration}</p>
+                <p className="work__position">{workDetails.position}</p>
             </div>
+
+            <p className="work__duration"><ClockIcon className="clock" /> {workDuration}</p>
+
             <p className="work__description">
                 {workDetails.description}
             </p>
             <div className="work__tech">
                 <TagList items={workDetails.techStack} />
             </div>
-        </div>
+        </article>
     );
 }

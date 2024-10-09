@@ -3,11 +3,15 @@
     margin: 0;
     font-family: "Montserrat", serif;
 
-    --primary-light: #FF8C00;
+    --primary-light: #FF6B20;
     --primary: #FF5500;
     --primary-dark: #C44405;
+
     --text: #EEE;
-    --bg: #010C2A;
+    --text-dark: #BBB;
+
+    --bg: #010A23;
+    --main-bg: linear-gradient(#292F55, #010C2A 50%);
 }
 
 .light-theme {
@@ -36,7 +40,7 @@ h2 {
 }
 
 body {
-    background: var(--bg);
+    background: var(--main-bg);
 }
 
 .montserrat-regular {

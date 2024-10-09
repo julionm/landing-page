@@ -10,9 +10,14 @@
     gap: 1.5rem;
 }
 
+.about header {
+    text-align: center;
+}
+
 .about .name {
     line-height: 1.25;
     text-transform: uppercase;
+    color: var(--primary);
 }
 
 .about .position {
@@ -44,7 +49,7 @@
 }
 
 .about__actions .my-links a {
-    color: var(--primary);
+    color: var(--primary-light);
     font-size: 1.25em;
 
     display: flex;
@@ -86,5 +91,11 @@
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .about header {
+        text-align: left;
     }
 }

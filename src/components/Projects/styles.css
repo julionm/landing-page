@@ -2,6 +2,8 @@
     width: min(800px, 100%);
     margin-inline: auto;
     margin-top: 6em;
+    padding-inline: 1em;
+    box-sizing: border-box;
 }
 
 .projects .list {
@@ -11,4 +13,10 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: .75em;
     row-gap: 1.625em;
+}
+
+@media (max-width: 640px) {
+    .projects .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

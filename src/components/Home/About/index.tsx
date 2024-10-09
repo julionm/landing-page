@@ -8,10 +8,10 @@ const GITHUB = 'https://github.com/julionm';
 export function About() {
     return (
         <section className='about'>
-            <div className=''>
+            <header>
                 <h1 className="name">Julio Negri</h1>
                 <p className='position'>Full Stack Developer</p>
-            </div>
+            </header>
             <div className='about__intro'>
                 <p>
                     I'm 23 years old and I'm based in Brazil <BrazilFlagIcon />.<br />

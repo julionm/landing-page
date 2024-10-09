@@ -26,13 +26,15 @@ export function UpdateEntry ({ update }: UpdateEntryProps) {
                         <span>{formattedDate}</span>
                     </p>
                     <div className="separator"></div>
-                    <span>{update.shortDescription}</span>
+                    <p className="short-desc" title={update.shortDescription}>
+                        {update.shortDescription}
+                    </p>
                 </div>
             </div>
 
             <div className="update__action">
                 <Button>
-                    <span>Read More</span>
+                    <span className="read-more">Read More</span>
                     <ArrowRightIcon className="icon" />
                 </Button>
             </div>

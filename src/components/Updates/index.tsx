@@ -47,13 +47,13 @@ const UPDATES: Update[] = [
 
 export function Updates () {
     return (
-        <div className='updates'>
+        <section className='updates'>
             <h2 className='title'>Last Updates</h2>
             {
                 UPDATES.map(update => (
                     <UpdateEntry key={update.id} update={update} />
                 ))
             }
-        </div>
+        </section>
     )
 }

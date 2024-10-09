@@ -13,3 +13,9 @@ I'll let these things here so I remember how I've done so far.
   - designed the latest Last Updates section
 - [x] rewrite introduction text on header
 - [x] make projects part the most correct as possible (add more projects)
+- [x] create a shared class for all titles so it'll be easier to change on the rundown
+- [x] create new project section
+- [x] add action to the project cards
+- [x] normalize a single class for titles
+- [x] check if a section Interests makes any sense
+  - No it doesn't I can show this via the site style (I don't know what exactly to use, but maybe some cool icons and/or svgs)

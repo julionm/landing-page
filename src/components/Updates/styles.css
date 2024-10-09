@@ -6,7 +6,8 @@
     margin-top: 6rem;
 }
 
-.updates .title {
-    color: var(--primary);
-    font-size: 2.5em;
+@media (max-width: 640px) {
+    .updates {
+        font-size: 0.875em;
+    }
 }
