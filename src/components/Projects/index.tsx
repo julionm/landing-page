@@ -80,7 +80,12 @@ export function ProjectsPage () {
                 }
             </div>
 
-            {currentProject && <ProjectDialog project={currentProject} />}
+            {
+                currentProject && (
+                    <ProjectDialog
+                        project={currentProject} />
+                )
+            }
         </section>
     )
 }

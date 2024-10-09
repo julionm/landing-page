@@ -10,10 +10,9 @@ import "./styles.css";
 
 type ProjectDialogProps = {
     project: Project,
-    onClose: () => void
 }
 
-export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
+export function ProjectDialog({ project }: ProjectDialogProps) {
 
     const modalRef = useRef<HTMLDialogElement>(null)
 
@@ -39,7 +38,6 @@ export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
 
         setTimeout(() => {
             if (modalRef.current) modalRef.current.close();
-            onClose();
         }, 200);
     }
 
@@ -49,6 +47,8 @@ export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
                 <h3>{project.title}</h3>
                 <CloseIcon className="close-icon" onClick={closeDialog} />
             </header>
+
+            <div className="separator"></div>
 
             <div className="image-container">
                 <img src={project.imageUrl || profilePhoto} alt="" />
