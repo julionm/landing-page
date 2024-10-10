@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef } from "react";
 import { Project } from "models/project";
 import { TechStack } from "models/workInfo";
 import { ProjectCard } from "./ProjectCard";
@@ -59,10 +59,10 @@ const PROJECTS: Project[] = [
 
 export function ProjectsPage () {
 
-    const [currentProject, setCurrentProject] = useState<Project | null>(null);
+    const dialogRef = useRef<{ showDialog: (project: Project) => void }>();
 
     function updateDialog (project: Project) {
-        setCurrentProject(project);
+        dialogRef.current?.showDialog(project);
     }
 
     return (
@@ -80,12 +80,7 @@ export function ProjectsPage () {
                 }
             </div>
 
-            {
-                currentProject && (
-                    <ProjectDialog
-                        project={currentProject} />
-                )
-            }
+            <ProjectDialog ref={dialogRef} />
         </section>
     )
 }

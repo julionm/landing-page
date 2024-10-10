@@ -19,3 +19,6 @@ I'll let these things here so I remember how I've done so far.
 - [x] normalize a single class for titles
 - [x] check if a section Interests makes any sense
   - No it doesn't I can show this via the site style (I don't know what exactly to use, but maybe some cool icons and/or svgs)
+- [x] make last updates work
+  - [x] make it work for mobile devices
+- [x] `BUG`: After opening a project dialog you can't click on the same card again. It doesn't trigger a new event

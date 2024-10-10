@@ -1,6 +1,6 @@
 import { Update, UpdateType } from 'models/updates';
-import './styles.css';
 import { UpdateEntry } from './UpdateEntry';
+import './styles.css';
 
 const UPDATES: Update[] = [
     {

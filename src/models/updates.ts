@@ -11,5 +11,6 @@ export enum UpdateType {
     Book = 'book',
     Certificate = 'certificate',
     Other = 'other',
-    Article = 'article'
+    Article = 'article',
+    LeetCode = 'leetcode'
 };
