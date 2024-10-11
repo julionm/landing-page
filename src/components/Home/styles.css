@@ -1,22 +1,17 @@
 .home {
     color: white;
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1em;
 
-    width: min(860px, 100%);
+    width: min(var(--max-w), 100%);
     
     margin-inline: auto;
-    padding-block: 6rem;
+    padding-block: 6em;
     padding-inline: 1em;
 
     box-sizing: border-box;
 
     display: grid;
     place-items: center;
-}
-
-.home__container {
-    width: min(100%, 1280px);
 }
 
 .home__presentation {
@@ -29,8 +24,24 @@
     justify-content: center;
 }
 
+@media (min-width: 1280px) {
+    .home__presentation {
+        justify-content: space-between;
+    }
+}
+
+.profile-container {
+    flex: 1;
+
+    display: grid;
+    place-items: center;
+}
+
 .profile-photo {
-    width: 15rem;
+    margin-block: auto;
+
+    width: 17.5rem;
+    max-width: 500px;
 
     object-fit: cover;
 
@@ -54,6 +65,10 @@
     .home__presentation {
         flex-direction: row;
         gap: 6rem;
+    }
+
+    .profile-photo {
+        width: 100%;
     }
 }
 

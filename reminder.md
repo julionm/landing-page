@@ -22,3 +22,5 @@ I'll let these things here so I remember how I've done so far.
 - [x] make last updates work
   - [x] make it work for mobile devices
 - [x] `BUG`: After opening a project dialog you can't click on the same card again. It doesn't trigger a new event
+- [x] make buttons work (both links and normal buttons)
+- [x] add a specific Update for LeetCodes I finish

@@ -1,5 +1,5 @@
 .projects {
-    width: min(800px, 100%);
+    width: min(var(--max-w), 100%);
     margin-inline: auto;
     margin-top: 6em;
     padding-inline: 1em;

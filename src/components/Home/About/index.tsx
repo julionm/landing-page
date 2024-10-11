@@ -21,7 +21,7 @@ export function About() {
             </div>
 
             <div className='about__actions'>
-                <Button type={ButtonType.PRIMARY}>
+                <Button type={ButtonType.PRIMARY} onClick={() => console.log('teste')}>
                     <span>Download Resume</span><DownloadIcon className='icon' />
                 </Button>
 

@@ -1,4 +1,4 @@
-import { ReactNode, useMemo } from "react";
+import { HTMLAttributes, ReactNode, useMemo } from "react";
 import './styles.css';
 
 export enum ButtonType {
@@ -7,7 +7,7 @@ export enum ButtonType {
     TEXT = 'text'
 };
 
-type ButtonProps = {
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
     type?: ButtonType,
     customClass?: string,
     children: ReactNode
@@ -26,7 +26,7 @@ export function Button ({
 
     return (
         <button
-            className={`button ${className} ${customClass}`}
+            className={`button ${className} ${customClass || ''}`}
             {...rest}>
             {children}
         </button>

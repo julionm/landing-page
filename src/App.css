@@ -12,6 +12,8 @@
 
     --bg: #010A23;
     --main-bg: linear-gradient(#292F55, #010C2A 50%);
+
+    --max-w: 1056px;
 }
 
 .light-theme {
@@ -26,7 +28,7 @@ p::selection {
 }
 
 h1 {
-    line-height: 1.25;
+    line-height: 1;
     font-size: 3em;
     font-weight: bold;
     color: var(--primary-light);

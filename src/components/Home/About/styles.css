@@ -15,7 +15,7 @@
 }
 
 .about .name {
-    line-height: 1.25;
+    line-height: 1;
     text-transform: uppercase;
     color: var(--primary);
 }
@@ -23,15 +23,18 @@
 .about .position {
     font-weight: bold;
     font-size: 1.125rem;
+    margin-top: 0.05em;
 }
 
 .about__intro p {
     line-height: 1.75;
     color: var(--text);
+    text-align: center;
 }
 
 .about__actions {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1.75rem;
 }
@@ -97,5 +100,13 @@
 @media (min-width: 768px) {
     .about header {
         text-align: left;
+    }
+
+    .about__intro p {
+        text-align: left;
+    }
+
+    .about__actions {
+        flex-direction: row;
     }
 }
