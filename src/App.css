@@ -11,7 +11,8 @@
     --text-dark: #BBB;
 
     --bg: #010A23;
-    --main-bg: linear-gradient(#292F55, #010C2A 50%);
+    --main-bg: linear-gradient(#151E40, #010B26 50%);
+    --main-bg: #010B26;
 
     --max-w: 1056px;
 }
