@@ -8,8 +8,10 @@ My landing page with some basic information: experiences, interests, projects, e
 
 ## ToDo
 
+- [ ] download the fonts and use it
 - [ ] Add a footer to the site
-- [ ] Add a header to the site
+- [ ] add option to select language
+- [ ] add option to change theme
 - [ ] find a way to show my email
 - [ ] make a tag list component that arranges tags inline
   - Maybe make the TagList component with the shared style among all the other components

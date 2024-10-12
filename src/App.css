@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "Montserrat", serif;
+    font-family: "Bitter", serif;
 
     --primary-light: #FF6B20;
     --primary: #FF5500;
@@ -28,18 +28,28 @@ p::selection {
     background-color: var(--primary-light);
 }
 
+h1, h2, h3, h4 {
+    line-height: 1.15;
+    font-weight: 300;
+    font-family: 'Space Mono', sans-serif;
+    color: var(--primary-light);
+}
+
 h1 {
-    line-height: 1;
     font-size: 3em;
-    font-weight: bold;
     color: var(--primary-light);
 }
 
 h2 {
-    line-height: 1.25;
     font-size: 2.5em;
-    font-weight: bold;
-    color: var(--primary-light);
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.5em;
 }
 
 body {

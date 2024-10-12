@@ -1,7 +1,9 @@
 .project-dialog {
-    width: min(350px, 100%);
+    width: max(500px, 50vw);
 
     padding: 1em;
+
+    box-sizing: border-box;
 
     border: none;
     outline: none;
@@ -9,7 +11,10 @@
     border-radius: .4vw;
 
     color: var(--text);
-    background-color: #000;
+
+    background-color: rgba(1 11 38 / 31%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
     margin: auto;
 
@@ -26,8 +31,8 @@
 
 @media (max-width: 490px) {
     .project-dialog {
-        margin-inline: auto;
         margin-top: auto;
+        margin-inline: 1em;
         margin-bottom: 1em;
     }
 }
@@ -88,6 +93,7 @@
 
 .project-dialog .description {
     font-size: 0.875em;
+    line-height: 1.75;
 }
 
 .project-dialog .actions {
@@ -101,6 +107,7 @@
     height: 1.25em;
     margin-left: .5em;
     margin-top: -2px;
+    stroke-width: 2;
 }
 
 @keyframes showUp {
