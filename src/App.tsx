@@ -3,6 +3,7 @@ import { ExperiencesPage } from "components/Experiences";
 import { MemoriesPage } from "components/Memories";
 import { Updates } from "components/Updates";
 import { ProjectsPage } from "components/Projects";
+import { Footer } from "components/Footer";
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <ProjectsPage />
       <Updates />
       <MemoriesPage />
+      <Footer />
     </main>
   )
 }

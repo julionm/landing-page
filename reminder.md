@@ -24,3 +24,7 @@ I'll let these things here so I remember how I've done so far.
 - [x] `BUG`: After opening a project dialog you can't click on the same card again. It doesn't trigger a new event
 - [x] make buttons work (both links and normal buttons)
 - [x] add a specific Update for LeetCodes I finish
+- [x] try to do that little hover thing on social media icons in Home
+  - tried but it didn't work the way I expected, I'll find something else to do there
+- [x] download the fonts and use it
+- [x] Add a footer to the site

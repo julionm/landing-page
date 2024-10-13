@@ -8,8 +8,7 @@ My landing page with some basic information: experiences, interests, projects, e
 
 ## ToDo
 
-- [ ] download the fonts and use it
-- [ ] Add a footer to the site
+- [ ] add true photos to the website to prepare for launch
 - [ ] add option to select language
 - [ ] add option to change theme
 - [ ] find a way to show my email
@@ -23,3 +22,4 @@ My landing page with some basic information: experiences, interests, projects, e
 - [ ] `BUG`: disable hover cards when scrolling starts
   - this may be solved by adding a context that'll say if the user is scrolling (this could be used for some animations or other interactions too)
 - [ ] DEAL WITH IMAGES FOR PROJECTS AND OTHER STUFF
+- [ ] add some effect to those social media buttons to show my usernames

@@ -5,6 +5,7 @@
 
 .project:hover {
     transform: scale(1.025);
+    box-shadow: 0 5px 10px #111;
 }
 
 .project:active {
@@ -27,10 +28,6 @@
     margin-top: .5em;
 
     padding: .75em;
-
-    border-radius: .4vw;
-
-    background-color: #151E40;
 }
 
 .project figcaption h4 {

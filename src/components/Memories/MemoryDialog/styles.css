@@ -63,7 +63,7 @@
 }
 
 .memory__title {
-    color: #FFF;
+    color: var(--text-light);
     font-size: 1.125rem;
     font-weight: 500;
 }

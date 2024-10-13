@@ -4,6 +4,7 @@ import './styles.css';
 
 const LINKEDIN = 'https://www.linkedin.com/in/julio-mirandola/';
 const GITHUB = 'https://github.com/julionm';
+const LEETCODE = 'https://leetcode.com/u/julionm/';
 
 export function About() {
     return (
@@ -39,7 +40,7 @@ export function About() {
                         <GithubIcon />
                     </a>
                     <a
-                        href={GITHUB}
+                        href={LEETCODE}
                         className='leetcode-button'
                         target='_blank'>
                         <LeetCodeIcon />

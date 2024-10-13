@@ -11,8 +11,8 @@
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: .75em;
-    row-gap: 1.625em;
+    column-gap: 1em;
+    row-gap: 2em;
 }
 
 @media (max-width: 640px) {

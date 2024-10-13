@@ -7,6 +7,7 @@
     --primary: #FF5500;
     --primary-dark: #C44405;
 
+    --text-light: #FFF;
     --text: #EEE;
     --text-dark: #BBB;
 
@@ -15,6 +16,42 @@
     --main-bg: #010B26;
 
     --max-w: 1056px;
+}
+
+@font-face {
+    font-family: "Space Mono";
+    src: url("./assets/fonts/SpaceMono/SpaceMono-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Space Mono";
+    src: url("./assets/fonts/SpaceMono/SpaceMono-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Space Mono";
+    src: url("./assets/fonts/SpaceMono/SpaceMono-Italic.ttf");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Space Mono";
+    src: url("./assets/fonts/SpaceMono/SpaceMono-BoldItalic.ttf");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: local("Bitter"),
+         url("./assets/fonts/Bitter/Bitter-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-stretch: 50% 100%;
 }
 
 .light-theme {
@@ -30,7 +67,7 @@ p::selection {
 
 h1, h2, h3, h4 {
     line-height: 1.15;
-    font-weight: 300;
+    font-weight: 500;
     font-family: 'Space Mono', sans-serif;
     color: var(--primary-light);
 }
@@ -54,23 +91,4 @@ h4 {
 
 body {
     background: var(--main-bg);
-}
-
-.montserrat-regular {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-}
-.montserrat-thin {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: lighter;
-    font-style: normal;
-}
-.montserrat-bold {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
 }
