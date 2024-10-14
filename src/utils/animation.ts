@@ -7,7 +7,7 @@ export function animate (
     draw: (progress: number) => void,
     duration: number,
     timingProgress: TimingProgress = TimingProgress.Linear,
-    callback: () => void,
+    callback: () => void = () => {},
     reverse: boolean = false
 ) {
     const zero = getZeroTime();

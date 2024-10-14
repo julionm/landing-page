@@ -78,3 +78,13 @@ export function MemoriesPage () {
         </>
     )
 }
+
+/*
+
+How to transform this into a slider
+- 
+- 
+
+
+
+*/

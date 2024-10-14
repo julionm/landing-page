@@ -8,6 +8,7 @@ My landing page with some basic information: experiences, interests, projects, e
 
 ## ToDo
 
+- [ ] design an personal achievments/records/statistics
 - [ ] add true photos to the website to prepare for launch
 - [ ] add option to select language
 - [ ] add option to change theme

@@ -5,6 +5,7 @@ footer {
     width: min(var(--max-w), 100%);
 
     margin-inline: auto;
+    margin-top: 6em;
 
     padding-block: 4em;
     padding-inline: 1em;
