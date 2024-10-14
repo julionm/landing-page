@@ -15,13 +15,15 @@ export function MetricItem ({ metric }: MetricItemProps) {
     const itemRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const runAnimation = () => animate(
-            updateValueFieldNumber,
-            DURATION,
-            TimingProgress.Linear
-        );
+        let observer: IntersectionObserver | null = null;
 
-        let observer = null;
+        const runAnimation = () => {
+            animate(
+                updateValueFieldNumber,
+                DURATION,
+                TimingProgress.Linear
+            );
+        }
 
         if (itemRef.current) {
             observer = new IntersectionObserver(runAnimation, {
