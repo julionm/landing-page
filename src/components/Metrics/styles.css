@@ -1,0 +1,19 @@
+.metrics {
+    width: min(var(--max-w), 100%);
+    margin-inline: auto;
+    padding-inline: 1em;
+    margin-top: 6em;
+    box-sizing: border-box;
+}
+
+.metrics__title {
+    text-align: center;
+}
+
+.metrics__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-inline: auto;
+}
