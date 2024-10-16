@@ -48,7 +48,7 @@ export function MetricsPage() {
             <div className="metrics__list">
                 {
                     METRICS.map(metric => (
-                        <MetricItem metric={metric} />
+                        <MetricItem key={metric.id} metric={metric} />
                     ))
                 }
             </div>

@@ -7,7 +7,7 @@
     animation: 1s ease-out showUp;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2em;
 }
 
 .about header {
@@ -22,7 +22,7 @@
 
 .about .position {
     font-weight: bold;
-    font-size: 1.125rem;
+    font-size: 1.125em;
     margin-top: 0.25em;
 }
 

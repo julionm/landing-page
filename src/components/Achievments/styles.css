@@ -1,0 +1,30 @@
+.achievments {
+    width: min(var(--max-w), 100%);
+
+    padding: 1em;
+    box-sizing: border-box;
+
+    margin-top: 6em;
+
+    margin-inline: auto;
+}
+
+.achievments__list {
+    margin-top: 2em;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+@media (max-width: 640px) {
+    .achievments {
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 1056px) {
+    .achievments__list {
+        grid-template-columns: 1fr;
+    }
+}

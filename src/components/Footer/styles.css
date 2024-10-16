@@ -53,3 +53,12 @@ footer .icon {
     height: 1.25em;
     color: var(--primary-light);
 }
+
+@media (max-width: 640px) {
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2em;
+        align-items: center;
+    }
+}

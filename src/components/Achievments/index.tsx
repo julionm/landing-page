@@ -6,40 +6,40 @@ import "./styles.css";
 const ACHIEVMENTS: Achievment[] = [
     {
         id: 0,
-        title: "First stage cleared!",
+        name: "First stage cleared!",
         description: "Get a promotion!",
-        imageUrl: ""
+        imageUrl: "",
     },
     {
         id: 1,
-        title: "Second stage cleared!",
+        name: "Second stage cleared!",
         description: "Get a promotion again!",
-        imageUrl: ""
+        imageUrl: "",
     },
     {
         id: 2,
-        title: "",
-        description: "",
-        imageUrl: ""
+        name: "Base knowledge acquired",
+        description: "Finish the technical school chapter",
+        imageUrl: "",
     },
     {
-        id: 0,
-        title: "",
-        description: "",
-        imageUrl: ""
+        id: 3,
+        name: "Not impossible at all",
+        description: "Finish a long book you thought you'd never finish.",
+        imageUrl: "",
     },
     {
-        id: 0,
-        title: "",
-        description: "",
-        imageUrl: ""
+        id: 4,
+        name: "Worldwide",
+        description: "Work with american clients",
+        imageUrl: "",
     },
     {
-        id: 0,
-        title: "",
-        description: "",
-        imageUrl: ""
-    },
+        id: 5,
+        name: "Jack-of-all-trades",
+        description: "Work on front end, back end and with infrastructure",
+        imageUrl: "",
+    }
 ]
 
 export function AchievmentsPage() {
@@ -50,7 +50,7 @@ export function AchievmentsPage() {
             <div className="achievments__list">
                 {
                     ACHIEVMENTS.map(achievment => (
-                        <AchievmentItem achievment={achievment} />
+                        <AchievmentItem key={achievment.id} achievment={achievment} />
                     ))
                 }
             </div>

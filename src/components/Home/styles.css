@@ -14,11 +14,18 @@
     place-items: center;
 }
 
+@media (max-width: 640px) {
+    .home {
+        font-size: 0.75em;
+    }
+}
+
+
 .home__presentation {
     width: 100%;
 
     display: flex;
-    gap: 3rem;
+    gap: 3em;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;

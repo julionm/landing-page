@@ -16,6 +16,10 @@
 }
 
 @media (max-width: 640px) {
+    .projects {
+        font-size: 0.75em;
+    }
+
     .projects .list {
         grid-template-columns: repeat(2, 1fr);
     }

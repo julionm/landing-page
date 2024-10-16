@@ -1,6 +1,6 @@
 export type Achievment = {
     id: number,
-    title: string,
+    name: string,
     description: string,
     imageUrl: string
 }
