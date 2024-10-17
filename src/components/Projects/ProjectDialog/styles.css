@@ -69,7 +69,7 @@
 .separator {
     height: 1px;
     width: 100%;
-    background-color: var(--primary-light);
+    background-color: var(--primary-dark);
 }
 
 .project-dialog .image-container {

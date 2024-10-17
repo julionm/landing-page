@@ -18,7 +18,7 @@
     position: relative;
 
     padding: 2.5rem 4rem;
-    border-left: 1px solid var(--primary-light);
+    border-left: 1px solid var(--primary-dark);
 
     box-sizing: border-box;
 }
@@ -50,6 +50,8 @@
     font-size: 1em;
     font-weight: bold;
     margin-top: 0.25em;
+
+    color: var(--text-light);
 }
 
 .work-details .header .top .work__duration {
@@ -62,12 +64,17 @@
     display: flex;
     gap: .5em;
     align-items: center;
+
+    color: var(--text-light);
+
+    font-weight: bold;
 }
 
 .work__duration .clock {
     height: 1em;
     width: 1em;
     line-height: 1;
+    stroke-width: 2.5;
 }
 
 .work__description {

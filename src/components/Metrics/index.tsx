@@ -43,7 +43,6 @@ export function MetricsPage() {
     return (
         <section className="metrics">
             <h2 className="metrics__title">Metrics</h2>
-            <p>Some metrics to showcase my abilities.</p>
 
             <div className="metrics__list">
                 {

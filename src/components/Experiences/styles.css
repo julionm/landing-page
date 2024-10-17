@@ -1,6 +1,4 @@
 .experiences {
-    color: white;
-
     width: min(var(--max-w), 100%);
     margin-inline: auto;
 
@@ -22,6 +20,7 @@
 .experiences .header .text {
     margin-top: 1em;
     line-height: 1.6;
+    color: var(--text);
 }
 
 .work-list {

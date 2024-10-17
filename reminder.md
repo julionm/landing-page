@@ -28,3 +28,4 @@ I'll let these things here so I remember how I've done so far.
   - tried but it didn't work the way I expected, I'll find something else to do there
 - [x] download the fonts and use it
 - [x] Add a footer to the site
+- [x] design an personal achievments/records/statistics

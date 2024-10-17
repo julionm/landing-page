@@ -19,3 +19,7 @@ export function formatNumericDateRange(startDate: Date, endDate: Date): string {
     
     return getDateTimeFormatter(dateFormatOptions).formatRange(startDate, endDate);
 }
+
+export function formatDateRange(startDate: Date, endDate: Date, options?: Intl.DateTimeFormatOptions): string {
+    return getDateTimeFormatter(options).formatRange(startDate, endDate);
+}
