@@ -61,7 +61,12 @@
     --bg: #3EC2FF;
 }
 
-p::selection {
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+span::selection {
     background-color: var(--primary-light);
 }
 
@@ -80,6 +85,12 @@ h1 {
 
 h2 {
     font-size: 2.5em;
+    padding-block: .75em;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--main-bg);
+    z-index: 10;
 }
 
 h3 {

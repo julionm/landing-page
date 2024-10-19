@@ -24,11 +24,23 @@
 
 .work-info__description {
     color: var(--text);
-    line-height: 1.5;
-    font-size: .875em;
+    line-height: 1.8;
+    font-size: 1em;
 }
 
 .work-info__positions {
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 564px) {
+    .work-info__description {
+        font-size: .875em;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-info__logo {
+        display: none;
+    }
 }

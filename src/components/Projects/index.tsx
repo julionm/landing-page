@@ -67,7 +67,7 @@ export function ProjectsPage () {
 
     return (
         <section className="projects">
-            <h2>Projects</h2>
+            <h2>&#x2192; Projects</h2>
 
             <div className="list">
                 {

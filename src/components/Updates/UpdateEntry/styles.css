@@ -8,7 +8,7 @@
     align-items: center;
 
     color: var(--text);
-    border-bottom: 1px solid var(--text);
+    border-bottom: 1px solid var(--primary-dark);
 
     text-wrap: nowrap;
 }

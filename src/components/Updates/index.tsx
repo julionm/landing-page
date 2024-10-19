@@ -48,7 +48,7 @@ const UPDATES: Update[] = [
 export function Updates () {
     return (
         <section className='updates'>
-            <h2 className='title'>Last Updates</h2>
+            <h2 className='title'>&#x2192; Last Updates</h2>
             <div className='updates__list'>
                 {
                     UPDATES.map(update => (

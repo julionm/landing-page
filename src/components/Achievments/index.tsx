@@ -45,7 +45,7 @@ const ACHIEVMENTS: Achievment[] = [
 export function AchievmentsPage() {
     return (
         <section className="achievments">
-            <h2>Achievments</h2>
+            <h2>&#x2192; Achievments</h2>
 
             <div className="achievments__list">
                 {

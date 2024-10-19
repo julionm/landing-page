@@ -72,12 +72,7 @@ export function ExperiencesPage () {
     return (
         <section className='experiences'>
 
-            <div className='header'>
-                <h2 className='title'>Experiences</h2>
-                <p className='text'>
-                    I've had the opportunity to meet great coworkers along my experiences and to work on a variety of different projects.
-                </p>
-            </div>
+            <h2 className='title'>&#x2192; Experiences</h2>
 
             <div className='work-list'>
                 {
