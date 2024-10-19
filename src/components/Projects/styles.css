@@ -2,7 +2,6 @@
     width: min(var(--max-w), 100%);
     margin-inline: auto;
     margin-top: 6em;
-    padding-inline: 1em;
     box-sizing: border-box;
 }
 
@@ -13,6 +12,8 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1em;
     row-gap: 2em;
+
+    padding-inline: 1em;
 }
 
 .projects .list:hover > * {

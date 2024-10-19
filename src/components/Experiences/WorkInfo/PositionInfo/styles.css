@@ -32,7 +32,7 @@
 .position-info__description {
     color: var(--text);
     font-size: 1em;
-    line-height: 1.8;
+    line-height: 2;
 }
 
 @media (max-width: 564px) {

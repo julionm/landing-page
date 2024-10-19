@@ -8,8 +8,6 @@
     flex-direction: column;
     gap: 3em;
     align-items: flex-start;
-
-    padding-inline: 1em;
 }
 
 .experiences .header .title {
@@ -34,6 +32,8 @@
     width: 100%;
 
     box-sizing: border-box;
+
+    padding-inline: 1em;
 }
 
 .work-list > div:first-child {

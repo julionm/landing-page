@@ -32,6 +32,17 @@
     text-align: center;
 }
 
+.about .email {
+    text-align: center;
+}
+
+.about .email-highlight {
+    border-bottom: 1px solid #59CCFD;
+    color: #59CCFD;
+
+    text-align: center;
+}
+
 .about__actions {
     display: flex;
     flex-direction: column;
@@ -61,6 +72,16 @@
     opacity: 0;
     animation: .5s ease-out slideRight;
     animation-fill-mode: forwards;
+
+    padding: .5em;
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.about__actions .my-links a:hover {
+    color: var(--text);
+    background-color: var(--primary);
 }
 
 .about__actions .my-links .linkedin-button {
@@ -102,6 +123,10 @@
         text-align: left;
     }
 
+    .about .email {
+        text-align: left;
+    }
+
     .about__intro p {
         text-align: left;
     }
@@ -109,10 +134,4 @@
     .about__actions {
         flex-direction: row;
     }
-}
-
-@media (min-width: 1056px) {
-    .about {
-        font-size: 1.15em;
-    } 
 }

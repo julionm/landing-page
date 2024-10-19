@@ -16,10 +16,14 @@ export function About() {
             <div className='about__intro'>
                 <p>
                     I'm 23 years old and I'm based in Brazil <BrazilFlagIcon />.<br />
-                    I've been working as a Full Stack Developer since 2018.<br />
+                    I've been working as a software developer since 2018.<br />
                     Download my resume or check my accounts! 
                 </p>
             </div>
+            
+            <p className='email'>
+                My email:&nbsp;&nbsp; <span className='email-highlight'>julionm60@gmail.com</span>
+            </p>
 
             <div className='about__actions'>
                 <Button type={ButtonType.PRIMARY} onClick={() => console.log('teste')}>

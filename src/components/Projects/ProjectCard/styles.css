@@ -5,7 +5,6 @@
 
 .project:hover {
     opacity: 1 !important;
-    box-shadow: 0 5px 10px #111;
 }
 
 .project:active {

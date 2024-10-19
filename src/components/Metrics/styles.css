@@ -1,7 +1,6 @@
 .metrics {
     width: min(var(--max-w), 100%);
     margin-inline: auto;
-    padding-inline: 1em;
     margin-top: 6em;
     box-sizing: border-box;
 }
@@ -18,6 +17,8 @@
     flex-wrap: wrap;
     gap: 1em;
     margin-inline: auto;
+
+    padding-inline: 1em;
 }
 
 @media (max-width: 640px) {
