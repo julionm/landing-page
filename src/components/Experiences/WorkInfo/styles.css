@@ -1,115 +1,34 @@
-.work__tech-stack {
+.work-info {
+    width: 100%;
+
     display: flex;
-    gap: 0.75em;
+    gap: 2em;
+
+    align-items: flex-start;
 }
 
-.icon-container {
-    height: 1.5em;
+.work-info__logo {
+    width: 5em;
     aspect-ratio: 1;
+    border-radius: 50%;
+
+    object-fit: cover;
+    object-position: center;
 }
 
-.work-details {
+.work-info__content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 1.5em;
-    width: 100%;
-
-    position: relative;
-
-    padding: 2.5rem 4rem;
-    border-left: 1px solid var(--primary-dark);
-
-    box-sizing: border-box;
 }
 
-.work-details::before {
-    content: '';
-    position: absolute;
-    left: -0.6125em;
-    top: 3.25em;
-
-    background-color: var(--primary-light);
-
-    height: 1.25em;
-    aspect-ratio: 1;
-    border-radius: 100%;
-}
-
-.work-details .header {
-    width: 100%;
-}
-
-.work-details .header .top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.work__position {
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 0.25em;
-
-    color: var(--text-light);
-}
-
-.work-details .header .top .work__duration {
-    display: none;
-}
-
-.work__duration {
-    margin-block: .25em;
-
-    display: flex;
-    gap: .5em;
-    align-items: center;
-
-    color: var(--text-light);
-
-    font-weight: bold;
-}
-
-.work__duration .clock {
-    height: 1em;
-    width: 1em;
-    line-height: 1;
-    stroke-width: 2.5;
-}
-
-.work__description {
-    font-size: 1em;
-    line-height: 1.75;
+.work-info__description {
     color: var(--text);
+    line-height: 1.5;
+    font-size: .875em;
 }
 
-.work__tech {
+.work-info__positions {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;    
-    flex-wrap: wrap;
-}
-
-.work__tech p {
-    font-weight: bold;
-}
-
-@media(max-width: 564px) {
-    .work-details {
-       padding: 2rem 2rem;
-    }
-
-    .work__description {
-        line-height: 2;
-    }
-}
-
-@media(min-width: 640px) {
-    .work__duration {
-        display: none;
-    }
-    
-    .work-details .header .top .work__duration {
-        display: flex;
-    }
+    flex-direction: column;
 }

@@ -1,4 +1,4 @@
-import profilePhoto from 'assets/profile-image.jpeg';
+import profilePhoto from 'assets/images/profile-image.jpeg';
 import "./styles.css";
 
 type CardThumbProps = {

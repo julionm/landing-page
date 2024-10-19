@@ -1,0 +1,36 @@
+.position-info {
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    border-left: 1px solid var(--primary-dark);
+
+    position: relative;
+
+    max-width: 600px;
+}
+
+.position-info::before {
+    --size: .75em;
+
+    content: "";
+
+    position: absolute;
+
+    top: calc(2em + (var(--size) / 2));
+    left: calc((var(--size) / 2) * -1);
+
+    height: var(--size);
+    width: var(--size);
+    border-radius: 100%;
+
+    background-color: var(--primary);
+}
+
+.position-info__description {
+    color: var(--text);
+    font-size: .875em;
+    line-height: 1.5;
+}

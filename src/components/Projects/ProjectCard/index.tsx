@@ -1,7 +1,7 @@
 import { Project } from "models/project";
 import { TagList } from "components/common/TagList";
 
-import profileImage from 'assets/profile-image.jpeg';
+import profileImage from 'assets/images/profile-image.jpeg';
 
 import "./styles.css";
 
@@ -18,9 +18,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
             <figcaption>
                 <h4>{project.title}</h4>
 
-                <div className="tech-list">
-                    <TagList items={project.techStack} />
-                </div>
+                <TagList items={project.techStack} />
             </figcaption>
         </figure>
     )

@@ -4,7 +4,7 @@ import { CloseIcon } from "assets/icons/Close";
 import { Button, ButtonType } from "components/common/Button";
 import { ArrowExternalIcon } from "assets/icons";
 
-import profilePhoto from "assets/profile-image.jpeg";
+import profilePhoto from "assets/images/profile-image.jpeg";
 
 import "./styles.css";
 

@@ -1,14 +1,23 @@
 export type WorkDetails = {
     companyName: string,
     description: string,
-    position: string,
-    techStack: string[],
     start: Date,
-    end: Date
+    end: Date,
+    logoUrl?: string
+    positions: Position[]
+}
+
+export type Position = {
+    title: string,
+    description: string,
+    start: Date,
+    end?: Date,
+    techStack: TechStack[]
 }
 
 export enum TechStack {
     React = 'react',
+    ReactNative = 'React Native',
     Laravel = 'laravel',
     Tailwind = 'tailwind',
     JQuery = 'jquery',
@@ -20,5 +29,12 @@ export enum TechStack {
     CSS = 'css',
     HTML = 'html',
     JavaScript = 'javascript',
-    Rust = 'rust'
+    Rust = 'rust',
+    Linux = 'linux',
+    StyledComponents = "styled components",
+    Redux = "redux",
+    PHP = "PHP",
+    TagManager = "Google Tag Manager",
+    GA4 = "Google Analytics 4",
+    Bloomreach = "bloomreach"
 }
