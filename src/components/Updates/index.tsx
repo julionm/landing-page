@@ -49,11 +49,13 @@ export function Updates () {
     return (
         <section className='updates'>
             <h2 className='title'>Last Updates</h2>
-            {
-                UPDATES.map(update => (
-                    <UpdateEntry key={update.id} update={update} />
-                ))
-            }
+            <div className='updates__list'>
+                {
+                    UPDATES.map(update => (
+                        <UpdateEntry key={update.id} update={update} />
+                    ))
+                }
+            </div>
         </section>
     )
 }

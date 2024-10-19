@@ -15,6 +15,10 @@
     row-gap: 2em;
 }
 
+.projects .list:hover > * {
+    opacity: 0.5;
+}
+
 @media (max-width: 640px) {
     .projects {
         font-size: 0.75em;

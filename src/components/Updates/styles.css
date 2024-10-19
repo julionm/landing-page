@@ -11,3 +11,15 @@
         font-size: 0.75em;
     }
 }
+
+.updates__list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--text);
+    border-radius: .4vw;
+    margin-top: 2em;
+}
+
+.updates__list div:last-child {
+    border: none;
+}

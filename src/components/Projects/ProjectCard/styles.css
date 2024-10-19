@@ -1,10 +1,10 @@
 .project {
-    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, opacity .3s ease-out;
     cursor: pointer;
 }
 
 .project:hover {
-    transform: scale(1.025);
+    opacity: 1 !important;
     box-shadow: 0 5px 10px #111;
 }
 
