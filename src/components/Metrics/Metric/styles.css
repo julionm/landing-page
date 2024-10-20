@@ -17,7 +17,7 @@
 }
 
 .metric-item__highlight {
-    background-color: var(--primary);
+    background-color: var(--primary-dark);
     color: var(--text-light);
     border-radius: 50%;
 

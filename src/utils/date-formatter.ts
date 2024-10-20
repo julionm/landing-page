@@ -11,17 +11,10 @@ export function formatNumericDate(date: Date): string {
     return getDateTimeFormatter(dateFormatOptions).format(date);
 }
 
-// export function formatNumericDateRange(startDate: Date, endDate: Date): string {
-//     const dateFormatOptions: Intl.DateTimeFormatOptions = {
-//         month: 'numeric',
-//         year: 'numeric'
-//     };
+export function formatDateRange(startDate: Date, endDate: Date, options?: Intl.DateTimeFormatOptions): string {    
+    const formatter = getDateTimeFormatter(options);
+    const formattedStartDate = formatter.format(startDate);
+    const formattedEndDate = formatter.format(endDate);
     
-//     return getDateTimeFormatter(dateFormatOptions).formatRange(startDate, endDate);
-// }
-
-// export function formatDateRange(startDate: Date, endDate: Date, options?: Intl.DateTimeFormatOptions): string {
-    
-    
-//     return getDateTimeFormatter(options).formatRange(startDate, endDate);
-// }
+    return `${formattedStartDate} - ${formattedEndDate}`;
+}

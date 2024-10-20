@@ -90,4 +90,8 @@
     .update__content .sub-title .time {
         line-height: normal;
     }
+
+    .update__content .sub-title .short-desc {
+        line-height: 1.8;
+    }
 }

@@ -29,6 +29,44 @@
     background-color: var(--primary);
 }
 
+.position-info__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.position-info__time {
+    line-height: 1;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: .875em;
+
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+@media (min-width: 764px) {
+    .position-info__header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+}
+
+.position-info__clock-icon {
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    stroke-width: 2;
+}
+
+.position-info__duration {
+    margin-top: 2px;
+}
+
 .position-info__description {
     color: var(--text);
     font-size: 1em;
