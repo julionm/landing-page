@@ -3,6 +3,10 @@
     margin: 0;
     font-family: "Bitter", serif;
 
+    --max-w: 1056px;
+}
+
+.dark {
     --primary-light: #FF6B20;
     --primary: #FF5500;
     --primary-dark: #C44405;
@@ -15,7 +19,23 @@
     --main-bg: #010B26;
     --main-bg-dark: #010920;
 
-    --max-w: 1056px;
+    --link-color: #59CCFD;
+}
+
+.light {
+    --primary-light: #ff7f3f;
+    --primary: #FF5500;
+    --primary-dark: #f16800;
+
+    --text-light: #fff;
+    --text: #FFF;
+    --text-dark: #ded9d9;
+
+    --main-bg-light: #64ddff;
+    --main-bg: #09bbec;
+    --main-bg-dark: #079fc9;
+
+    --link-color: #010B26;
 }
 
 @font-face {
@@ -54,13 +74,6 @@
     font-stretch: 50% 100%;
 }
 
-.light-theme {
-    --primary: #FF7300;
-    --primary-dark: #FF5500;
-    --text: #FFFFEE;
-    --bg: #3EC2FF;
-}
-
 p::selection,
 h1::selection,
 h2::selection,
@@ -72,7 +85,7 @@ span::selection {
 
 h1, h2, h3, h4 {
     line-height: 1.15;
-    font-weight: 500;
+    font-weight: 700;
     font-family: 'Space Mono', sans-serif;
     color: var(--primary-light);
     margin-left: -2px;

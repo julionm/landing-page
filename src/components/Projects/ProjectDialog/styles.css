@@ -52,10 +52,7 @@
 }
 
 .project-dialog h3 {
-    font-size: 1.5em;
-    font-weight: 500;
     flex: 1;
-    color: var(--primary-light);
 }
 
 .project-dialog .close-icon {

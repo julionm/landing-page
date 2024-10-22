@@ -47,7 +47,7 @@ const UPDATES: Update[] = [
 
 export function Updates () {
     return (
-        <section className='updates'>
+        <section id="updatesSection" className='updates'>
             <h2 className='title'>&#x2192; Last Updates</h2>
             <div className='updates__list'>
                 {

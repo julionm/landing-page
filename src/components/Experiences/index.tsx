@@ -70,7 +70,7 @@ const workExperiences: WorkDetails[] = [
 export function ExperiencesPage () {
 
     return (
-        <section className='experiences'>
+        <section id="experiencesSection" className='experiences'>
 
             <h2 className='title'>&#x2192; Experiences</h2>
 

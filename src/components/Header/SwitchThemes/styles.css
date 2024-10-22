@@ -1,0 +1,58 @@
+.switch-themes {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.switch-themes .icon {
+    height: 1.5em;
+    width: 1.5em;
+    fill: var(--text-dark);
+    color: var(--text-dark);
+
+    transition: color .3s ease-in, fill .3s ease-in;
+}
+
+.switch-themes .icon[data-selected=true] {
+    color: var(--text-light);
+    fill: var(--text-light);
+}
+
+.switch {
+    border: 1px solid var(--text);
+    
+    background-color: var(--main-bg);
+
+    padding: .25em;
+    box-sizing: border-box;
+    border-radius: 9999px;
+
+    width: 3em;
+    height: 1.5em;
+
+    position: relative;
+
+    user-select: none;
+    -webkit-user-select: none;
+
+    cursor: pointer;
+}
+
+.switch[data-theme="light"] .circle {
+    left: 1.75em;
+}
+
+.circle {
+    user-select: none;
+
+    position: absolute;
+
+    border-radius: 100%;
+    background-color: var(--text);
+    top: .25em;
+    bottom: .25em;
+    left: .25em;
+    aspect-ratio: 1;
+
+    transition: left .3s ease-out;
+}

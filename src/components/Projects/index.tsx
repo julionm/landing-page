@@ -66,7 +66,7 @@ export function ProjectsPage () {
     }
 
     return (
-        <section className="projects">
+        <section id="projectsSection" className="projects">
             <h2>&#x2192; Projects</h2>
 
             <div className="list">

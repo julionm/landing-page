@@ -8,3 +8,5 @@ export { LeetCodeIcon } from "./contact/LeetCodeIcon"
 export { CloseIcon } from "./Close";
 export { DownloadIcon } from "./Download";
 export { ArrowExternalIcon } from "./ArrowExternal";
+export { MoonIcon } from "./theme/Moon";
+export { SunIcon } from "./theme/Sun";

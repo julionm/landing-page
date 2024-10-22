@@ -5,13 +5,15 @@ import { ProjectsPage } from "components/Projects";
 import { Footer } from "components/Footer";
 import { MetricsPage } from "components/Metrics";
 import { AchievmentsPage } from "components/Achievments";
-import './App.css';
 import { ThanksMessage } from "components/ThanksMessage";
+import { Header } from "components/Header";
+import './App.css';
 
 function App() {
 
   return (
     <main className="">
+      <Header />
       <HomePage />
       <ExperiencesPage />
       <ProjectsPage />
