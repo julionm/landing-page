@@ -29,3 +29,8 @@ I'll let these things here so I remember how I've done so far.
 - [x] download the fonts and use it
 - [x] Add a footer to the site
 - [x] design an personal achievments/records/statistics
+- [x] add option to select language
+- [x] add option to change theme
+- [x] find a way to show my email
+- [x] make a tag list component that arranges tags inline
+  - Maybe make the TagList component with the shared style among all the other components

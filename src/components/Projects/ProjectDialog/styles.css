@@ -10,7 +10,7 @@
 
     border-radius: .4vw;
 
-    color: var(--text);
+    color: #EEE;
 
     background-color: rgba(1 11 38 / 31%);
     backdrop-filter: blur(20px);
@@ -80,6 +80,12 @@
     overflow: hidden;
 
     border-radius: .4vw;
+
+    transition: padding .3s ease-out;
+}
+
+.project-dialog .image-container:hover {
+    padding: 28.125% 0;
 }
 
 .project-dialog .image-container img {

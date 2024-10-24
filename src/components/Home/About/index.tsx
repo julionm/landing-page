@@ -1,17 +1,20 @@
 import { Button, ButtonType } from 'components/common/Button';
 import { LeetCodeIcon, LinkedInIcon, GithubIcon, BrazilFlagIcon, DownloadIcon } from 'assets/icons';
 import './styles.css';
+import { useTranslation } from 'react-i18next';
 
 const LINKEDIN = 'https://www.linkedin.com/in/julio-mirandola/';
 const GITHUB = 'https://github.com/julionm';
 const LEETCODE = 'https://leetcode.com/u/julionm/';
 
 export function About() {
+    const { t } = useTranslation();
+
     return (
         <section className='about'>
             <header>
                 <h1 className="name">Julio Negri</h1>
-                <p className='position'>Full Stack Developer</p>
+                <p className='position'>{t("home.position")}</p>
             </header>
             <div className='about__intro'>
                 <p>
@@ -22,12 +25,12 @@ export function About() {
             </div>
             
             <p className='email'>
-                My email:&nbsp;&nbsp; <span className='email-highlight'>julionm60@gmail.com</span>
+                {t("home.my-email")}:&nbsp;&nbsp; <span className='email-highlight'>julionm60@gmail.com</span>
             </p>
 
             <div className='about__actions'>
                 <Button type={ButtonType.PRIMARY} onClick={() => console.log('teste')}>
-                    <span>Download Resume</span><DownloadIcon className='icon' />
+                    <span>{t("download-resume")}</span><DownloadIcon className='icon' />
                 </Button>
 
                 <div className='my-links'>

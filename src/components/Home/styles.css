@@ -1,5 +1,4 @@
 .home {
-    color: white;
     font-size: 1em;
 
     width: min(var(--max-w), 100%);

@@ -1,6 +1,9 @@
-export function BrazilFlagIcon() {
+import { HTMLAttributes } from "react";
+
+export function BrazilFlagIcon(props: HTMLAttributes<SVGElement>) {
   return (
     <svg
+      {...props}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="16"

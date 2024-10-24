@@ -7,9 +7,9 @@
 }
 
 .dark {
-    --primary-light: #FF6B20;
-    --primary: #FF5500;
-    --primary-dark: #C44405;
+    --primary-light: hsl(20deg 100% 60%);
+    --primary: hsl(20deg 100% 50%);
+    --primary-dark: hsl(20deg 100% 40%);
 
     --text-light: #FFF;
     --text: #EEE;
@@ -23,17 +23,17 @@
 }
 
 .light {
-    --primary-light: #ff7f3f;
-    --primary: #FF5500;
-    --primary-dark: #f16800;
+    --primary-light: hsl(20deg 100% 50%);
+    --primary: hsl(20deg 100% 50%);
+    --primary-dark: hsl(20deg 100% 50%);
 
-    --text-light: #fff;
-    --text: #FFF;
-    --text-dark: #ded9d9;
+    --text-light: #151E40;
+    --text: #010B26;
+    --text-dark: #010920;
 
-    --main-bg-light: #64ddff;
-    --main-bg: #09bbec;
-    --main-bg-dark: #079fc9;
+    --main-bg-light: #fff;
+    --main-bg: #eee;
+    --main-bg-dark: #bbb;
 
     --link-color: #010B26;
 }

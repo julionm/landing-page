@@ -24,6 +24,7 @@
     font-weight: bold;
     font-size: 1.125em;
     margin-top: 0.25em;
+    color: var(--text);
 }
 
 .about__intro p {
@@ -34,6 +35,7 @@
 
 .about .email {
     text-align: center;
+    color: var(--text);
 }
 
 .about .email-highlight {
@@ -73,13 +75,13 @@
     animation-fill-mode: forwards;
 
     padding: .5em;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--primary-light);
     border-radius: 50%;
     box-sizing: border-box;
 }
 
 .about__actions .my-links a:hover {
-    color: var(--text);
+    color: #FFF;
     background-color: var(--primary);
 }
 
