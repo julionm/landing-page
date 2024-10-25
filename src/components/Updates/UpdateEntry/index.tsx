@@ -32,12 +32,16 @@ export function UpdateEntry ({ update }: UpdateEntryProps) {
                 </div>
             </div>
 
-            <div className="update__action">
-                <Button>
-                    <span className="read-more">Read More</span>
-                    <ArrowRightIcon className="icon" />
-                </Button>
-            </div>
+            {
+                update.actionUrl && (
+                    <div className="update__action">
+                        <Button>
+                            <span className="read-more">Read More</span>
+                            <ArrowRightIcon className="icon" />
+                        </Button>
+                    </div>
+                )
+            }
         </div>
     )
 }

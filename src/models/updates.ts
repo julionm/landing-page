@@ -2,9 +2,9 @@ export type Update = {
     id: number,
     title: string,
     time: Date, // timestamp
-    description: string,
     shortDescription: string,
-    type: UpdateType
+    type: UpdateType,
+    actionUrl?: string
 };
 
 export enum UpdateType {
