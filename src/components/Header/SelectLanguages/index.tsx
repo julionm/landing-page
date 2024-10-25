@@ -6,19 +6,19 @@ import { useTranslation } from "react-i18next";
 import "./styles.css";
 
 type Language = {
-    language: "en" | "pt",
+    language: "en-US" | "pt-BR",
     text: string,
     icon: (props: HTMLAttributes<SVGElement>) => ReactElement
 }
 
 const LANGUAGES: Language[] = [
     {
-        language: "pt",
+        language: "pt-BR",
         text: "portuguese",
         icon: BrazilFlagIcon
     },
     {
-        language: "en",
+        language: "en-US",
         text: "english",
         icon: UsaFlagIcon
     }
@@ -46,31 +46,45 @@ export function SelectLanguages() {
     }
 
     return (
-        <div
+        <button
+            type="button"
             className="select-wrapper"
-            onClick={() => setOptionsVisible(!optionsVisible)}>
+            onClick={() => setOptionsVisible(!optionsVisible)}
+            aria-haspopup
+            aria-label={`Current language is ${t(selectedLanguage.text)}. Choose your preferred language.`}
+        >
+           
             <div className="language-selected">
                 <LanguageIcon />
                 <p>{t(selectedLanguage.text)}</p>
             </div>
 
-            <div className="language-options" data-visible={optionsVisible}>
+            <ul
+                id="languageOptions"
+                className="language-options"
+                data-visible={optionsVisible}
+                role="menu"
+                aria-expanded={optionsVisible}    
+            >
                 {
                     LANGUAGES.map(lang => {
                         const Icon = lang.icon;
 
                         return (
-                            <div
+                            <li
                                 key={lang.language}
                                 className="language-option"
-                                onClick={() => handleUserSelection(lang)}>
+                                lang={lang.language}
+                                onClick={() => handleUserSelection(lang)}
+                                role="menuitem"
+                            >
                                 <Icon />
                                 <p>{t(lang.text)}</p>
-                            </div>
+                            </li>
                         )
                     })
                 }
-            </div>
-        </div>
+            </ul>
+        </button>
     )    
 }

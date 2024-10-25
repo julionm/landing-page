@@ -9,7 +9,7 @@ export function Header() {
 
     return (
         <nav className="header">
-            <ul>
+            <ul className="header__menu-list">
                 <li>
                     <a href="#homeSection" data-active>{t("home")}</a>
                 </li>

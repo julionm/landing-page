@@ -12,13 +12,13 @@
     box-sizing: border-box;
 }
 
-.header ul {
+.header__menu-list {
     list-style: none;
     display: flex;
     gap: 2em;
 }
 
-.header ul li a {
+.header__menu-list li a {
     text-transform: uppercase;
     font-size: 1em;
     font-weight: bold;
@@ -28,7 +28,7 @@
     position: relative;
 }
 
-.header ul li a:before {
+.header__menu-list li a:before {
     content: "";
     position: absolute;
     bottom: -2px;
@@ -40,8 +40,8 @@
     transition: right .3s ease-out;
 }
 
-.header ul li a[data-active]::before,
-.header ul li a:hover::before {
+.header__menu-list li a[data-active]::before,
+.header__menu-list li a:hover::before {
     right: 0%;
 }
 

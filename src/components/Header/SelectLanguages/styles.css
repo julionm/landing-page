@@ -1,4 +1,9 @@
 .select-wrapper {
+    appearance: none;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
     padding: .5em;
 
     display: flex;
@@ -9,6 +14,8 @@
 
     border: 1px solid var(--primary);
     border-radius: .5vw;
+
+    font-size: 1em;
 }
 
 .language-selected {
@@ -24,6 +31,7 @@
     min-width: 100px;
 
     user-select: none;
+    -webkit-user-select: none;
 }
 
 .close-button:hover .close-icon {

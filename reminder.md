@@ -34,3 +34,8 @@ I'll let these things here so I remember how I've done so far.
 - [x] find a way to show my email
 - [x] make a tag list component that arranges tags inline
   - Maybe make the TagList component with the shared style among all the other components
+- [x] hover on modal image increases the padding to image 3:4
+- [x] text in modal for light theme
+- [x] make Updates actually work, create a new page to show the content, or maybe just use it as short update messages
+  - I don't know yet what to do with this section so I'll leave as it is for now
+  - Nah, I'll use the updates to link to my LinkedIn posts and LeetCode solutions, that'll be good enough
