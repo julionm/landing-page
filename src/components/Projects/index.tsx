@@ -5,52 +5,53 @@ import { ProjectCard } from "./ProjectCard";
 import { ProjectDialog } from "./ProjectDialog";
 
 import './styles.css';
+import { useTranslation } from "react-i18next";
 
 const PROJECTS: Project[] = [
     {
         id: 1,
-        title: "Pairs Game",
-        description: "A simple game to find matching pairs. Good to study japanese",
+        title: "projects.pairs_game.title",
+        description: "projects.pairs_game.description",
         sourceCodeUrl: "https://github.com/julionm/pairs-game",
         techStack: [TechStack.React, TechStack.Tailwind],
         imageUrl: ''
     },
     {
         id: 2,
-        title: "Rust Studies",
-        description: "Notes I took while reading The Rust Programming Language.",
+        title: "projects.rust_studies.title",
+        description: "projects.rust_studies.description",
         sourceCodeUrl: "https://github.com/julionm/rust-studies",
         techStack: [TechStack.Rust],
         imageUrl: ''
     },
     {
         id: 3,
-        title: "Landing Page",
-        description: "This page's code",
+        title: "projects.landing_page.title",
+        description: "projects.landing_page.description",
         sourceCodeUrl: "https://github.com/julionm/landing-page",
         techStack: [TechStack.React],
         imageUrl: ''
     },
     {
         id: 4,
-        title: "Tulitip",
-        description: "Simple reusable tooltip component.",
+        title: "projects.tulitip.title",
+        description: "projects.tulitip.description",
         sourceCodeUrl: "https://github.com/julionm/tulitip",
         techStack: [TechStack.React],
         imageUrl: ''
     },
     {
         id: 5,
-        title: "Simple Dashboard",
-        description: "Using a dribbble layout as a base I made this simple dashboard using Glassmorphism technique. I really liked the result.",
+        title: "projects.simple_dashboard.title",
+        description: "projects.simple_dashboard.description",
         sourceCodeUrl: "https://codepen.io/julionm/pen/GRMbmdg",
         techStack: [TechStack.CSS, TechStack.HTML],
         imageUrl: ''
     },
     {
         id: 6,
-        title: "Flipping Cards",
-        description: "I saw a flipping card like this on a website and I decided to implement it myself. It was pretty fun to toy with the perspective CSS property.",
+        title: "projects.flipping_cards.title",
+        description: "projects.flipping_cards.description",
         sourceCodeUrl: "https://codepen.io/julionm/pen/jORpYbO",
         techStack: [TechStack.CSS, TechStack.HTML, TechStack.JavaScript],
         imageUrl: ''
@@ -58,6 +59,8 @@ const PROJECTS: Project[] = [
 ];
 
 export function ProjectsPage () {
+
+    const { t } = useTranslation();
 
     const dialogRef = useRef<{ showDialog: (project: Project) => void }>();
 
@@ -67,7 +70,7 @@ export function ProjectsPage () {
 
     return (
         <section id="projectsSection" className="projects">
-            <h2>&#x2192; Projects</h2>
+            <h2>&#x2192; {t("projects.title")}</h2>
 
             <div className="list">
                 {

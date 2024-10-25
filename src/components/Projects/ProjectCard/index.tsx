@@ -4,6 +4,7 @@ import { TagList } from "components/common/TagList";
 import profileImage from 'assets/images/profile-image.jpeg';
 
 import "./styles.css";
+import { useTranslation } from "react-i18next";
 
 type ProjectCardProps = {
     project: Project,
@@ -11,12 +12,15 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ project, onClick }: ProjectCardProps) {
+
+    const { t } = useTranslation();
+
     return (
         <figure className="project" onClick={() => onClick(project)} role="button">
             <img src={project.imageUrl || profileImage} alt="" />
 
             <figcaption>
-                <h4>{project.title}</h4>
+                <h4>{t(project.title)}</h4>
 
                 <TagList items={project.techStack} />
             </figcaption>

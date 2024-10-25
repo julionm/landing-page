@@ -1,12 +1,16 @@
 import { WorkDetails } from "models/workInfo"
 import { PositionInfo } from "./PositionInfo"
 import "./styles.css"
+import { useTranslation } from "react-i18next"
 
 type WorkInfoProps = {
     work: WorkDetails
 }
 
 export function WorkInfo({ work }: WorkInfoProps) {
+
+    const { t } = useTranslation();
+
     return (
         <article className="work-info">
             <img src={work.logoUrl || ""} alt={`${work.companyName} logo`} className="work-info__logo" />
@@ -14,7 +18,7 @@ export function WorkInfo({ work }: WorkInfoProps) {
             <div className="work-info__content">
                 <h3>{work.companyName}</h3>
 
-                <p className="work-info__description">{work.description}</p>
+                <p className="work-info__description">{t(work.description)}</p>
 
                 <div className="work-info__positions">
                     {

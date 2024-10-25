@@ -3,6 +3,7 @@ import { Project } from "models/project";
 import { CloseIcon } from "assets/icons/Close";
 import { Button, ButtonType } from "components/common/Button";
 import { ArrowExternalIcon } from "assets/icons";
+import { useTranslation } from "react-i18next";
 
 import profilePhoto from "assets/images/profile-image.jpeg";
 
@@ -13,6 +14,9 @@ type ProjectDialogProps = {
 
 export const ProjectDialog = forwardRef(
     ({ }: ProjectDialogProps, ref) => {
+
+        const { t } = useTranslation();
+
         const [project, setProject] = useState<Project>();
         
         const modalRef = useRef<HTMLDialogElement>(null)
@@ -54,7 +58,7 @@ export const ProjectDialog = forwardRef(
         return (
             <dialog onClose={closeDialog} className="project-dialog" ref={modalRef}>
                 <header>
-                    <h3>{project?.title}</h3>
+                    <h3>{t(project?.title || '')}</h3>
                     <CloseIcon className="close-icon" onClick={closeDialog} />
                 </header>
 
@@ -64,12 +68,12 @@ export const ProjectDialog = forwardRef(
                     <img src={project?.imageUrl || profilePhoto} alt="" />
                 </div>
                 
-                <p className="description">{project?.description}</p>
+                <p className="description">{t(project?.description || '')}</p>
 
                 <section className="actions">
-                    <Button>Source</Button>
+                    <Button>{t("projects.source")}</Button>
                     <Button type={ButtonType.PRIMARY}>
-                        <span>Visit</span> <ArrowExternalIcon className="icon" />
+                        <span>{t("projects.visit")}</span> <ArrowExternalIcon className="icon" />
                     </Button>
                 </section>
             </dialog>

@@ -3,7 +3,12 @@
         "position": "Full Stack Developer",
         "intro": "",
         "my-email": "My Email",
-        "dowload-resume": "Download Resume"
+        "dowload_resume": "Download Resume",
+        "about": {
+            "age_and_location": "I'm 23 years old and I'm based in Brazil",
+            "work_duration": "I've been working as a software developer since 2018.",
+            "dowload_resume": "Download my resume or check my accounts!"
+        }
     },
     "header": {
         "home": "Home",
@@ -15,5 +20,55 @@
     "languages": {
         "english": "English",
         "portuguese": "Portuguese"
+    },
+    "position": {
+        "full_stack": "Full Stack Developer",
+        "junior_full_stack": "Junior Full Stack Developer",
+        "web_analytics": "Web Analytics Engineer",
+        "front_end": "Front End Developer",
+        "intern": "Intern"
+    },
+    "experiences": {
+        "viewb": {
+            "description": "Worked with a BI product that allowed users to create dashboards and create presentations. I maintained the software end-to-end using Angular, Spring and Postgres. I also supported the company infrastructure and clients.",
+            "full_stack_desc": "By the time I was promoted the second time, I was already working on client's infrastructure, offering support for them and I had already tackled almost every part of their software.",
+            "junior_full_stack_desc": "I was promoted to Junior after a thorough study of the company's software. New responsibilities were assigned to me and I got used to the flow.",
+            "intern_desc": "I started my journey as a programmer here, learning the very basics of Spring Boot and Angular."
+        },
+        "up_outsourcing": {
+            "description": "I've worked in a range of different projects, all of them using PHP for Back-End and in some cases in Front End too. I earned a lot of experience on customer service. I'm still striving to learn lots of new stuff to help on our current project.",
+            "front_end_desc": "I worked on the Front End and Mobile softwares, it was relly nice to finally gain some experience using React professionally. It is a nice project to offer a better communication for workers on construction sites.",
+            "full_stack_desc": "I spent some time working on a couple of different projects using mostly PHP. One to help real estate agents with their social media and other shorter projects.",
+            "web_analytics_desc": "I accepted a new challenge to work as a Web Analytics Engineer for a big project and it has been really fun! Understanding deeply how to track user information and turn raw data into valuable information to support our executives, it's really nice!"
+        }
+    },
+    "projects": {
+        "title": "Projects",
+        "source": "Source",
+        "visit": "Visit",
+        "pairs_game": {
+            "title": "Pairs Game",
+            "description": "A simple game to find matching pairs. Good to study japanese"
+        },
+        "rust_studies": {
+            "title": "Rust Studies",
+            "description": "Notes I took while reading The Rust Programming Language."
+        },
+        "landing_page": {
+            "title": "Landing Page",
+            "description": "This page's code"
+        },
+        "tulitip": {
+            "title": "Tulitip",
+            "description": "Simple reusable tooltip component."
+        },
+        "simple_dashboard": {
+            "title": "Simple Dashboard",
+            "description": "Using a dribbble layout as a base I made this simple dashboard using Glassmorphism technique. I really liked the result."
+        },
+        "flipping_cards": {
+            "title": "Flipping Cards",
+            "description": "I saw a flipping card like this on a website and I decided to implement it myself. It was pretty fun to toy with the perspective CSS property."
+        } 
     }
 }

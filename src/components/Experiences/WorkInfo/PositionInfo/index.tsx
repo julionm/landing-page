@@ -1,10 +1,12 @@
 import { TagList } from "components/common/TagList"
 import { Position } from "models/workInfo"
 
-import "./styles.css";
 import { ClockIcon } from "assets/icons";
 import { useMemo } from "react";
 import { getDateTimeFormatter } from "utils/date-formatter";
+import { useTranslation } from "react-i18next";
+
+import "./styles.css";
 
 type PositionInfoProps = {
     position: Position
@@ -19,6 +21,8 @@ const formatter = getDateTimeFormatter(formatterOptions);
 
 export function PositionInfo ({ position }: PositionInfoProps ) {
     
+    const { t } = useTranslation();
+
     const formattedStartDate = useMemo(() => {
         return formatter.format(position.start);
     }, [position]);
@@ -31,7 +35,7 @@ export function PositionInfo ({ position }: PositionInfoProps ) {
         <div className="position-info">
 
             <div className="position-info__header">
-                <h4>{position.title}</h4>
+                <h4>{t(position.title)}</h4>
                 <div className="position-info__time">
                     <ClockIcon className="position-info__clock-icon" />
                     <p className="position-info__duration">
@@ -41,7 +45,7 @@ export function PositionInfo ({ position }: PositionInfoProps ) {
             </div>
 
             <p className="position-info__description">
-                {position.description}
+                {t(position.description)}
             </p>
 
             <TagList items={position.techStack} />
