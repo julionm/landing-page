@@ -3,12 +3,15 @@ import { Button } from "components/common/Button";
 import { ArrowRightIcon, ClockIcon } from "assets/icons";
 import { useMemo } from "react";
 import "./styles.css";
+import { useTranslation } from "react-i18next";
 
 type UpdateEntryProps = {
     update: Update
 }
 
 export function UpdateEntry ({ update }: UpdateEntryProps) {
+
+    const { t } = useTranslation(); 
 
     const formattedDate = useMemo(() => {
         const dateFormatter = new Intl.DateTimeFormat(navigator.language);
@@ -19,15 +22,15 @@ export function UpdateEntry ({ update }: UpdateEntryProps) {
     return (
         <div className="update">
             <div className="update__content">
-                <h3 className="title">{update.title}</h3>
+                <h3 className="title">{t(update.title)}</h3>
                 <div className="sub-title">
                     <p className="time">
                         <ClockIcon className="icon" />
                         <span>{formattedDate}</span>
                     </p>
                     <div className="separator"></div>
-                    <p className="short-desc" title={update.shortDescription}>
-                        {update.shortDescription}
+                    <p className="short-desc" title={t(update.shortDescription)}>
+                        {t(update.shortDescription)}
                     </p>
                 </div>
             </div>
@@ -36,7 +39,7 @@ export function UpdateEntry ({ update }: UpdateEntryProps) {
                 update.actionUrl && (
                     <div className="update__action">
                         <Button>
-                            <span className="read-more">Read More</span>
+                            <span className="read-more">{t("updates.read_more")}</span>
                             <ArrowRightIcon className="icon" />
                         </Button>
                     </div>

@@ -70,5 +70,25 @@
             "title": "Flipping Cards",
             "description": "I saw a flipping card like this on a website and I decided to implement it myself. It was pretty fun to toy with the perspective CSS property."
         } 
+    },
+    "updates": {
+        "title": "Last Updates",
+        "read_more": "Read More",
+        "thousand_weeks": {
+            "title": "[Book] Started Four Thousand Weeks - Oliver Burkeman",
+            "description": "It gave me a new perspective on time management."
+        },
+        "book_ddd": {
+            "title": "[Book] Finished Domain Driven Design",
+            "description": "An amazing book to understand more about models."
+        },
+        "course_js_tdd": {
+            "title": "[Udemy Course] JavaScript Unit Testing",
+            "description": "Finished this cool introductory course to testing with JS."            
+        },
+        "keys_and_rooms": {
+            "title": "[LeetCode] 841. Keys and Rooms - DFS Solution",
+            "description": "My resolution to a LeetCode problem."            
+        }
     }
 }
