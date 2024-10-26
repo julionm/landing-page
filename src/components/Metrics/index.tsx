@@ -1,5 +1,6 @@
 import { Metric } from "models/metric";
 import { MetricItem } from "./Metric";
+import { useTranslation } from "react-i18next";
 import "./styles.css";
 
 const METRICS: Metric[] = [
@@ -7,15 +8,15 @@ const METRICS: Metric[] = [
         id: 0,
         value: 5,
         valuePrefix: "+",
-        measurementUnit: "years",
-        description: "Working as a developer"
+        measurementUnit: "metrics.years_working.unit",
+        description: "metrics.years_working.description"
     },
     {
         id: 1,
         value: 100,
         valuePrefix: "+",
-        measurementUnit: "exercises",
-        description: "solved in LeetCode"
+        measurementUnit: "metrics.leetcodes_solved.unit",
+        description: "metrics.leetcodes_solved.description"
     },
     {
         id: 2,
@@ -40,9 +41,12 @@ const METRICS: Metric[] = [
 ]
 
 export function MetricsPage() {
+
+    const { t } = useTranslation();
+
     return (
         <section className="metrics">
-            <h2 className="metrics__title">Metrics</h2>
+            <h2 className="metrics__title">{t("metrics.title")}</h2>
 
             <div className="metrics__list">
                 {

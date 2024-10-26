@@ -27,7 +27,7 @@ const LANGUAGES: Language[] = [
 export function SelectLanguages() {
     const { t, i18n } = useTranslation("translation", { keyPrefix: "languages" });
     
-    const [selectedLanguage, setSelectedLanguage] = useState(LANGUAGES[0]);
+    const [selectedLanguage, setSelectedLanguage] = useState(LANGUAGES[1]);
     const [optionsVisible, setOptionsVisible] = useState(false);
 
     const LanguageIcon = useCallback(() => {

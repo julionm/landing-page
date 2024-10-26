@@ -117,5 +117,28 @@
             "title": "Jack-of-all-trades",
             "description": "Work on front end, back end and with infrastructure"
         }
+    },
+    "metrics": {
+        "title": "Metrics",
+        "years_working": {
+            "unit": "years",
+            "description": "Working as a developer"
+        },
+        "leetcodes_solved": {
+            "unit": "exercises",
+            "description": "solved in LeetCode"
+        },
+        "duolingo_streak": {
+            "unit": "days",
+            "description": "of Duolingo streak"
+        },
+        "worldle": {
+            "unit": "days",
+           "description": "doing Wordle at NY Times" 
+        },
+        "git_repos": {
+            "unit": "repositories",
+            "description": "on GitHub"
+        }
     }
 }

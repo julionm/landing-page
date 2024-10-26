@@ -1,6 +1,7 @@
 import { Metric } from "models/metric";
 import { useEffect, useRef } from "react";
 import { TimingProgress, animate } from "utils/animation";
+import { useTranslation } from "react-i18next";
 import "./styles.css";
 
 type MetricItemProps = {
@@ -10,6 +11,8 @@ type MetricItemProps = {
 const DURATION = 1000;
 
 export function MetricItem ({ metric }: MetricItemProps) {
+
+    const { t } = useTranslation();
 
     const valueRef = useRef<HTMLSpanElement>(null);
     const itemRef = useRef<HTMLDivElement>(null);
@@ -56,11 +59,11 @@ export function MetricItem ({ metric }: MetricItemProps) {
                 <p className="metric-item__value">
                     {metric.valuePrefix || ""}<span ref={valueRef}>0</span>
                 </p>
-                <p className="metric-item__unit">{metric.measurementUnit}</p>
+                <p className="metric-item__unit">{t(metric.measurementUnit)}</p>
             </div>
 
             <p className="metric-item__description">
-                {metric.description}
+                {t(metric.description)}
             </p>
         </div>
     )
