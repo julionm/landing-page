@@ -22,21 +22,21 @@ const METRICS: Metric[] = [
         id: 2,
         value: 200,
         valuePrefix: "~",
-        measurementUnit: "days",
-        description: "of Duolingo streak"
+        measurementUnit: "metrics.duolingo_streak.unit",
+        description: "metrics.duolingo_streak.description"
     },
     {
         id: 3,
         value: 100,
         valuePrefix: "+",
-        measurementUnit: "days",
-        description: "doing Wordle at NY Times"
+        measurementUnit: "metrics.worldle.unit",
+        description: "metrics.worldle.description"
     },
     {
         id: 4,
         value: 58,
-        measurementUnit: "repositories",
-        description: "on GitHub"
+        measurementUnit: "metrics.git_repos.unit",
+        description: "metrics.git_repos.description"
     },
 ]
 

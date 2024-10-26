@@ -28,7 +28,6 @@
     gap: .5em;
 
     line-height: 1;
-    min-width: 100px;
 
     user-select: none;
     -webkit-user-select: none;
@@ -40,13 +39,12 @@
 
 .language-options {
     top: calc(100% + .5em);
+    left: 0;
 
-    inset-inline: 0;
-
-    background-color: var(--text-light);
+    background-color: grey;
     color: var(--text);
 
-    border: 1px solid grey;
+    border: .5px solid grey;
 
     position: absolute;
 

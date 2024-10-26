@@ -5,6 +5,7 @@ import UpOutsourcingLogo from "assets/images/upoutsourcing_logo.jpeg";
 import ViewBLogo from "assets/images/viewb_logo.jpeg";
 
 import './styles.css';
+import { useTranslation } from 'react-i18next';
 
 const workExperiences: WorkDetails[] = [
     {
@@ -28,7 +29,7 @@ const workExperiences: WorkDetails[] = [
                 end: new Date(2024, 8, 26)
             },
             {
-                title: "position.frond_end",
+                title: "position.front_end",
                 description: "experiences.up_outsourcing.front_end_desc",
                 techStack: [TechStack.React, TechStack.ReactNative, TechStack.StyledComponents, TechStack.Redux],
                 start: new Date(2022, 3, 12),
@@ -70,10 +71,12 @@ const workExperiences: WorkDetails[] = [
 
 export function ExperiencesPage () {
 
+    const { t } = useTranslation();
+
     return (
         <section id="experiencesSection" className='experiences'>
 
-            <h2 className='title'>&#x2192; Experiences</h2>
+            <h2 className='title'>&#x2192; {t("experiences.title")}</h2>
 
             <div className='work-list'>
                 {

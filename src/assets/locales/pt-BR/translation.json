@@ -1,12 +1,16 @@
 {
     "home": {
         "position": "Desenvolvedor Full Stack",
-        "intro": "",
         "my-email": "Meu Email",
-        "dowload-resume": "Baixar Currículo"
+        "download_resume": "Baixar Currículo",
+        "about": {
+            "age_and_location": "Tenho 23 anos e atualmente moro no Brasil",
+            "work_duration": "Tenho trabalhado como desenvolvedor de software desde 2018.",
+            "download_resume": "Baixe o meu currículo ou dê uma olhada nas minhas redes!"
+        }
     },
     "header": {
-        "home": "Home",
+        "home": "Início",
         "experiences": "Experiências",
         "projects": "Projetos",
         "updates": "Atualizações",
@@ -15,5 +19,127 @@
     "languages": {
         "english": "Inglês",
         "portuguese": "Português"
-    }
+    },
+    "position": {
+        "full_stack": "Desenvolvedor Full Stack",
+        "junior_full_stack": "Desenvolvedor Full Stack Jr.",
+        "web_analytics": "Engenheiro de Web Analytics",
+        "front_end": "Desenvolvedor Front End",
+        "intern": "Estagiário"
+    },
+    "experiences": {
+        "title": "Experiências",
+        "viewb": {
+            "description": "Trabalhei em um produto de BI que permitia usuários criarem dashboards e análises oferencdo suporte a tomada de decisões. Participei no desenvolvimento do software end-to-end usando Angular, Spring, Postgres e Linux para servidores. Atendimento ao cliente também foi uma das habilidades que ganhei nesse trabalho",
+            "full_stack_desc": "Pelo momento que fui promovido a segunda vez, já estava trabalhando na infraestrutura de clientes, oferecendo suporte e já havia mexido em praticamente todo o sistema.",
+            "junior_full_stack_desc": "Fui promovido a Junior depois de fazer um estudo completo e profundo do software da empresa. Recebi novas responsabilidades e entendi melhor o fluxo de trabalho.",
+            "intern_desc": "Comecei minha jornada como programador aqui, aprendendo os básicos de Angular e Spring"
+        },
+        "up_outsourcing": {
+            "description": "Na Up Outsourcing recebi a oportunidade de melhorar minhas soft skills além do conhecimento profundo que recebi de Front End e PHP. Têm sido uma experiência ótima trabalhar com tantas pessoas diferentes por tantos projetos únicos.",
+            "front_end_desc": "Meu trabalho com um Desenvolvedor Front End foi um marco na minha carreira. Pela primeira vez, eu era responsável por apenas uma parte do software, o que me deu a oportunidade de aprofundar minhas habilidades com React.",
+            "full_stack_desc": "Seguindo na minha jornada, acabei trabalhando, pela primeira vez profissionalmente, com PHP usando Laravel. Trabalhei em alguns projetos mais antigos que usavam PHP mas esse foi o que trabalhei com PHP por mais tempo.",
+            "web_analytics_desc": "Por um longo tempo, tem sido um sonho meu trabalhar em um projeto grande com muitas áreas diferentes, isso aconteceu finamente na Up. Trabalhando como um engenheiro de Web Analytics abriu meus olhos para uma área totalmente nova que eu não tinha conhecimento prévio. Ainda estou no processo de aprendizado, entretanto."
+        }
+    },
+    "projects": {
+        "title": "Projetos",
+        "source": "Fonte",
+        "visit": "Visitar",
+        "pairs_game": {
+            "title": "Jogo dos Pares",
+            "description": "Um jogo simples para encontrar pares semelhantes. Bom para estudar japonês."
+        },
+        "rust_studies": {
+            "title": "Estudos de Rust",
+            "description": "Notas eu escrevi enquanto lia o livro The Rust Programming Language."
+        },
+        "landing_page": {
+            "title": "Landing Page",
+            "description": "O código dessa página."
+        },
+        "tulitip": {
+            "title": "Tulitip",
+            "description": "Componente simples e reutilizavél de tooltip."
+        },
+        "simple_dashboard": {
+            "title": "Dashboard Simples",
+            "description": "Usando um layout do Dribbble como base, criei esse dashboard simples usando a técnica de Glassmorphism. Gostei bastante do resultado."
+        },
+        "flipping_cards": {
+            "title": "Cartões Giratórios",
+            "description": "Vi um cartão que girava dessa forma em um website e decidi implementar um sozinho. Foi bem divertido de brincar com a propriedade perspective do CSS."
+        } 
+    },
+    "updates": {
+        "title": "Últimas Atualizações",
+        "read_more": "Leia Mais",
+        "thousand_weeks": {
+            "title": "[Livro] Comecei Four Thousand Weeks - Oliver Burkeman",
+            "description": "Me deu uma nova perspectiva no gerenciamento de tempo"
+        },
+        "book_ddd": {
+            "title": "[Livro] Terminei Domain Driven Design - Eric Evan",
+            "description": "Um livro incrível para entender mais sobre modelos"
+        },
+        "course_js_tdd": {
+            "title": "[Curso] Testes Unitários em JavaScript",
+            "description": "Terminei esse curso introdutório maneiro para testar no JS vanilla"            
+        },
+        "keys_and_rooms": {
+            "title": "[LeetCode] 841. Keys and Rooms - Solução com DFS",
+            "description": "Minha solução para um LeetCode"            
+        }
+    },
+    "achievments": {
+        "title": "Conquistas",
+        "first_stage": {
+            "title": "Primeira fase concluída!",
+            "description": "Seja promovido!"
+        },
+        "second_stage": {
+            "title": "Segunda fase concluída!",
+            "description": "Seja promovido de novo!"
+        },
+        "knowledge": {
+            "title": "Conhecimento básico adquirido",
+            "description": "Termine o capítulo do colégio técnico"
+        },
+        "not_impossible": {
+            "title": "Nunca diga nunca",
+            "description": "Termine um longo livro que você pensou que não era possível"
+        },
+        "worldwide": {
+            "title": "Pelo mundo",
+            "description": "Trabalhe com clientes americanos"
+        },
+        "jack": {
+            "title": "Pau-pra-toda-obra",
+            "description": "Trabalhe com front end, back end e infra estrutura"
+        }
+    },
+    "metrics": {
+        "title": "Métricas",
+        "years_working": {
+            "unit": "anos",
+            "description": "trabalhando como desenvolvedor"
+        },
+        "leetcodes_solved": {
+            "unit": "exercícios",
+            "description": "do LeetCode resolvidos"
+        },
+        "duolingo_streak": {
+            "unit": "dias",
+            "description": "seguidos no Duolingo"
+        },
+        "worldle": {
+            "unit": "dias",
+            "description": "fazendo o Worldle do NY Times" 
+        },
+        "git_repos": {
+            "unit": "repositórios",
+            "description": "no GitHub"
+        }
+    },
+    "thanks_message": "Obrigado pelo seu tempo 🙏. Espero que tenha gostado!"
 }

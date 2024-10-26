@@ -8,6 +8,7 @@ My landing page with some basic information: experiences, interests, projects, e
 
 ## ToDo
 
+- [ ] read material guidelines on text
 - [ ] translate the entire website to pt-BR
 - [ ] implement animations or some creative stuff for the website
 - [ ] add true photos to the website to prepare for launch

@@ -1,13 +1,12 @@
 {
     "home": {
         "position": "Full Stack Developer",
-        "intro": "",
         "my-email": "My Email",
-        "dowload_resume": "Download Resume",
+        "download_resume": "Download Resume",
         "about": {
             "age_and_location": "I'm 23 years old and I'm based in Brazil",
             "work_duration": "I've been working as a software developer since 2018.",
-            "dowload_resume": "Download my resume or check my accounts!"
+            "download_resume": "Download my resume or check my accounts!"
         }
     },
     "header": {
@@ -29,17 +28,18 @@
         "intern": "Intern"
     },
     "experiences": {
+        "title": "Experiences",
         "viewb": {
-            "description": "Worked with a BI product that allowed users to create dashboards and create presentations. I maintained the software end-to-end using Angular, Spring and Postgres. I also supported the company infrastructure and clients.",
-            "full_stack_desc": "By the time I was promoted the second time, I was already working on client's infrastructure, offering support for them and I had already tackled almost every part of their software.",
+            "description": "Worked with a BI product that allowed users to create dashboards and analysis that helped executives making critical business decisions. I had participated in the software development end-to-end using: Angular, Spring, Postgres and Linux for servers. Customer service was another skill I earned by working at this company",
+            "full_stack_desc": "By the time I was promoted the second time, I was already working on client's infrastructure, offering support for them and I had already tackled almost every part of the system.",
             "junior_full_stack_desc": "I was promoted to Junior after a thorough study of the company's software. New responsibilities were assigned to me and I got used to the flow.",
             "intern_desc": "I started my journey as a programmer here, learning the very basics of Spring Boot and Angular."
         },
         "up_outsourcing": {
-            "description": "I've worked in a range of different projects, all of them using PHP for Back-End and in some cases in Front End too. I earned a lot of experience on customer service. I'm still striving to learn lots of new stuff to help on our current project.",
-            "front_end_desc": "I worked on the Front End and Mobile softwares, it was relly nice to finally gain some experience using React professionally. It is a nice project to offer a better communication for workers on construction sites.",
-            "full_stack_desc": "I spent some time working on a couple of different projects using mostly PHP. One to help real estate agents with their social media and other shorter projects.",
-            "web_analytics_desc": "I accepted a new challenge to work as a Web Analytics Engineer for a big project and it has been really fun! Understanding deeply how to track user information and turn raw data into valuable information to support our executives, it's really nice!"
+            "description": "At Up Outsourcing I was given the opportunity to improve my soft skills besides the deeper aknowledge I acquired on Front End and PHP. It has been a great experience to work with so many different people and across so many distinguished projects.",
+            "front_end_desc": "My job as a Front End developer was a milestone in my career. For the first time I was responsible for only one part of the software, what gave me an opportunity to deepen my skills in React.",
+            "full_stack_desc": "Following up on my journey, I ended up working professionally, for the first time, with PHP using the Laravel framework. I worked on a couple of older projects that used PHP but this is one, is the longest I've worked with PHP.",
+            "web_analytics_desc": "For a long time, it has been my dream to work on a big project with so many different areas and it came true at Up. Working as a Web Analytics Engineer opened my eyes to a whole new area that I hadn't prior knowledge about. I'm still on the learning process though."
         }
     },
     "projects": {
@@ -83,7 +83,7 @@
             "description": "An amazing book to understand more about models."
         },
         "course_js_tdd": {
-            "title": "[Udemy Course] JavaScript Unit Testing",
+            "title": "[Curso] JavaScript Unit Testing",
             "description": "Finished this cool introductory course to testing with JS."            
         },
         "keys_and_rooms": {
@@ -106,8 +106,8 @@
             "description": "Finish the technical school chapter"
         },
         "not_impossible": {
-            "title": "Not impossible at all",
-            "description": "Finish a long book you thought you'd never finish."
+            "title": "Never say never",
+            "description": "Finish a long book you thought you'd never finish"
         },
         "worldwide": {
             "title": "Worldwide",
