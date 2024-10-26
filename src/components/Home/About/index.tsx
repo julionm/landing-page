@@ -13,7 +13,7 @@ export function About() {
     return (
         <section className='about'>
             <header>
-                <h1 className="name">Julio Negri</h1>
+                <h1 className="name notranslate">Julio Negri</h1>
                 <p className='position'>{t("position")}</p>
             </header>
             <div className='about__intro'>

@@ -16,7 +16,7 @@ export function WorkInfo({ work }: WorkInfoProps) {
             <img src={work.logoUrl || ""} alt={`${work.companyName} logo`} className="work-info__logo" />
 
             <div className="work-info__content">
-                <h3>{work.companyName}</h3>
+                <h3 className="notranslate">{work.companyName}</h3>
 
                 <p className="work-info__description">{t(work.description)}</p>
 
