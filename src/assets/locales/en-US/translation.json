@@ -90,5 +90,32 @@
             "title": "[LeetCode] 841. Keys and Rooms - DFS Solution",
             "description": "My resolution to a LeetCode problem."            
         }
+    },
+    "achievments": {
+        "title": "Achievments",
+        "first_stage": {
+            "title": "First stage cleared!",
+            "description": "Get a promotion!"
+        },
+        "second_stage": {
+            "title": "Second stage cleared!",
+            "description": "Get a promotion again!"
+        },
+        "knowledge": {
+            "title": "Base knowledge acquired",
+            "description": "Finish the technical school chapter"
+        },
+        "not_impossible": {
+            "title": "Not impossible at all",
+            "description": "Finish a long book you thought you'd never finish."
+        },
+        "worldwide": {
+            "title": "Worldwide",
+            "description": "Work with american clients"
+        },
+        "jack": {
+            "title": "Jack-of-all-trades",
+            "description": "Work on front end, back end and with infrastructure"
+        }
     }
 }
