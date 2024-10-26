@@ -12,7 +12,7 @@ i18next
     lng: navigator.language,
     fallbackLng: "en-US",
     backend: {
-      loadPath: "src/assets/locales/{{lng}}/translation.json"
+      loadPath: "/locales/{{lng}}/translation.json"
     }  
   })
 
