@@ -39,3 +39,4 @@ I'll let these things here so I remember how I've done so far.
 - [x] make Updates actually work, create a new page to show the content, or maybe just use it as short update messages
   - I don't know yet what to do with this section so I'll leave as it is for now
   - Nah, I'll use the updates to link to my LinkedIn posts and LeetCode solutions, that'll be good enough
+- [x] translate the entire website to pt-BR
