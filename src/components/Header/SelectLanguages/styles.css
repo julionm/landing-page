@@ -40,7 +40,7 @@
     font-size: .875em;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 768px) {
     .language-selected__caption {
         display: block;
     }

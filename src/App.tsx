@@ -11,11 +11,6 @@ import './App.css';
 
 const ITEMS = [
   {
-    text: "home",
-    target: "homeSection",
-    component: HomePage
-  },
-  {
     text: "experiences",
     target: "experiencesSection",
     component: ExperiencesPage
@@ -42,6 +37,7 @@ function App() {
   return (
     <main className="">
       <Header items={ITEMS} />
+      <HomePage />
       {
         ITEMS.map(item => (
           <item.component key={item.text} />

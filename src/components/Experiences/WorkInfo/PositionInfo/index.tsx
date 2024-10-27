@@ -3,7 +3,6 @@ import { Position } from "models/workInfo"
 
 import { ClockIcon } from "assets/icons";
 import { useMemo } from "react";
-import { getDateTimeFormatter } from "utils/date-formatter";
 import { useTranslation } from "react-i18next";
 
 import "./styles.css";
@@ -17,19 +16,21 @@ const formatterOptions: Intl.DateTimeFormatOptions = {
     year: "numeric"
 };
 
-const formatter = getDateTimeFormatter(formatterOptions);
-
 export function PositionInfo ({ position }: PositionInfoProps ) {
     
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+
+    const formatter = useMemo(() => {
+        return new Intl.DateTimeFormat(i18n.language, formatterOptions);
+    }, [i18n.language]);
 
     const formattedStartDate = useMemo(() => {
         return formatter.format(position.start);
-    }, [position]);
+    }, [position, i18n.language]);
 
     const formattedEndDate = useMemo(() => {
-        return position.end ? formatter.format(position.end) : "Present"
-    }, [position]);
+        return position.end ? formatter.format(position.end) : t("now")
+    }, [position, i18n.language]);
     
     return (
         <div className="position-info">

@@ -14,12 +14,23 @@
     place-items: center;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 564px) {
     .home {
-        font-size: 0.75em;
+        padding-bottom: 4rem;
     }
 }
 
+@media (max-width: 768px) {
+    .home {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .home {
+        font-size: 0.875em;
+    }
+}
 
 .home__presentation {
     width: 100%;
@@ -63,11 +74,5 @@
 
     .profile-photo {
         width: 100%;
-    }
-}
-
-@media (max-width: 564px) {
-    .home {
-        padding-block: 4rem;
     }
 }

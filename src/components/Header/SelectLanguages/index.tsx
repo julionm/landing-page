@@ -11,37 +11,38 @@ type Language = {
     icon: (props: HTMLAttributes<SVGElement>) => ReactElement
 }
 
-const LANGUAGES: Language[] = [
-    {
+const LANGUAGES: Record<string, Language> = {
+    "pt-BR": {
         language: "pt-BR",
         text: "portuguese",
         icon: BrazilFlagIcon
     },
-    {
+    "en-US": {
         language: "en-US",
         text: "english",
         icon: UsaFlagIcon
     }
-]
+}
 
 export function SelectLanguages() {
     const { t, i18n } = useTranslation("translation", { keyPrefix: "languages" });
     
-    const [selectedLanguage, setSelectedLanguage] = useState(LANGUAGES[1]);
+    const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
     const [optionsVisible, setOptionsVisible] = useState(false);
 
     const LanguageIcon = useCallback(() => {
-        const Icon = selectedLanguage.icon;
+        const Icon = LANGUAGES[selectedLanguage].icon;
 
         return (
             <Icon className="icon" />
         );
     }, [selectedLanguage]);
 
-    function handleUserSelection(selected: Language) {
+    function handleUserSelection(selectedKey: string) {
+        const selected = LANGUAGES[selectedKey];
         i18n.changeLanguage(selected.language);
         
-        setSelectedLanguage(selected);
+        setSelectedLanguage(selectedKey);
         setOptionsVisible(!optionsVisible);
     }
 
@@ -51,12 +52,12 @@ export function SelectLanguages() {
             className="select-wrapper"
             onClick={() => setOptionsVisible(!optionsVisible)}
             aria-haspopup
-            aria-label={`Current language is ${t(selectedLanguage.text)}. Choose your preferred language.`}
+            aria-label={`Current language is ${t(LANGUAGES[selectedLanguage].text)}. Choose your preferred language.`}
         >
            
             <div className="language-selected">
                 <LanguageIcon />
-                <p className="language-selected__caption">{t(selectedLanguage.text)}</p>
+                <p className="language-selected__caption">{t(LANGUAGES[selectedLanguage].text)}</p>
             </div>
 
             <ul
@@ -67,7 +68,8 @@ export function SelectLanguages() {
                 aria-expanded={optionsVisible}    
             >
                 {
-                    LANGUAGES.map(lang => {
+                    Object.keys(LANGUAGES).map(langKey => {
+                        const lang = LANGUAGES[langKey];
                         const Icon = lang.icon;
 
                         return (
@@ -75,7 +77,7 @@ export function SelectLanguages() {
                                 key={lang.language}
                                 className="language-option"
                                 lang={lang.language}
-                                onClick={() => handleUserSelection(lang)}
+                                onClick={() => handleUserSelection(langKey)}
                                 role="menuitem"
                             >
                                 <Icon className="icon" />

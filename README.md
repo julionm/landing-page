@@ -8,17 +8,18 @@ My landing page with some basic information: experiences, interests, projects, e
 
 ## ToDo
 
-- [ ] make header active state depending on which section is the most visible
-- [ ] translate Present on dates
-- [ ] fix header in mobile
-- [ ] think on a solution to fix dates across the website
 - [ ] parametrize spacing between sections
   - [ ] make it change based on screen size
-- [ ] read material guidelines on text
 - [ ] add true photos to the website to prepare for launch
   - [ ] projects
   - [ ] achievments
 - [ ] add utility to the primary buttons
+- [ ] address accessibility issues
+- [ ] improve lighthouse score
+
+After v1 being published:
+- [ ] read material guidelines on text
+- [ ] improve text
 - [ ] add some effect to those social media buttons to show my usernames
   - dunno if I want this
 
