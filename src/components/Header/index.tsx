@@ -3,28 +3,31 @@ import { SwitchThemes } from "./SwitchThemes";
 import { SelectLanguages } from "./SelectLanguages";
 import "./styles.css";
 
-export function Header() {
+type HeaderItem = {
+    text: string,
+    target: string
+}
+
+type HeaderProps = {
+    items: HeaderItem[]
+}
+
+const LINK_ITEM_PREFIX = "link_"
+
+export function Header ({ items }: HeaderProps) {
 
     const { t } = useTranslation("translation", { keyPrefix: "header" });
 
     return (
         <nav className="header">
             <ul className="header__menu-list">
-                <li>
-                    <a href="#homeSection" data-active>{t("home")}</a>
-                </li>
-                <li>
-                    <a href="#experiencesSection">{t("experiences")}</a>
-                </li>
-                <li>
-                    <a href="#projectsSection">{t("projects")}</a>
-                </li>
-                <li>
-                    <a href="#updatesSection">{t("updates")}</a>
-                </li>
-                <li>
-                    <a href="#achievmentsSection">{t("achievments")}</a>
-                </li>
+                {
+                    items.map(item => (
+                        <li id={`${LINK_ITEM_PREFIX}${item.target}`} key={item.target} >
+                            <a href={`#${LINK_ITEM_PREFIX}${item.target}`}>{t(item.text)}</a>
+                        </li>
+                    ))
+                }
             </ul>
 
             <div className="header__actions">

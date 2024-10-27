@@ -9,16 +9,44 @@ import { ThanksMessage } from "components/ThanksMessage";
 import { Header } from "components/Header";
 import './App.css';
 
+const ITEMS = [
+  {
+    text: "home",
+    target: "homeSection",
+    component: HomePage
+  },
+  {
+    text: "experiences",
+    target: "experiencesSection",
+    component: ExperiencesPage
+  },
+  {
+    text: "projects",
+    target: "projectsSection",
+    component: ProjectsPage
+  },
+  {
+    text: "updates",
+    target: "updatesSection",
+    component: Updates
+  },
+  {
+    text: "achievments",
+    target: "achievmentsSection",
+    component: AchievmentsPage
+  }
+]
+
 function App() {
 
   return (
     <main className="">
-      <Header />
-      <HomePage />
-      <ExperiencesPage />
-      <ProjectsPage />
-      <Updates />
-      <AchievmentsPage />
+      <Header items={ITEMS} />
+      {
+        ITEMS.map(item => (
+          <item.component key={item.text} />
+        ))
+      }
       <MetricsPage />
       <Footer />
       <ThanksMessage />

@@ -6,8 +6,6 @@ export function BrazilFlagIcon(props: HTMLAttributes<SVGElement>) {
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="16"
-      height="16"
       viewBox="-2100 -1470 4200 2940"
     >
       <defs>

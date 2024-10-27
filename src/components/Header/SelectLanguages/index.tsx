@@ -34,7 +34,7 @@ export function SelectLanguages() {
         const Icon = selectedLanguage.icon;
 
         return (
-            <Icon />
+            <Icon className="icon" />
         );
     }, [selectedLanguage]);
 
@@ -56,7 +56,7 @@ export function SelectLanguages() {
            
             <div className="language-selected">
                 <LanguageIcon />
-                <p>{t(selectedLanguage.text)}</p>
+                <p className="language-selected__caption">{t(selectedLanguage.text)}</p>
             </div>
 
             <ul
@@ -78,7 +78,7 @@ export function SelectLanguages() {
                                 onClick={() => handleUserSelection(lang)}
                                 role="menuitem"
                             >
-                                <Icon />
+                                <Icon className="icon" />
                                 <p>{t(lang.text)}</p>
                             </li>
                         )

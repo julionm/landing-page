@@ -13,15 +13,17 @@
     position: relative;
 
     border: 1px solid var(--primary);
-    border-radius: .5vw;
+    border-radius: .4vw;
 
     font-size: 1em;
 }
 
+.select-wrapper .icon {
+    width: 1em;
+}
+
 .language-selected {
     color: var(--text);
-
-    font-size: .875em;
 
     display: flex;
     align-items: center;
@@ -31,6 +33,17 @@
 
     user-select: none;
     -webkit-user-select: none;
+}
+
+.language-selected__caption {
+    display: none;
+    font-size: .875em;
+}
+
+@media (min-width: 540px) {
+    .language-selected__caption {
+        display: block;
+    }
 }
 
 .close-button:hover .close-icon {
@@ -71,10 +84,13 @@
 
     cursor: pointer;
 
-    font-size: .875em;
     line-height: 1;
 
     box-sizing: border-box;
+}
+
+.language-option p {
+    font-size: .875em;
 }
 
 .language-option:hover {

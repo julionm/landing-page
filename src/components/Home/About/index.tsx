@@ -17,7 +17,7 @@ export function About() {
                 <p className='position'>{t("position")}</p>
             </header>
             <div className='about__intro'>
-                <p>{t("about.age_and_location")} <BrazilFlagIcon />.</p>
+                <p>{t("about.age_and_location")} <BrazilFlagIcon className='brazil-icon' />.</p>
                 <p>{t("about.work_duration")}</p>
                 <p>{t("about.download_resume")}</p>
             </div>

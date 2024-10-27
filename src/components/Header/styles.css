@@ -14,8 +14,14 @@
 
 .header__menu-list {
     list-style: none;
-    display: flex;
+    display: none;
     gap: 2em;
+}
+
+@media (min-width: 800px) {
+    .header__menu-list {
+        display: flex;
+    }
 }
 
 .header__menu-list li a {
@@ -40,8 +46,8 @@
     transition: right .3s ease-out;
 }
 
-.header__menu-list li a[data-active]::before,
-.header__menu-list li a:hover::before {
+.header__menu-list li[data-active] a::before,
+.header__menu-list li:hover a::before {
     right: 0%;
 }
 

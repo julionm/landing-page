@@ -6,9 +6,7 @@ export function UsaFlagIcon (props: HTMLAttributes<SVGElement>) {
             {...props}
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 7410 3900"
-            width={16}
-            height={16}>
+            viewBox="0 0 7410 3900">
             <rect width="7410" height="3900" fill="#b22234"/>
             <path d="M0,450H7410m0,600H0m0,600H7410m0,600H0m0,600H7410m0,600H0" stroke="#fff" strokeWidth="300"/>
             <rect width="2964" height="2100" fill="#3c3b6e"/>

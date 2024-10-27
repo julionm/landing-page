@@ -8,16 +8,17 @@ My landing page with some basic information: experiences, interests, projects, e
 
 ## ToDo
 
-- [ ] fix header and projects section on mobile
+- [ ] make header active state depending on which section is the most visible
+- [ ] translate Present on dates
+- [ ] fix header in mobile
+- [ ] think on a solution to fix dates across the website
+- [ ] parametrize spacing between sections
+  - [ ] make it change based on screen size
 - [ ] read material guidelines on text
-- [ ] implement animations or some creative stuff for the website
 - [ ] add true photos to the website to prepare for launch
   - [ ] projects
   - [ ] achievments
 - [ ] add utility to the primary buttons
-- [-] discover a way to make the site stand out more, today it looks really similar to everything else
-  - I had an idea for this but it'll only work after 90% of the site is finished
-  - I believe I achieved it by changing the font and redesigning the experiences section
 - [ ] add some effect to those social media buttons to show my usernames
   - dunno if I want this
 

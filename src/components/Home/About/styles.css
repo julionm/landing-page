@@ -27,6 +27,10 @@
     color: var(--text);
 }
 
+.about__intro .brazil-icon {
+    height: 1em;
+}
+
 .about__intro p {
     line-height: 1.75;
     color: var(--text);
