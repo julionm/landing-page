@@ -11,3 +11,4 @@ export { ArrowExternalIcon } from "./ArrowExternal";
 export { MoonIcon } from "./theme/Moon";
 export { SunIcon } from "./theme/Sun";
 export { UsaFlagIcon } from  "./UsaFlag";
+export { TrophyIcon } from "./Trophy";

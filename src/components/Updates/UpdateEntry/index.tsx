@@ -2,8 +2,8 @@ import { Update } from "models/updates"
 import { Button } from "components/common/Button";
 import { ArrowRightIcon, ClockIcon } from "assets/icons";
 import { useMemo } from "react";
-import "./styles.css";
 import { useTranslation } from "react-i18next";
+import "./styles.css";
 
 type UpdateEntryProps = {
     update: Update
@@ -38,7 +38,7 @@ export function UpdateEntry ({ update }: UpdateEntryProps) {
             {
                 update.actionUrl && (
                     <div className="update__action">
-                        <Button>
+                        <Button href={update.actionUrl}>
                             <span className="read-more">{t("updates.read_more")}</span>
                             <ArrowRightIcon className="icon" />
                         </Button>

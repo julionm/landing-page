@@ -1,35 +1,51 @@
 import { HTMLAttributes, ReactNode, useMemo } from "react";
 import './styles.css';
 
-export enum ButtonType {
+export enum ButtonStyle {
     PRIMARY = 'primary',
     OUTLINED = 'outlined',
     TEXT = 'text'
 };
 
-interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-    type?: ButtonType,
+interface ButtonProps extends HTMLAttributes<HTMLElement> {
+    btnStyle?: ButtonStyle,
     customClass?: string,
+    href?: string,
     children: ReactNode
 };
 
 export function Button ({
-    type = ButtonType.OUTLINED,
+    btnStyle = ButtonStyle.OUTLINED,
     customClass,
     children,
+    href,
     ...rest
 }: ButtonProps) {
 
     const className = useMemo(() => {
-        return 'button--' + type;
-    }, [type]);
+        return 'button--' + btnStyle;
+    }, [btnStyle]);
 
     return (
-        <button
-            className={`button ${className} ${customClass || ''}`}
-            {...rest}>
-            {children}
-        </button>
+        <>
+            {
+                href ? (
+                    <a
+                        href={href}
+                        target="_blank"
+                        className={`button ${className} ${customClass || ''}`}
+                        {...rest}>
+                        {children}
+                    </a>
+                ) : (
+                    <button
+                        className={`button ${className} ${customClass || ''}`}
+                        {...rest}>
+                        {children}
+                    </button>
+                )
+            }
+        </>
     );
 
 }

@@ -3,9 +3,15 @@ import { Project } from "models/project";
 import { TechStack } from "models/workInfo";
 import { ProjectCard } from "./ProjectCard";
 import { ProjectDialog } from "./ProjectDialog";
+import { useTranslation } from "react-i18next";
+
+import pairsGamePhoto from "assets/images/pairs_game.png";
+import rustStudiesPhoto from "assets/images/rust-studies.png";
+import simpleDashboardPhoto from "assets/images/simple_dashboard.png";
+import flippingCardsPhoto from "assets/images/flipping_cards.png";
+import landingPagePhoto from "assets/images/landing_page.png";
 
 import './styles.css';
-import { useTranslation } from "react-i18next";
 
 const PROJECTS: Project[] = [
     {
@@ -14,7 +20,7 @@ const PROJECTS: Project[] = [
         description: "projects.pairs_game.description",
         sourceCodeUrl: "https://github.com/julionm/pairs-game",
         techStack: [TechStack.React, TechStack.Tailwind],
-        imageUrl: ''
+        imageUrl: pairsGamePhoto
     },
     {
         id: 2,
@@ -22,7 +28,7 @@ const PROJECTS: Project[] = [
         description: "projects.rust_studies.description",
         sourceCodeUrl: "https://github.com/julionm/rust-studies",
         techStack: [TechStack.Rust],
-        imageUrl: ''
+        imageUrl: rustStudiesPhoto
     },
     {
         id: 3,
@@ -30,7 +36,7 @@ const PROJECTS: Project[] = [
         description: "projects.landing_page.description",
         sourceCodeUrl: "https://github.com/julionm/landing-page",
         techStack: [TechStack.React],
-        imageUrl: ''
+        imageUrl: landingPagePhoto
     },
     {
         id: 4,
@@ -46,7 +52,8 @@ const PROJECTS: Project[] = [
         description: "projects.simple_dashboard.description",
         sourceCodeUrl: "https://codepen.io/julionm/pen/GRMbmdg",
         techStack: [TechStack.CSS, TechStack.HTML],
-        imageUrl: ''
+        imageUrl: simpleDashboardPhoto,
+        publishedUrl: "https://codepen.io/julionm/pen/GRMbmdg"
     },
     {
         id: 6,
@@ -54,7 +61,8 @@ const PROJECTS: Project[] = [
         description: "projects.flipping_cards.description",
         sourceCodeUrl: "https://codepen.io/julionm/pen/jORpYbO",
         techStack: [TechStack.CSS, TechStack.HTML, TechStack.JavaScript],
-        imageUrl: ''
+        imageUrl: flippingCardsPhoto,
+        publishedUrl: "https://codepen.io/julionm/full/jORpYbO"
     }
 ];
 

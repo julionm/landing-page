@@ -8,14 +8,16 @@ My landing page with some basic information: experiences, interests, projects, e
 
 ## ToDo
 
-- [ ] parametrize spacing between sections
-  - [ ] make it change based on screen size
+- [ ] add utility to the primary buttons
+  - [ ] Download resume
+  - [x] read More buttons on article
 - [ ] add true photos to the website to prepare for launch
   - [ ] projects
-  - [ ] achievments
-- [ ] add utility to the primary buttons
+  - [x] achievments
 - [ ] address accessibility issues
 - [ ] improve lighthouse score
+- [ ] parametrize spacing between sections
+  - [ ] make it change based on screen size
 
 After v1 being published:
 - [ ] read material guidelines on text

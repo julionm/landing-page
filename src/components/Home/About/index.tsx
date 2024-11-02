@@ -1,4 +1,4 @@
-import { Button, ButtonType } from 'components/common/Button';
+import { Button, ButtonStyle } from 'components/common/Button';
 import { LeetCodeIcon, LinkedInIcon, GithubIcon, BrazilFlagIcon, DownloadIcon } from 'assets/icons';
 import { useTranslation } from 'react-i18next';
 import './styles.css';
@@ -27,7 +27,7 @@ export function About() {
             </p>
 
             <div className='about__actions'>
-                <Button type={ButtonType.PRIMARY} onClick={() => console.log('teste')}>
+                <Button btnStyle={ButtonStyle.PRIMARY} onClick={() => console.log('teste')}>
                     <span>{t("download_resume")}</span><DownloadIcon className='icon' />
                 </Button>
 

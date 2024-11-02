@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
 import { Project } from "models/project";
 import { CloseIcon } from "assets/icons/Close";
-import { Button, ButtonType } from "components/common/Button";
+import { Button, ButtonStyle } from "components/common/Button";
 import { ArrowExternalIcon } from "assets/icons";
 import { useTranslation } from "react-i18next";
 
@@ -9,11 +9,8 @@ import profilePhoto from "assets/images/profile-image.jpeg";
 
 import "./styles.css";
 
-type ProjectDialogProps = {
-}
-
 export const ProjectDialog = forwardRef(
-    ({ }: ProjectDialogProps, ref) => {
+    (_, ref) => {
 
         const { t } = useTranslation();
 
@@ -71,10 +68,23 @@ export const ProjectDialog = forwardRef(
                 <p className="description">{t(project?.description || '')}</p>
 
                 <section className="actions">
-                    <Button>{t("projects.source")}</Button>
-                    <Button type={ButtonType.PRIMARY}>
-                        <span>{t("projects.visit")}</span> <ArrowExternalIcon className="icon" />
-                    </Button>
+                    {
+                        project?.sourceCodeUrl && (
+                            <Button href={project.sourceCodeUrl}>
+                                {t("projects.source")}
+                            </Button>
+                        )
+                    }
+                    {
+                        project?.publishedUrl && (
+                            <Button
+                                btnStyle={ButtonStyle.PRIMARY}
+                                href={project.publishedUrl}
+                            >
+                                <span>{t("projects.visit")}</span> <ArrowExternalIcon className="icon" />
+                            </Button>
+                        )
+                    }
                 </section>
             </dialog>
         )

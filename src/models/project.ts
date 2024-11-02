@@ -9,7 +9,8 @@ export type Project = {
     imageUrl: string,
     startDate?: Date,
     endDate?: Date,
-    metrics?: ProjectMetric[]
+    metrics?: ProjectMetric[],
+    publishedUrl?: string
 };
 
 export type ProjectMetric = {

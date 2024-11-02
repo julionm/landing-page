@@ -13,12 +13,22 @@
     gap: 1.5em;
 }
 
-.achievment .icon {
+.achievment .icon-container {
     height: 100%;
     aspect-ratio: 1;
     background-color: var(--main-bg);
 
     border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievment .icon-container .icon {
+    height: 2em;
+    width: 2em;
+    color: var(--text);
 }
 
 .achievment .content {
