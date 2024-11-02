@@ -1,6 +1,7 @@
 import { Button, ButtonStyle } from 'components/common/Button';
 import { LeetCodeIcon, LinkedInIcon, GithubIcon, BrazilFlagIcon, DownloadIcon } from 'assets/icons';
 import { useTranslation } from 'react-i18next';
+import curriculum from "assets/curriculum.pdf";
 import './styles.css';
 
 const LINKEDIN = 'https://www.linkedin.com/in/julio-mirandola/';
@@ -27,9 +28,11 @@ export function About() {
             </p>
 
             <div className='about__actions'>
-                <Button btnStyle={ButtonStyle.PRIMARY} onClick={() => console.log('teste')}>
-                    <span>{t("download_resume")}</span><DownloadIcon className='icon' />
-                </Button>
+                <a href={curriculum} download>
+                    <Button btnStyle={ButtonStyle.PRIMARY}>
+                        <span>{t("download_resume")}</span><DownloadIcon className='icon' />
+                    </Button>
+                </a>
 
                 <div className='my-links'>
                     <a

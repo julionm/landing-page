@@ -39,6 +39,7 @@ export function Button ({
                     </a>
                 ) : (
                     <button
+                        type="button"
                         className={`button ${className} ${customClass || ''}`}
                         {...rest}>
                         {children}

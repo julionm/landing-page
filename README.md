@@ -8,14 +8,11 @@ My landing page with some basic information: experiences, interests, projects, e
 
 ## ToDo
 
-- [ ] add utility to the primary buttons
-  - [ ] Download resume
-  - [x] read More buttons on article
 - [ ] add true photos to the website to prepare for launch
   - [ ] projects
   - [x] achievments
-- [ ] address accessibility issues
 - [ ] improve lighthouse score
+- [ ] address accessibility issues
 - [ ] parametrize spacing between sections
   - [ ] make it change based on screen size
 

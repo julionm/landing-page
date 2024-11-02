@@ -46,3 +46,6 @@ I'll let these things here so I remember how I've done so far.
 - [x] fix header in mobile
 - [x] translate Present on dates
 - [x] think on a solution to fix dates across the website
+- [x] add utility to the primary buttons
+  - [x] Download resume
+  - [x] read More buttons on article

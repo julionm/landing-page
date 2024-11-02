@@ -119,6 +119,10 @@ body {
     background: var(--main-bg);
 }
 
+a {
+    text-decoration: none;
+}
+
 .capitalize {
     text-transform: capitalize;
 }
