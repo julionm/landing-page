@@ -52,3 +52,5 @@ I'll let these things here so I remember how I've done so far.
 - [x] add true photos to the website to prepare for launch
   - [x] projects
   - [x] achievments
+- [x] improve lighthouse score
+- [x] address accessibility issues
