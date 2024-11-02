@@ -22,7 +22,7 @@ export function Header ({ items }: HeaderProps) {
                 {
                     items.map(item => (
                         <li key={item.target} >
-                            <a href={`#${item.target}`}>{t(item.text)}</a>
+                            <a href={`#${item.target}`} aria-label={t("accessibility.link_label", { name: t(item.text) })}>{t(item.text)}</a>
                         </li>
                     ))
                 }

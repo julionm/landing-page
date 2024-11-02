@@ -142,5 +142,13 @@
         }
     },
     "thanks_message": "Thanks for your time 🙏. Hope you liked it!",
-    "now": "Now"
+    "now": "Now",
+    "accessibility": {
+        "link": "Go to {{name}}",
+        "link_label": "Go to {{name}} section",
+        "social_media": "Check on my {{name}} profile",
+        "project_link": "Visit the source of code of project {{name}}",
+        "project_published_link": "Visit the project {{name}}",
+        "updates_link": "Read more about the update"
+    }
 }

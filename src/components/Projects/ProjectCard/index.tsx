@@ -20,7 +20,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
             <img src={project.imageUrl || profileImage} alt="" />
 
             <figcaption>
-                <h4>{t(project.title)}</h4>
+                <h3>{t(project.title)}</h3>
 
                 <TagList items={project.techStack} />
             </figcaption>

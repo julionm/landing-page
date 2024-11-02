@@ -14,7 +14,7 @@
         "experiences": "Experiências",
         "projects": "Projetos",
         "updates": "Atualizações",
-        "achievments": "Conquistas"    
+        "achievments": "Conquistas"
     },
     "languages": {
         "english": "Inglês",
@@ -142,5 +142,13 @@
         }
     },
     "thanks_message": "Obrigado pelo seu tempo 🙏. Espero que tenha gostado!",
-    "now": "Agora"
+    "now": "Agora",
+    "accessibility": {
+        "link": "Vá para {{name}}",
+        "link_label": "Vá para a sessão {{name}} do site",
+        "social_media": "Confira o meu perfil no {{name}}",
+        "project_link": "Veja o código fonte do projeto {{name}}",
+        "project_published_link": "Visite o projeto {{name}}",
+        "updates_link": "Leia mais sobre a atualização"
+    }
 }

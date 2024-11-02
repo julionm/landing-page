@@ -38,7 +38,7 @@ export function UpdateEntry ({ update }: UpdateEntryProps) {
             {
                 update.actionUrl && (
                     <div className="update__action">
-                        <Button href={update.actionUrl}>
+                        <Button href={update.actionUrl} aria-label={t("accessibility.updates_link")}>
                             <span className="read-more">{t("updates.read_more")}</span>
                             <ArrowRightIcon className="icon" />
                         </Button>

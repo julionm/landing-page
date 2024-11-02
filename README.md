@@ -10,14 +10,14 @@ My landing page with some basic information: experiences, interests, projects, e
 
 - [ ] improve lighthouse score
 - [ ] address accessibility issues
-- [ ] parametrize spacing between sections
-  - [ ] make it change based on screen size
 
 After v1 being published:
 - [ ] read material guidelines on text
 - [ ] improve text
 - [ ] add some effect to those social media buttons to show my usernames
   - dunno if I want this
+- [ ] parametrize spacing between sections
+  - [ ] make it change based on screen size
 
 
 ## Blocked

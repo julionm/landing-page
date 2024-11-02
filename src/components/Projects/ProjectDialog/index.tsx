@@ -70,7 +70,10 @@ export const ProjectDialog = forwardRef(
                 <section className="actions">
                     {
                         project?.sourceCodeUrl && (
-                            <Button href={project.sourceCodeUrl}>
+                            <Button
+                                href={project.sourceCodeUrl}
+                                aria-label={t("accessibility.project_link", { name: t(project.title) })}
+                            >
                                 {t("projects.source")}
                             </Button>
                         )
@@ -80,6 +83,7 @@ export const ProjectDialog = forwardRef(
                             <Button
                                 btnStyle={ButtonStyle.PRIMARY}
                                 href={project.publishedUrl}
+                                aria-label={t("accessibility.project_published_link", { name: t(project.title) })}
                             >
                                 <span>{t("projects.visit")}</span> <ArrowExternalIcon className="icon" />
                             </Button>

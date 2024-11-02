@@ -20,19 +20,22 @@ export function Footer () {
                     <a
                         href={LINKEDIN}
                         className='icon linkedin-button'
-                        target='_blank'>
+                        target='_blank'
+                        aria-label={t("accessibility.social_media", { name: "LinkedIn" })}>
                         <LinkedInIcon />
                     </a>
                     <a
                         href={GITHUB}
                         className='icon github-button'
-                        target='_blank'>
+                        target='_blank'
+                        aria-label={t("accessibility.social_media", { name: "GitHub" })}>
                         <GithubIcon />
                     </a>
                     <a
                         href={LEETCODE}
                         className='icon leetcode-button'
-                        target='_blank'>
+                        target='_blank'
+                        aria-label={t("accessibility.social_media", { name: "LeetCode" })}>
                         <LeetCodeIcon />
                     </a>
                 </div>
@@ -40,13 +43,13 @@ export function Footer () {
             
             <div className="link-list">
                 <div className="set">
-                    <a href="#homeSection">{t("header.home")}</a>
-                    <a href="#experiencesSection">{t("header.experiences")}</a>
-                    <a href="#projectsSection">{t("header.projects")}</a>
+                    <a href="#homeSection" aria-label={t("accessibility.link_label", { name: t("header.home") })}>{t("header.home")}</a>
+                    <a href="#experiencesSection" aria-label={t("accessibility.link_label", { name: t("header.experiences") })}>{t("header.experiences")}</a>
+                    <a href="#projectsSection" aria-label={t("accessibility.link_label", { name: t("header.projects") })}>{t("header.projects")}</a>
                 </div>
                 <div className="set">
-                    <a href="#updatesSection">{t("header.updates")}</a>
-                    <a href="#achievmentsSection">{t("header.achievments")}</a>
+                    <a href="#updatesSection" aria-label={t("accessibility.link_label", { name: t("header.updates") })}>{t("header.updates")}</a>
+                    <a href="#achievmentsSection" aria-label={t("accessibility.link_label", { name: t("header.achievments") })}>{t("header.achievments")}</a>
                 </div>
             </div>
         </footer>
