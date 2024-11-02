@@ -149,6 +149,7 @@
         "social_media": "Check on my {{name}} profile",
         "project_link": "Visit the source of code of project {{name}}",
         "project_published_link": "Visit the project {{name}}",
-        "updates_link": "Read more about the update"
+        "updates_link": "Read more about the update",
+        "switch_themes": "Click to Switch themes"
     }
 }

@@ -149,6 +149,7 @@
         "social_media": "Confira o meu perfil no {{name}}",
         "project_link": "Veja o código fonte do projeto {{name}}",
         "project_published_link": "Visite o projeto {{name}}",
-        "updates_link": "Leia mais sobre a atualização"
+        "updates_link": "Leia mais sobre a atualização",
+        "switch_themes": "Clique para mudar o tema do site"
     }
 }

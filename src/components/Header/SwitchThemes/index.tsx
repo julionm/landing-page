@@ -1,8 +1,11 @@
 import { MoonIcon, SunIcon } from "assets/icons";
 import { KeyboardEvent, useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./styles.css";
 
 export function SwitchThemes () {
+
+    const { t } = useTranslation();
 
     const [selectedTheme, setSelectedTheme] = useState("dark");
 
@@ -35,6 +38,7 @@ export function SwitchThemes () {
                 data-theme={selectedTheme}
                 role="button"
                 aria-pressed={selectedTheme === "light"}
+                aria-label={t("accessibility.switch_themes")}
                 tabIndex={0}>
                 <div className="circle"></div>
             </div>

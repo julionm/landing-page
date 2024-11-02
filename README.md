@@ -10,6 +10,7 @@ My landing page with some basic information: experiences, interests, projects, e
 
 - [ ] improve lighthouse score
 - [ ] address accessibility issues
+- [ ] fix contrast for light theme
 
 After v1 being published:
 - [ ] read material guidelines on text

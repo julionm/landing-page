@@ -20,7 +20,7 @@
     line-height: 1;
 
     background-color: var(--bg);
-    color: var(--fg);
+    color: #000;
 
     text-decoration: none;
 }

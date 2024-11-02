@@ -38,19 +38,22 @@ export function About() {
                     <a
                         href={LINKEDIN}
                         className='linkedin-button'
-                        target='_blank'>
+                        target='_blank'
+                        aria-label={t("accessibility.social_media", { name: "LinkedIn" })}>
                         <LinkedInIcon />
                     </a>
                     <a
                         href={GITHUB}
                         className='github-button'
-                        target='_blank'>
+                        target='_blank'
+                        aria-label={t("accessibility.social_media", { name: "LinkedIn" })}>
                         <GithubIcon />
                     </a>
                     <a
                         href={LEETCODE}
                         className='leetcode-button'
-                        target='_blank'>
+                        target='_blank'
+                        aria-label={t("accessibility.social_media", { name: "LinkedIn" })}>
                         <LeetCodeIcon />
                     </a>
                 </div>
