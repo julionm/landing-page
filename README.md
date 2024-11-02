@@ -8,9 +8,6 @@ My landing page with some basic information: experiences, interests, projects, e
 
 ## ToDo
 
-- [ ] add true photos to the website to prepare for launch
-  - [ ] projects
-  - [x] achievments
 - [ ] improve lighthouse score
 - [ ] address accessibility issues
 - [ ] parametrize spacing between sections

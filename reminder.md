@@ -49,3 +49,6 @@ I'll let these things here so I remember how I've done so far.
 - [x] add utility to the primary buttons
   - [x] Download resume
   - [x] read More buttons on article
+- [x] add true photos to the website to prepare for launch
+  - [x] projects
+  - [x] achievments

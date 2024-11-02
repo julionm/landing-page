@@ -10,6 +10,7 @@ import rustStudiesPhoto from "assets/images/rust-studies.png";
 import simpleDashboardPhoto from "assets/images/simple_dashboard.png";
 import flippingCardsPhoto from "assets/images/flipping_cards.png";
 import landingPagePhoto from "assets/images/landing_page.png";
+import tulitipPhoto from "assets/images/tulitip.png";
 
 import './styles.css';
 
@@ -44,7 +45,7 @@ const PROJECTS: Project[] = [
         description: "projects.tulitip.description",
         sourceCodeUrl: "https://github.com/julionm/tulitip",
         techStack: [TechStack.React],
-        imageUrl: ''
+        imageUrl: tulitipPhoto
     },
     {
         id: 5,
