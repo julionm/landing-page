@@ -20,7 +20,7 @@
     line-height: 1;
 
     background-color: var(--bg);
-    color: #000;
+    color: var(--fg);
 
     text-decoration: none;
 }
@@ -33,7 +33,7 @@
 
 .button--primary {
     --bg: var(--primary);
-    --fg: white;
+    --fg: #000;
     box-shadow: 0px 0px 0.85em var(--primary);
     font-weight: 500;
 }
