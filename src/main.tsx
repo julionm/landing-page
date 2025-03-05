@@ -13,7 +13,7 @@ i18next
     fallbackLng: "en-US",
     backend: {
       loadPath: "/locales/{{lng}}/translation.json"
-    }  
+    }
   })
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

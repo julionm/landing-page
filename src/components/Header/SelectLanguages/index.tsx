@@ -22,12 +22,15 @@ const LANGUAGES: Record<string, Language> = {
         text: "english",
         icon: UsaFlagIcon
     }
-}
+};
+const DEFAULT_LANGUAGE = "en-US";
 
 export function SelectLanguages() {
     const { t, i18n } = useTranslation("translation", { keyPrefix: "languages" });
     
-    const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
+    const [selectedLanguage, setSelectedLanguage] = useState(
+        LANGUAGES[i18n.language] ? i18n.language : DEFAULT_LANGUAGE
+    );
     const [optionsVisible, setOptionsVisible] = useState(false);
 
     const LanguageIcon = useCallback(() => {
